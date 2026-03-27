@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carbon Credit Lifecycle — 8 Steps</title>
+<style>
+  body { background: #1a2744; color: #e2e8f0; font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; line-height: 1.5; font-size: 0.92em; }
+  h1 { color: #2BBFB3; font-size: 1.4em; border-bottom: 2px solid #2BBFB3; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { color: #fff; font-size: 1.05em; margin-top: 22px; margin-bottom: 8px; border-left: 3px solid #2BBFB3; padding-left: 10px; }
+  .meta { color: #8a9bb8; font-size: 0.82em; margin-bottom: 16px; }
+  .number { color: #fbbf24; font-weight: 600; }
+  strong { color: #2BBFB3; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.85em; }
+  th { background: rgba(43,191,179,0.2); color: #2BBFB3; text-align: left; padding: 5px 6px; font-weight: 600; }
+  td { padding: 4px 6px; border-bottom: 1px solid rgba(255,255,255,0.07); vertical-align: top; }
+  tr:hover td { background: rgba(43,191,179,0.05); }
+  a { color: #2BBFB3; }
+
+  /* Flow chart */
+  .flow { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 20px; }
+  .step-box { background: rgba(43,191,179,0.12); border: 1px solid rgba(43,191,179,0.35); border-radius: 8px; padding: 8px 10px; text-align: center; min-width: 70px; flex: 1 1 auto; max-width: 100px; position: relative; }
+  .step-box .snum { color: #fbbf24; font-weight: 700; font-size: 0.8em; display: block; }
+  .step-box .slabel { color: #fff; font-size: 0.78em; font-weight: 600; }
+  .arrow { color: #2BBFB3; font-size: 1.2em; display: flex; align-items: center; font-weight: 700; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+</style>
+</head>
+<body>
+
+<h1>Carbon Credit Lifecycle — 8 Steps</h1>
+<p class="meta">Reference Card · Carbon Mastery · March 2026</p>
+
+<h2>Visual Flow</h2>
+<div class="flow">
+  <div class="step-box"><span class="snum">1</span><span class="slabel">Design / PDD</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box"><span class="snum">2</span><span class="slabel">Validation</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box"><span class="snum">3</span><span class="slabel">Registration</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box"><span class="snum">4</span><span class="slabel">Monitoring</span></div>
+</div>
+<div class="flow">
+  <div class="step-box"><span class="snum">5</span><span class="slabel">Verification</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box"><span class="snum">6</span><span class="slabel">Issuance</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box"><span class="snum">7</span><span class="slabel">Transfer</span></div>
+  <div class="arrow">&rarr;</div>
+  <div class="step-box" style="border-color: rgba(251,191,36,0.5); background: rgba(251,191,36,0.1);"><span class="snum">8</span><span class="slabel">Retirement</span></div>
+</div>
+
+<h2>Step Detail</h2>
+<div class="scroll">
+<table>
+  <tr><th>#</th><th>Step</th><th>Actor</th><th>Duration</th><th>Output</th><th>Contract Touch</th></tr>
+  <tr><td><span class="number">1</span></td><td>Design / PDD</td><td>Developer</td><td>3–12 months</td><td>PDD, baseline</td><td>CSA scope, methodology</td></tr>
+  <tr><td><span class="number">2</span></td><td>Validation</td><td>VVB (Auditor)</td><td>2–6 months</td><td>Validation report</td><td>VVB cost allocation</td></tr>
+  <tr><td><span class="number">3</span></td><td>Registration</td><td>Registry</td><td>1–3 months</td><td>Project ID, account</td><td>Registry fees, standard choice</td></tr>
+  <tr><td><span class="number">4</span></td><td>Monitoring</td><td>Developer / dMRV</td><td>Ongoing (annual)</td><td>Monitoring report</td><td>SaaS/Tech fee, data rights</td></tr>
+  <tr><td><span class="number">5</span></td><td>Verification</td><td>VVB (Auditor)</td><td>2–4 months</td><td>Verification report</td><td>VVB cost, non-delivery risk</td></tr>
+  <tr><td><span class="number">6</span></td><td>Issuance</td><td>Registry</td><td>1–2 months</td><td>Serial credits</td><td>Issuance fee, volume</td></tr>
+  <tr><td><span class="number">7</span></td><td>Transfer</td><td>Seller &rarr; Buyer</td><td>Days</td><td>Registry booking</td><td>Offtake, price, consent</td></tr>
+  <tr><td><span class="number">8</span></td><td>Retirement</td><td>Buyer / End-user</td><td>Immediate</td><td>Retirement certificate</td><td>Claim rights, finality</td></tr>
+</table>
+</div>
+
+<h2>Registry Account Types</h2>
+<table>
+  <tr><th>Type</th><th>Function</th><th>Who</th></tr>
+  <tr><td><strong>Project Account</strong></td><td>Receives newly issued credits</td><td>Developer / Project owner</td></tr>
+  <tr><td><strong>Holding Account</strong></td><td>Stores credits for trading</td><td>Broker, buyer, developer</td></tr>
+  <tr><td><strong>Retirement Account</strong></td><td>Final destination, irreversible</td><td>End-user / offsetter</td></tr>
+</table>
+
+<h2>Revenue Flow (Geldfluss)</h2>
+<table>
+  <tr><th>From</th><th>To</th><th>Payment</th></tr>
+  <tr><td>Developer</td><td>VVB (Auditor)</td><td>Validation + verification fees</td></tr>
+  <tr><td>Developer</td><td>Registry</td><td>Registration + issuance fees</td></tr>
+  <tr><td>Buyer</td><td>Developer</td><td>Credit purchase price</td></tr>
+  <tr><td>Developer</td><td>Landowner / Community</td><td><span class="number">60–80%</span> revenue share</td></tr>
+  <tr><td>Developer</td><td>Host State</td><td>Benefit-sharing (e.g. DRC <span class="number">50/25/25</span>)</td></tr>
+  <tr><td>Host State</td><td>UNFCCC</td><td>Art. 6.4: <span class="number">5%</span> SOP levy + <span class="number">2%</span> Adaptation Fund</td></tr>
+</table>
+
+<h2>Avoidance vs Removal (Vermeidung vs Entnahme)</h2>
+<table>
+  <tr><th></th><th>Avoidance</th><th>Removal</th></tr>
+  <tr><td>Mechanism</td><td>Prevent emissions</td><td>Extract CO2 from atmosphere</td></tr>
+  <tr><td>Baseline</td><td>Counterfactual (estimated)</td><td>Measured directly</td></tr>
+  <tr><td>Price</td><td><span class="number">USD 0.88–15</span></td><td><span class="number">USD 15–600</span></td></tr>
+  <tr><td>Integrity risk</td><td>High (400% overestimation)</td><td>Lower (measurable)</td></tr>
+  <tr><td>Permanence</td><td>Variable (forest fire risk)</td><td>High (biochar 100yr+, DAC permanent)</td></tr>
+  <tr><td>Buyer trend</td><td>Declining demand</td><td><span class="number">62%</span> buyers prioritize</td></tr>
+  <tr><td>Examples</td><td>REDD+, cookstoves, renewables</td><td>ARR, biochar, DAC, soil carbon</td></tr>
+</table>
+
+</body>
+</html>

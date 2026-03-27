@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fee Matrix — Quick Reference</title>
+<style>
+  body { background: #1a2744; color: #e2e8f0; font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; line-height: 1.6; }
+  h1 { color: #2BBFB3; font-size: 1.4em; border-bottom: 2px solid #2BBFB3; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { color: #fff; font-size: 1.05em; margin-top: 20px; margin-bottom: 8px; border-left: 3px solid #2BBFB3; padding-left: 8px; }
+  .meta { color: #8a9bb8; font-size: 0.8em; margin-bottom: 14px; }
+  .g { color: #fbbf24; font-weight: 600; }
+  strong { color: #2BBFB3; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82em; margin-bottom: 14px; }
+  th { background: rgba(43,191,179,0.2); color: #2BBFB3; text-align: left; padding: 6px 8px; font-weight: 600; }
+  td { padding: 5px 8px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  tr:hover td { background: rgba(43,191,179,0.05); }
+  ul { padding-left: 20px; margin: 6px 0 12px; font-size: 0.88em; }
+  li { margin-bottom: 4px; }
+  .card { background: rgba(43,191,179,0.08); border: 1px solid rgba(43,191,179,0.2); border-radius: 8px; padding: 12px; margin-bottom: 14px; }
+  .card h2 { margin-top: 0; border: none; padding-left: 0; }
+  .tag-default { background: #2BBFB3; color: #1a2744; font-size: 0.7em; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  .tag-open { background: #f59e0b; color: #1a2744; font-size: 0.7em; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  .tag-reserved { background: #dc2626; color: #fff; font-size: 0.7em; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+  .check { color: #2BBFB3; }
+  .dash { color: #64748b; }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 16px 0; }
+  .hierarchy { text-align: center; font-size: 0.88em; margin: 12px 0; }
+  .hierarchy .box { display: inline-block; background: rgba(43,191,179,0.15); border: 1px solid rgba(43,191,179,0.3); border-radius: 6px; padding: 4px 12px; margin: 2px; }
+  .hierarchy .arrow { color: #fbbf24; margin: 0 4px; }
+  ol { padding-left: 20px; margin: 6px 0 12px; font-size: 0.88em; }
+  ol li { margin-bottom: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Fee Matrix — Quick Reference</h1>
+<p class="meta">Carbon Mastery Reference Card 6 · 5 Fees &times; 2 Models &times; 3 Infrastructure</p>
+
+<h2>5 Fee Types (Gebuehrenarten)</h2>
+<table>
+<tr><th>Fee</th><th>Type</th><th>CSA-A</th><th>CSA-B</th><th>Shared w/ MANUFACTURER</th></tr>
+<tr><td><strong>Structuring</strong></td><td>One-time</td><td class="check">&check;</td><td class="check">&check;</td><td>No</td></tr>
+<tr><td><strong>Initiation</strong></td><td>One-time</td><td class="check">&check;</td><td class="check">&check;</td><td><span class="g">Yes</span></td></tr>
+<tr><td><strong>SaaS</strong></td><td>Recurring</td><td class="check">&check;</td><td class="check">&check;</td><td>No</td></tr>
+<tr><td><strong>PaaS</strong></td><td>Recurring</td><td><span class="check">&check;</span> <span class="tag-default">DEFAULT</span></td><td class="dash">&mdash;</td><td>No</td></tr>
+<tr><td><strong>Participation</strong></td><td>Performance</td><td class="check">&check;</td><td class="dash">&mdash;</td><td><span class="g">Yes</span></td></tr>
+</table>
+<p style="font-size:0.8em; color:#8a9bb8;">Participation Fee = revenue share from credit sales (cash). Only Model A (credits required).</p>
+
+<h2>3 Infrastructure Options (Infrastruktur-Optionen)</h2>
+<table>
+<tr><th>Option</th><th>Who provides</th><th>Who owns</th><th>COMPANY role</th></tr>
+<tr><td><strong>None</strong></td><td>Client</td><td>Client</td><td>Software only</td></tr>
+<tr><td><strong>PaaS</strong> <span class="tag-default">DEFAULT</span></td><td>COMPANY</td><td>COMPANY</td><td>Full service</td></tr>
+<tr><td><strong>Lease</strong></td><td>DFI / MANUFACTURER</td><td>Lessor</td><td>Intermediary (off-balance)</td></tr>
+</table>
+
+<hr>
+
+<h2>CSA-A vs CSA-B (Vertragsvergleich)</h2>
+<table>
+<tr><th>Aspect</th><th>CSA-A (Carbon Credit)</th><th>CSA-B (Compliance Only)</th></tr>
+<tr><td><strong>Includes</strong></td><td>Full: Compliance + Credit generation</td><td>Standalone compliance/accounting</td></tr>
+<tr><td><strong>Fees</strong></td><td>All <span class="g">5</span> fees</td><td><span class="g">3</span> fees (Structuring, Initiation, SaaS)</td></tr>
+<tr><td><strong>Output</strong></td><td>Carbon credits + compliance data</td><td>Compliance data only</td></tr>
+<tr><td><strong>Upgrade</strong></td><td>N/A (full scope)</td><td>Upgrade clause to CSA-A via amendment</td></tr>
+</table>
+
+<div class="card">
+<h2>Revenue Sharing Principle (Umsatzteilung)</h2>
+<ul>
+<li><strong>No default split</strong> — silence in contract = MANUFACTURER gets <span class="g">0%</span></li>
+<li>Split specified <strong>per Work Order</strong>, not at framework level</li>
+<li><span class="g">2</span> fees shared: Initiation + Participation</li>
+<li><span class="g">3</span> fees COMPANY-only: Structuring, SaaS, PaaS</li>
+</ul>
+</div>
+
+<h2>Contract Hierarchy (Vertragshierarchie)</h2>
+<div class="hierarchy">
+<span class="box">Framework Agreement (FA)</span><br>
+<span class="arrow">&darr;</span><br>
+<span class="box">CSA-A</span> <span style="color:#8a9bb8;">/</span> <span class="box">CSA-B</span><br>
+<span class="arrow">&darr;</span><br>
+<span class="box">Work Order</span><br>
+<span class="arrow">&darr;</span><br>
+<span class="box">Country Annex</span>
+</div>
+<p style="font-size:0.8em; color:#8a9bb8;">FA governs COMPANY-MANUFACTURER. CSA governs COMPANY-CLIENT. Work Order = project-specific. Country Annex = jurisdiction-specific (mandatory for high-risk countries like DRC).</p>
+
+<hr>
+
+<div class="card">
+<h2>Margin Protection <span class="tag-reserved">[RESERVED]</span></h2>
+<ul>
+<li>Ensures minimum margin for COMPANY across all fee combinations</li>
+<li>Placeholder in all documents — details open</li>
+<li>Applies to contracts, briefings, and management summary</li>
+</ul>
+</div>
+
+<h2>8 Open Pricing Decisions <span class="tag-open">OPEN</span></h2>
+<ol>
+<li><strong>E-1:</strong> Structuring Fee level and calculation basis</li>
+<li><strong>E-2:</strong> Initiation Fee split with MANUFACTURER</li>
+<li><strong>E-3:</strong> SaaS recurring pricing model</li>
+<li><strong>E-4:</strong> PaaS margin and cost pass-through</li>
+<li><strong>E-5:</strong> Participation Fee % of credit revenue</li>
+<li><strong>E-6:</strong> Participation split with MANUFACTURER</li>
+<li><strong>E-7:</strong> Performance Fee KPIs for Model B</li>
+<li><strong>E-8:</strong> Procurement Fee baseline (MFN minus 20% hypothesis)</li>
+</ol>
+
+</body>
+</html>

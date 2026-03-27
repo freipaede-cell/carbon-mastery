@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRC Risk Dashboard — Quick Reference</title>
+<style>
+  body { background: #1a2744; color: #e2e8f0; font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; line-height: 1.6; }
+  h1 { color: #2BBFB3; font-size: 1.4em; border-bottom: 2px solid #2BBFB3; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { color: #fff; font-size: 1.05em; margin-top: 20px; margin-bottom: 8px; border-left: 3px solid #2BBFB3; padding-left: 8px; }
+  .meta { color: #8a9bb8; font-size: 0.8em; margin-bottom: 14px; }
+  .g { color: #fbbf24; font-weight: 600; }
+  strong { color: #2BBFB3; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82em; margin-bottom: 14px; }
+  th { background: rgba(43,191,179,0.2); color: #2BBFB3; text-align: left; padding: 6px 8px; font-weight: 600; }
+  td { padding: 5px 8px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  tr:hover td { background: rgba(43,191,179,0.05); }
+  ul { padding-left: 20px; margin: 6px 0 12px; font-size: 0.88em; }
+  li { margin-bottom: 4px; }
+  ol { padding-left: 20px; margin: 6px 0 12px; font-size: 0.88em; }
+  ol li { margin-bottom: 3px; }
+  .card { background: rgba(43,191,179,0.08); border: 1px solid rgba(43,191,179,0.2); border-radius: 8px; padding: 12px; margin-bottom: 14px; }
+  .card h2 { margin-top: 0; border: none; padding-left: 0; }
+  .crit { color: #ef4444; font-weight: 700; font-size: 0.8em; }
+  .high { color: #f59e0b; font-weight: 700; font-size: 0.8em; }
+  .med { color: #22c55e; font-weight: 700; font-size: 0.8em; }
+  .dot-crit { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444; margin-right: 4px; }
+  .dot-high { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; margin-right: 4px; }
+  .dot-med { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; margin-right: 4px; }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 16px 0; }
+  .waterfall { background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 12px; margin-bottom: 14px; font-size: 0.88em; }
+  .waterfall h2 { color: #fbbf24; margin-top: 0; border: none; padding-left: 0; }
+  .wf-line { display: flex; justify-content: space-between; padding: 2px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .wf-label { flex: 1; }
+  .wf-value { text-align: right; font-weight: 600; }
+  .wf-neg { color: #ef4444; }
+  .wf-pos { color: #22c55e; }
+</style>
+</head>
+<body>
+
+<h1>DRC Risk Dashboard</h1>
+<p class="meta">Carbon Mastery Reference Card 7 · Demokratische Republik Kongo</p>
+
+<h2>7 Risk Categories (Risikokategorien)</h2>
+<table>
+<tr><th>#</th><th>Category</th><th>Level</th><th>Key Fact</th></tr>
+<tr><td>R1</td><td><strong>Sanctions</strong></td><td><span class="crit"><span class="dot-crit"></span>CRITICAL</span></td><td><span class="g">4</span> parallel regimes, OFAC 50%-rule, CHF <span class="g">500k</span>/5yr</td></tr>
+<tr><td>R2</td><td><strong>Corruption</strong></td><td><span class="crit"><span class="dot-crit"></span>CRITICAL</span></td><td>CPI <span class="g">20</span>/100, Art. 322<sup>septies</sup> StGB, Glencore precedent</td></tr>
+<tr><td>R3</td><td><strong>Tax</strong></td><td><span class="high"><span class="dot-high"></span>HIGH</span></td><td><span class="g">14%</span> WHT, no DBA CH-DRC, PE &gt;30 days</td></tr>
+<tr><td>R4</td><td><strong>Counterparty</strong></td><td><span class="high"><span class="dot-high"></span>HIGH</span></td><td>SPV minimal capital, BCC <span class="g">11.8</span> weeks cover</td></tr>
+<tr><td>R5</td><td><strong>Regulatory</strong></td><td><span class="high"><span class="dot-high"></span>HIGH</span></td><td>ARMCA <span class="g">6/9</span> regulations missing, <span class="g">8</span> concessions annulled</td></tr>
+<tr><td>R6</td><td><strong>Operational</strong></td><td><span class="high"><span class="dot-high"></span>HIGH</span></td><td>M23 conflict, <span class="g">19%</span> electricity, dual-use equipment</td></tr>
+<tr><td>R7</td><td><strong>Reputational</strong></td><td><span class="med"><span class="dot-med"></span>MEDIUM</span></td><td><span class="g">5.2M</span> ha carbon land grab, NGO scrutiny</td></tr>
+</table>
+
+<div class="waterfall">
+<h2>50/25/25 Benefit-Sharing Waterfall (Gewinnverteilung)</h2>
+<div class="wf-line"><span class="wf-label">Gross revenue</span><span class="wf-value"><span class="g">1M</span> credits &times; USD <span class="g">10</span> = USD <span class="g">10M</span></span></div>
+<div class="wf-line"><span class="wf-label">&rarr; State 50%</span><span class="wf-value wf-neg">&minus; USD 5.0M</span></div>
+<div class="wf-line"><span class="wf-label">&rarr; Communities 25%</span><span class="wf-value wf-neg">&minus; USD 2.5M</span></div>
+<div class="wf-line"><span class="wf-label">&rarr; SPV 25% (gross)</span><span class="wf-value">USD 2.5M</span></div>
+<div class="wf-line"><span class="wf-label">&rarr; Minus costs, WHT, fees</span><span class="wf-value wf-neg">potentially negative</span></div>
+<div class="wf-line" style="border-top: 2px solid rgba(251,191,36,0.3); margin-top: 4px; padding-top: 4px;"><span class="wf-label"><strong>Art. 6.2 at USD <span class="g">20+</span>/t</strong></span><span class="wf-value wf-pos">survival strategy</span></div>
+</div>
+
+<hr>
+
+<h2>6 Showstopper Questions (Abbruchfragen)</h2>
+<ol>
+<li>Is the SPV or any UBO on OFAC/EU/SECO/UN sanctions lists?</li>
+<li>Can FPIC documentation be independently verified for all project land?</li>
+<li>Does SPV have sufficient capitalization to survive 18-month pre-revenue?</li>
+<li>Are all ARMCA regulatory approvals obtainable within project timeline?</li>
+<li>Is physical access to project site secure (M23/conflict zones)?</li>
+<li>Can benefit-sharing waterfall produce positive SPV net margin at VCM prices?</li>
+</ol>
+
+<h2>12 Contractual Instruments (Vertragliche Instrumente)</h2>
+<table>
+<tr><th>#</th><th>Instrument</th><th>Addresses</th></tr>
+<tr><td>1</td><td>Country Annex</td><td>All DRC-specific risks</td></tr>
+<tr><td>2</td><td>Sanctions screening clause</td><td>R1 — OFAC/EU/SECO/UN</td></tr>
+<tr><td>3</td><td>Anti-corruption representations</td><td>R2 — Art. 322<sup>septies</sup> StGB</td></tr>
+<tr><td>4</td><td>WHT gross-up / tax indemnity</td><td>R3 — 14% WHT, no DBA</td></tr>
+<tr><td>5</td><td>Payment security (escrow/LC)</td><td>R4 — counterparty risk</td></tr>
+<tr><td>6</td><td>Regulatory change clause</td><td>R5 — ARMCA gaps</td></tr>
+<tr><td>7</td><td>Force majeure (conflict)</td><td>R6 — M23, infrastructure</td></tr>
+<tr><td>8</td><td>FPIC condition precedent</td><td>R7 — land grab risk</td></tr>
+<tr><td>9</td><td>Dual-pathway (VCM + Art. 6.2)</td><td>Revenue optimization</td></tr>
+<tr><td>10</td><td>Equipment insurance</td><td>R6 — dual-use, theft, damage</td></tr>
+<tr><td>11</td><td>Community grievance mechanism</td><td>R7 — reputation, FPIC</td></tr>
+<tr><td>12</td><td>Sovereign risk exit clause</td><td>R5/R6 — nationalization, concession revocation</td></tr>
+</table>
+
+<hr>
+
+<h2>9 FPIC Safeguards</h2>
+<ol>
+<li>Obtain consent <strong>before</strong> any credit generation or land activity</li>
+<li>Independent verification by qualified third party (not developer)</li>
+<li>Documentation in local language(s) — not French-only</li>
+<li>Community right to say "no" without penalty</li>
+<li>Benefit-sharing agreement signed before project start</li>
+<li>Ongoing consent — periodic renewal, not one-time</li>
+<li>Grievance mechanism with independent escalation path</li>
+<li>Community monitors with access to project data</li>
+<li>Exit clause if community withdraws consent</li>
+</ol>
+
+<div class="card">
+<h2>Key Cases (Praezedenzfaelle)</h2>
+<ul>
+<li><strong>Isangi REDD+</strong> — <span class="g">1.39M</span> credits sold (&gt;USD 7M), community consent obtained <span class="g">5 years</span> after credit sales. Annulled Jan 2024.</li>
+<li><strong>Tradelink</strong> — <span class="g">5</span> concessions annulled (project area exceeded limits)</li>
+<li><strong>Cambodia REDD+</strong> — <span class="g">29</span> communities, no FPIC documented. HRW investigation, forced evictions.</li>
+<li><strong>Glencore (CH)</strong> — CHF <span class="g">2M</span> + USD <span class="g">150M</span> fine (Aug 2024) for DRC corruption. Sets Swiss prosecution precedent.</li>
+</ul>
+</div>
+
+</body>
+</html>

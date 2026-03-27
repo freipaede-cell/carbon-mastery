@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REF 10: Contract Architecture — Framework & Hierarchy</title>
+<style>
+  body { background: #1a2744; color: #e2e8f0; font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; line-height: 1.6; font-size: 14px; }
+  h1 { color: #2BBFB3; font-size: 1.3em; border-bottom: 2px solid #2BBFB3; padding-bottom: 6px; margin-bottom: 4px; }
+  h2 { color: #fff; font-size: 1.05em; margin-top: 20px; margin-bottom: 8px; border-left: 3px solid #2BBFB3; padding-left: 8px; }
+  h3 { color: #fbbf24; font-size: 0.95em; margin-top: 14px; margin-bottom: 6px; }
+  p { margin-bottom: 8px; font-size: 0.9em; }
+  .meta { color: #8a9bb8; font-size: 0.8em; margin-bottom: 14px; }
+  .g { color: #fbbf24; font-weight: 600; }
+  strong { color: #2BBFB3; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82em; margin-bottom: 14px; }
+  th { background: rgba(43,191,179,0.2); color: #2BBFB3; padding: 6px 5px; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(43,191,179,0.3); }
+  td { padding: 5px; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  ul { padding-left: 18px; margin: 6px 0 10px; font-size: 0.88em; }
+  li { margin-bottom: 3px; }
+  .box { background: rgba(43,191,179,0.08); border: 1px solid rgba(43,191,179,0.2); border-radius: 8px; padding: 10px 12px; margin: 10px 0; font-size: 0.88em; }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 16px 0; }
+  /* Hierarchy visual */
+  .hier { font-family: 'SF Mono', 'Menlo', monospace; font-size: 0.82em; line-height: 1.8; }
+  .hier .l0 { background: rgba(43,191,179,0.15); border: 1px solid rgba(43,191,179,0.3); border-radius: 6px; padding: 8px 10px; margin-bottom: 4px; }
+  .hier .l1 { margin-left: 16px; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.2); border-radius: 6px; padding: 8px 10px; margin-bottom: 4px; }
+  .hier .l2 { margin-left: 32px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 6px 10px; margin-bottom: 3px; }
+  .hier .l3 { margin-left: 48px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 5px 10px; margin-bottom: 3px; }
+  .warn { color: #f87171; }
+</style>
+</head>
+<body>
+
+<h1>Contract Architecture</h1>
+<p class="meta">REF 10 &middot; Framework &amp; Hierarchy &middot; Quick Reference</p>
+
+<h2>Visual Hierarchy</h2>
+<div class="hier">
+  <div class="l0"><strong>Framework Agreement (FA)</strong> &mdash; COMPANY &harr; MANUFACTURER</div>
+  <div class="l1"><strong>Client Service Agreement (CSA)</strong> &mdash; COMPANY &harr; CLIENT
+    <div class="l2"><strong>CSA-A</strong> (Carbon Credit) &mdash; includes Compliance base</div>
+    <div class="l2"><strong>CSA-B</strong> (Compliance only) &mdash; standalone + upgrade clause
+      <div class="l3"><strong>Work Order (WO)</strong> &mdash; project-specific</div>
+      <div class="l3"><strong>Country Annex</strong> &mdash; jurisdiction-specific</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2>Three Parties</h2>
+<table>
+<tr><th>Party</th><th>Role</th><th>Jurisdiction</th><th>Key risk</th></tr>
+<tr><td><strong>COMPANY</strong></td><td>Swiss service provider (aMRV + advisory)</td><td>Switzerland (AG)</td><td>Liability pass-through, PE exposure</td></tr>
+<tr><td><strong>MANUFACTURER</strong></td><td>US hardware supplier (Eddy Covariance)</td><td>USA (Nebraska)</td><td>Warranty chain, "Original Purchaser"</td></tr>
+<tr><td><strong>CLIENT</strong></td><td>Worldwide end-customer</td><td>Varies</td><td>Multi-jurisdictional enforcement</td></tr>
+</table>
+
+<hr>
+
+<h2>CSA-A vs. CSA-B</h2>
+<table>
+<tr><th>Aspect</th><th>CSA-A</th><th>CSA-B</th></tr>
+<tr><td><strong>Model</strong></td><td>Carbon Credit (Emissionsrechtehandel)</td><td>Compliance only (Berichtswesen)</td></tr>
+<tr><td><strong>Includes compliance</strong></td><td>Yes (base layer)</td><td>Yes (standalone)</td></tr>
+<tr><td><strong>Output</strong></td><td>Credits + data</td><td>Data + reports</td></tr>
+<tr><td><strong>Participation Fee</strong></td><td>Yes</td><td>No</td></tr>
+<tr><td><strong>PaaS</strong></td><td>Default</td><td>No</td></tr>
+<tr><td><strong>Upgrade</strong></td><td>N/A</td><td>To CSA-A via supplement (Zusatzvereinbarung)</td></tr>
+</table>
+
+<hr>
+
+<h2>Multi-Jurisdictional Framework</h2>
+<table>
+<tr><th>Framework</th><th>Scope</th><th>Key provision</th></tr>
+<tr><td><strong>CISG</strong></td><td>Int'l goods sales, <span class="g">96</span> parties</td><td>Auto-applies, must opt-out. Equipment = yes, services = no</td></tr>
+<tr><td><strong>Swiss OR</strong></td><td>Mandatory provisions (zwingendes Recht)</td><td>OR 73 interest, OR 97-100 liability, OR 340 non-compete, OR 404 mandate</td></tr>
+<tr><td><strong>ICC Arbitration</strong></td><td>Dispute resolution (Schiedsgerichtsbarkeit)</td><td>3-panel USD <span class="g">200-500k</span>, sole USD <span class="g">50-100k</span>, Expert Det. USD <span class="g">20-50k</span></td></tr>
+<tr><td><strong>NYC 1958</strong></td><td>Enforcement (Vollstreckung)</td><td><span class="g">172</span> parties, arbitral award enforcement</td></tr>
+<tr><td><strong>GDPR/DSG</strong></td><td>Data protection (Datenschutz)</td><td>EUR <span class="g">20M</span>/4% vs. CHF <span class="g">250k</span>, SCCs, TIA</td></tr>
+</table>
+
+<hr>
+
+<h2>Non-Compete Enforceability</h2>
+<table>
+<tr><th>Jurisdiction</th><th>Status</th></tr>
+<tr><td><strong>Switzerland</strong></td><td>Limited (OR 340: angemessen nach Ort, Zeit, Gegenstand)</td></tr>
+<tr><td><strong>California</strong></td><td class="warn">VOID (B&amp;P Code &sect;16600)</td></tr>
+<tr><td><strong>Delaware</strong></td><td>Reasonable scope + blue pencil doctrine</td></tr>
+<tr><td><strong>Malaysia</strong></td><td class="warn">VOID (Sec. 28 Contracts Act 1950)</td></tr>
+<tr><td><strong>DRC</strong></td><td>Max <span class="g">1</span> year (Art. 35 Constitution)</td></tr>
+<tr><td><strong>Indonesia</strong></td><td>Generally enforceable (KUHPerdata, court review)</td></tr>
+</table>
+
+<hr>
+
+<h2>Force Majeure Comparison</h2>
+<table>
+<tr><th>Aspect</th><th>CH (OR 119)</th><th>US Common Law</th><th>UCC 2-615</th></tr>
+<tr><td><strong>Rule</strong></td><td>Both obligations dissolve (beide erlöschen)</td><td>No statutory FM; "impossibility" narrow</td><td>"Commercial impracticability" — seller only</td></tr>
+<tr><td><strong>Payment at FM</strong></td><td>OR 119(2): counter-obligation also expires</td><td>Per contract terms</td><td>Buyer NOT excused</td></tr>
+<tr><td><strong>Recommendation</strong></td><td>Bilateral FM with fee suspension</td><td>Contractual FM clause = standard</td><td>Goods sale only</td></tr>
+</table>
+
+<hr>
+
+<h2>Warranty Chain</h2>
+<div class="box">
+<div style="text-align:center; font-family: 'SF Mono', monospace; font-size: 0.9em; margin-bottom: 8px;">
+MANUFACTURER &rarr; COMPANY &rarr; CLIENT
+</div>
+<strong>Problem:</strong> "Original Purchaser" restriction in MANUFACTURER warranty limits pass-through to CLIENT.<br>
+<strong>Solution:</strong> Pass-Through clause (FA Art. 12.4) — COMPANY assigns warranty rights to CLIENT. <span class="g">5</span> gaps identified in Draft 0.<br>
+<strong>Equipment redundancy:</strong> Built-in redundancy — single device failure does not break measurement chain (Messkette).
+</div>
+
+</body>
+</html>
