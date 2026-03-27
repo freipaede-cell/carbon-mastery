@@ -1,0 +1,158 @@
+{
+  "id": "glossar-recht",
+  "title": "Carbon Market Legal & Contractual Terminology",
+  "domain": "glossar",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Contract Law",
+      "front": "CISG (United Nations Convention on Contracts for the International Sale of Goods)",
+      "back": "UN-Kaufrecht\n\nAutomatisch anwendbar bei internationalem Warenkauf zwischen Vertragsstaaten (Art. 1(1)(a)). 96 Vertragsstaaten (März 2026). Nicht anwendbar wenn Dienstleistungsanteil >50% (Art. 3(2)).\n\nBest Practice: CISG in internationalen Verträgen explizit ausschliessen (Art. 6). Wichtige Nicht-Vertragsstaaten: Malaysia, Indonesien, DRC, UK."
+    },
+    {
+      "id": 2,
+      "category": "Contract Law",
+      "front": "Force Majeure",
+      "back": "Höhere Gewalt\n\nUnvorhersehbares, unabwendbares Ereignis, das die Vertragserfüllung unmöglich macht. Im CH-Recht: OR 119 (Unmöglichkeit -- beide Leistungspflichten erlöschen). Im US-Recht: keine gesetzliche Regelung, «Impossibility» eng ausgelegt.\n\nEmpfehlung: Vertragliche FM-Klausel mit Fee-Suspension. UCC § 2-615 gilt nur für Warenkauf und befreit nur den Verkäufer."
+    },
+    {
+      "id": 3,
+      "category": "Contract Law",
+      "front": "Gross-up Clause",
+      "back": "Aufstockungsklausel\n\nVertragliche Regelung, bei der der Zahler (Client) den Bruttobetrag zahlt, sodass der Empfänger nach Abzug der Quellensteuer (WHT) den vollen vereinbarten Nettobetrag erhält.\n\nRelevant bei grenzüberschreitenden Zahlungen. Beispiel DRC: 14% WHT auf Service Fees -- ohne Gross-up erhält der Empfänger nur 86%."
+    },
+    {
+      "id": 4,
+      "category": "Contract Law",
+      "front": "Indemnity / Indemnification",
+      "back": "Freistellung / Schadloshaltung\n\nVertragliche Verpflichtung einer Partei, die andere bei bestimmten Schäden oder Ansprüchen Dritter schadlos zu halten. Geht über normalen Schadensersatz hinaus.\n\nCH-Recht: Haftung für Vorsatz/grobe Fahrlässigkeit nicht abbedingbar (OR 100(1)). Liability Caps bei Vorsatz/grober Fahrlässigkeit sind unwirksam."
+    },
+    {
+      "id": 5,
+      "category": "Contract Law",
+      "front": "Representations & Warranties (Reps & Warranties)",
+      "back": "Zusicherungen und Gewährleistungen\n\nVertragliche Erklärungen über bestimmte Tatsachen (Representations) und Garantien für deren Richtigkeit (Warranties). Basis für Schadensersatzansprüche bei Unrichtigkeit.\n\nCH-Recht (OR 97): Schadensersatz bei Verschulden. US-Recht: Breach of Warranty = Strict Liability (verschuldensunabhängig)."
+    },
+    {
+      "id": 6,
+      "category": "Contract Law",
+      "front": "Condition Precedent (CP)",
+      "back": "Aufschiebende Bedingung\n\nVoraussetzung, die VOR Vertragsbeginn oder einer bestimmten Leistungspflicht erfüllt sein muss.\n\nCarbon-Beispiele: ARMCA-Registrierung, FPIC-Dokumentation, Host Country Authorization (LoA), PDD-Genehmigung. Ohne CP-Erfüllung kein Vertragsstart."
+    },
+    {
+      "id": 7,
+      "category": "Contract Law",
+      "front": "Material Adverse Change (MAC)",
+      "back": "Wesentliche nachteilige Veränderung\n\nVertragliche Klausel, die einer Partei bei wesentlichen negativen Veränderungen Rücktrittsrechte oder Nachverhandlungsrechte einräumt.\n\nCarbon-Kontext: Änderung der Carbon-Regulierung, Verlust der Host Country Authorization, Sanktionierung des Clients. Typisch in Offtake Agreements und langfristigen Carbon Rights Agreements."
+    },
+    {
+      "id": 8,
+      "category": "Contract Law",
+      "front": "Pass-Through Warranty",
+      "back": "Durchgeleitete Garantie\n\nHersteller-Garantie, die über einen Zwischenhändler/Dienstleister an den Endkunden weitergegeben wird, ohne dass der Dienstleister selbst haftet.\n\nRelevant bei Equipment-Transaktionen: Hersteller-Warranty wird an Client durchgeleitet. Dienstleister übernimmt keine eigene Equipment-Garantie."
+    },
+    {
+      "id": 9,
+      "category": "Contract Law",
+      "front": "Revenue Sharing",
+      "back": "Erlösbeteiligung\n\nAufteilung des Credit-Erlöses zwischen den Vertragsparteien. Typische Splits im Carbon-Markt: 60/40 bis 80/20 (Landbesitzer/Developer).\n\nVarianten: Cash-basiert (Participation Fee aus Verkaufserlösen) oder in-kind (Credits als Vergütung). DRC Benefit-Sharing: 50% Staat / 25% Communities / 25% Investor."
+    },
+    {
+      "id": 10,
+      "category": "Contract Law",
+      "front": "Margin Protection",
+      "back": "Margenschutz\n\nVertraglicher Mechanismus zum Schutz der Gewinnmarge bei sinkenden Carbon-Credit-Preisen. Verhindert, dass Preisverfall die gesamte Marge auffrisst.\n\nRelevant bei Offtake Agreements mit festem Revenue Sharing: Wenn der Credit-Preis unter ein bestimmtes Niveau fällt, greifen Anpassungsmechanismen."
+    },
+    {
+      "id": 11,
+      "category": "Dispute Resolution",
+      "front": "ICC Arbitration",
+      "back": "ICC-Schiedsverfahren\n\nSchiedsverfahren unter den Regeln der International Chamber of Commerce. Grösste internationale Schiedsinstitution.\n\nKosten: USD 50-100k (Sole Arbitrator) bis USD 200-500k+ (3 Schiedsrichter). Dauer: 12-36 Monate. Empfehlung: Eskalation vorschalten (30 Tage Verhandlung → 60 Tage Mediation → ICC)."
+    },
+    {
+      "id": 12,
+      "category": "Dispute Resolution",
+      "front": "Expert Determination",
+      "back": "Sachverständigenentscheidung\n\nSchnelles, kostengünstiges Verfahren für technische Streitigkeiten. Ein unabhängiger Experte entscheidet verbindlich über Fachfragen.\n\nKosten: USD 20-50k. Dauer: 3-6 Monate. Ideal für: Datenqualität, SLA-Verstösse, Baseline-Streitigkeiten im Carbon-Kontext. Kein vollwertiges Schiedsverfahren."
+    },
+    {
+      "id": 13,
+      "category": "Dispute Resolution",
+      "front": "NYC Convention 1958 (New York Convention)",
+      "back": "New Yorker Übereinkommen von 1958\n\nUNO-Konvention zur Anerkennung und Vollstreckung ausländischer Schiedssprüche. Macht ICC-Schiedssprüche weltweit durchsetzbar.\n\n172 Vertragsstaaten. Praktische Probleme: DRC (Mitglied seit 2013, aber Korruption), Indonesien (Mitglied seit 1981, Exequatur kann Monate dauern)."
+    },
+    {
+      "id": 14,
+      "category": "Dispute Resolution",
+      "front": "Applicable Law / Governing Law",
+      "back": "Anwendbares Recht / Vertragsstatut\n\nDie Rechtsordnung, nach der ein Vertrag ausgelegt und Streitigkeiten entschieden werden. Zentrale Klausel in internationalen Verträgen.\n\nBei Carbon-Verträgen oft: Schweizer OR (neutral, bekannt), Delaware/New York Law (US-Partner), oder lokales Recht (wenn regulatorisch erforderlich)."
+    },
+    {
+      "id": 15,
+      "category": "Dispute Resolution",
+      "front": "Forum Selection",
+      "back": "Gerichtsstandsvereinbarung\n\nVertragliche Festlegung des zuständigen Gerichts oder Schiedsortes. Bestimmt, wo Streitigkeiten verhandelt werden.\n\nBei internationalen Carbon-Verträgen: Zürich/Genf empfohlen (ICC-Infrastruktur, neutrale Schweiz). Sole Arbitrator für Streitwerte <USD 500k zur Kostenreduktion."
+    },
+    {
+      "id": 16,
+      "category": "Tax & Finance",
+      "front": "Withholding Tax (WHT)",
+      "back": "Quellensteuer\n\nSteuer, die bei grenzüberschreitenden Zahlungen an der Quelle abgezogen wird. Reduzierbar durch Doppelbesteuerungsabkommen (DBA).\n\nBeispiele: DRC 14% auf Service Fees (kein DBA CH-DRC). Indonesien: 5% statt 20% dank DBA CH-ID. Gross-up-Klausel verlagert die Last auf den Zahler."
+    },
+    {
+      "id": 17,
+      "category": "Tax & Finance",
+      "front": "Permanent Establishment (PE)",
+      "back": "Betriebsstätte (Steuerrecht)\n\nFeste Geschäftseinrichtung, die lokale Steuerpflicht auslöst. Kann durch physische Präsenz, Personal oder dauerhafte Equipment-Installation entstehen.\n\nIndonesien: PE ab 60 Tagen (Inlandsrecht) bzw. 90-183 Tage (DBA). Steuerfolgen bei PE: 22% CIT + bis 10% Branch Profit Tax. Dauerhafte Equipment-Installation = eigenständiger PE-Tatbestand."
+    },
+    {
+      "id": 18,
+      "category": "Tax & Finance",
+      "front": "Transfer Pricing",
+      "back": "Verrechnungspreise\n\nPreisgestaltung bei Transaktionen zwischen verbundenen Unternehmen. Muss dem Fremdvergleichsgrundsatz (Arm's Length Principle) entsprechen.\n\nRelevant bei Carbon-Verträgen: Fees zwischen Muttergesellschaft und ausländischer Tochter/PE müssen marktüblich sein. TP-Dokumentation durch Revisionsgesellschaft (Big 4 / TP-Boutique) empfohlen."
+    },
+    {
+      "id": 19,
+      "category": "Tax & Finance",
+      "front": "Double Taxation Agreement (DBA/DTA)",
+      "back": "Doppelbesteuerungsabkommen\n\nBilateraler Staatsvertrag zur Vermeidung der doppelten Besteuerung grenzüberschreitender Einkünfte. Reduziert WHT-Sätze und klärt Besteuerungsrechte.\n\nBeispiel: DBA CH-Indonesien (1988): Service Fees nur 5% statt 20% WHT. Kein DBA CH-DRC → volle 14% WHT, kompetitiver Nachteil gegenüber Belgien (0%)."
+    },
+    {
+      "id": 20,
+      "category": "Tax & Finance",
+      "front": "Tax Indemnity",
+      "back": "Steuerliche Freistellung\n\nVertragliche Klausel, bei der eine Partei die andere von unerwarteten Steuerfolgen freistellt. Schützt vor Doppelbesteuerung oder regulatorischen Steueränderungen.\n\nCarbon-Kontext: Risiko liegt beim Hersteller (Territorialprinzip). Client-Risiko = Doppelbesteuerung ohne TP-Dokumentation."
+    },
+    {
+      "id": 21,
+      "category": "Compliance",
+      "front": "FPIC (Free, Prior and Informed Consent)",
+      "back": "Freie, vorherige und informierte Zustimmung\n\nInternational anerkanntes Recht indigener und lokaler Gemeinschaften, vor Projektbeginn umfassend informiert zu werden und frei zuzustimmen oder abzulehnen.\n\nKritisch bei Carbon-Projekten: Isangi REDD+ (DRC) annulliert wegen FPIC-Verstoss -- Consent erst 5 Jahre NACH Credit-Verkauf eingeholt. CCP-Prinzip Nr. 9."
+    },
+    {
+      "id": 22,
+      "category": "Compliance",
+      "front": "UBO (Ultimate Beneficial Owner)",
+      "back": "Wirtschaftlich Berechtigter\n\nNatürliche Person, die letztlich Eigentümer oder Kontrollinhaber eines Unternehmens ist. Muss bei KYC/AML identifiziert werden.\n\nDRC: RCCM (Handelsregister) verlangt UBO-Offenlegung, Durchsetzung aber schwach. OFAC 50%-Regel: Entität gilt als sanktioniert wenn ≥50% von einem SDN gehalten."
+    },
+    {
+      "id": 23,
+      "category": "Compliance",
+      "front": "Sanctions Screening",
+      "back": "Sanktionsprüfung\n\nSystematische Prüfung von Geschäftspartnern gegen internationale Sanktionslisten (OFAC, EU, SECO, UN Security Council).\n\nAktuell: OFAC sanktionierte Rwanda Defence Force + 4 Offiziere wegen M23 (02.03.2026). MRV-Equipment (Drohnen/Sensoren) potenziell Dual-Use. DRC = Multi-Sanktionsregime."
+    },
+    {
+      "id": 24,
+      "category": "Compliance",
+      "front": "Anti-Corruption / Anti-Bribery",
+      "back": "Antikorruption / Bestechungsprävention\n\nRechtliche Rahmenbedingungen gegen Bestechung im internationalen Geschäft. Verschärfte Anforderungen bei öffentlich-rechtlichen Clients.\n\nPräzedenzfall: Glencore -- CHF 2 Mio. + USD 150 Mio. Busse (Aug 2024, Schweiz). DRC CPI 2024: 20/100 (Rang 163/182). Malaysia: MACC Section 17A (Corporate Liability)."
+    },
+    {
+      "id": 25,
+      "category": "Compliance",
+      "front": "Benefit-Sharing",
+      "back": "Nutzenverteilung\n\nVertragliche und regulatorische Aufteilung der Erlöse aus Carbon-Projekten zwischen Investor, Staat und lokalen Gemeinschaften.\n\nDRC (finalisiert Feb. 2025): 25% an lokale Gemeinden zwingend. Rechtsgrundlage: Arrêté interministériel 006 (Nov 2023), Code Forestier Art. 89. FCPF-Zahlung: USD 19.47 Mio. für 3.89 Mio. tCO2."
+    }
+  ]
+}

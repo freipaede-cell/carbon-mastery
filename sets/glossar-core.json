@@ -1,0 +1,308 @@
+{
+  "id": "glossar-core",
+  "title": "Carbon Market Core Terminology",
+  "domain": "glossar",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Market Basics",
+      "front": "Voluntary Carbon Market (VCM)",
+      "back": "Freiwilliger Kohlenstoffmarkt\n\nMarkt, auf dem Unternehmen und Privatpersonen Emissionen durch den Kauf von Carbon Credits freiwillig kompensieren -- unabhängig von regulatorischen Pflichten.\n\nMarktgrösse 2025: ~USD 2.5 Mrd. Anteil am Gesamtmarkt nur 1.4% nach Wert (Compliance dominiert mit 98.6%)."
+    },
+    {
+      "id": 2,
+      "category": "Market Basics",
+      "front": "Compliance Market",
+      "back": "Regulatorischer Kohlenstoffmarkt\n\nStaatlich vorgeschriebenes System, in dem Unternehmen Emissionen begrenzen, berichten oder kompensieren müssen. Umfasst Cap-and-Trade-Systeme und Carbon Taxes.\n\nAnteil am Gesamtmarkt: 98.6% nach Wert. Grösstes System: EU ETS (~1.4 Mrd. t, EUR 60-82/t)."
+    },
+    {
+      "id": 3,
+      "category": "Market Basics",
+      "front": "Carbon Credit",
+      "back": "Emissionsgutschrift / CO2-Zertifikat\n\n1 Carbon Credit = 1 Tonne CO2-Äquivalent (tCO2e), die vermieden oder aus der Atmosphäre entfernt wurde. Zertifiziert durch eine anerkannte Registry nach einer anerkannten Methodologie.\n\nPreisspanne: USD 0.88/t (generisch) bis USD 500+/t (Tech Removal wie DAC)."
+    },
+    {
+      "id": 4,
+      "category": "Market Basics",
+      "front": "tCO2e",
+      "back": "Tonne CO2-Äquivalent\n\nStandardeinheit für Carbon Credits. Rechnet verschiedene Treibhausgase (Methan, Lachgas etc.) in ihre CO2-Äquivalente um, basierend auf ihrem Global Warming Potential (GWP).\n\n1 Credit = 1 tCO2e. Alle Preise, Handelsvolumina und NDC-Ziele werden in tCO2e gemessen."
+    },
+    {
+      "id": 5,
+      "category": "Market Basics",
+      "front": "Offset",
+      "back": "Kompensation\n\nVerwendung eines Carbon Credits zur Kompensation eigener Emissionen. Der Credit wird dabei «retired» (endgültig gelöscht) und kann nicht weiterverkauft werden.\n\nAb Sept. 2026 verbietet die EU generische Claims wie «klimaneutral» ohne verifizierbare Belege."
+    },
+    {
+      "id": 6,
+      "category": "Market Basics",
+      "front": "Avoidance Credit",
+      "back": "Vermeidungsgutschrift\n\nCredit für die Vermeidung von Emissionen, die sonst stattgefunden hätten (z.B. Waldschutz statt Abholzung, Erneuerbare statt Kohle). Gegenstück zu Removal Credits.\n\nPreise ab USD 0.88/t (generisch). 84% der Credits gelten als High-Risk laut Nature Communications Studie (2024)."
+    },
+    {
+      "id": 7,
+      "category": "Market Basics",
+      "front": "Removal Credit",
+      "back": "Entfernungsgutschrift\n\nCredit für die aktive Entfernung von CO2 aus der Atmosphäre (z.B. Aufforstung, Biochar, Direct Air Capture). Premium-Segment mit höheren Preisen als Avoidance.\n\n62% der Käufer priorisieren Removal Credits (2026). Preise: USD 15-35/t (Nature-Based) bis USD 300-600/t (DAC)."
+    },
+    {
+      "id": 8,
+      "category": "Market Basics",
+      "front": "Retirement",
+      "back": "Stilllegung / Entwertung\n\nEndgültige Löschung eines Carbon Credits im Registry. Damit wird der Kompensationsanspruch erhoben -- der Credit kann nicht mehr gehandelt oder übertragen werden.\n\nRetirements 2025 im VCM: USD 1.04 Mrd. Erst nach Retirement darf ein Unternehmen den Credit als Offset geltend machen."
+    },
+    {
+      "id": 9,
+      "category": "Market Basics",
+      "front": "Vintage",
+      "back": "Jahrgang (eines Carbon Credits)\n\nDas Jahr, in dem die tatsächliche Emissionsreduktion stattfand -- nicht das Jahr der Credit-Ausstellung oder des Verkaufs.\n\nÄltere Vintages (>5 Jahre) handeln typischerweise mit Abschlag. Käufer bevorzugen frische Vintages für glaubwürdige Kompensation."
+    },
+    {
+      "id": 10,
+      "category": "Market Basics",
+      "front": "Carbon Pricing",
+      "back": "CO2-Bepreisung\n\nMechanismus zur Bepreisung von Treibhausgasemissionen, entweder über CO2-Steuern oder Emissionshandelssysteme (Cap-and-Trade).\n\nBeispiele: Schweiz CHF 120/t, EU ETS EUR 60-82/t (2025, Prognose EUR 149/t bis 2030), Kanada CAD 80/t (steigend auf CAD 170 bis 2030)."
+    },
+    {
+      "id": 11,
+      "category": "Standards & Integrity",
+      "front": "Core Carbon Principles (CCP)",
+      "back": "Kernprinzipien für CO2-Zertifikate\n\n10 Qualitätsprinzipien des ICVCM, unterteilt in Governance (4), Emissions Impact (4) und Sustainable Development (2). Definieren den Qualitätsstandard für den VCM.\n\nCCP-Label bringt +25% Preispremium. 98% der Marktvolumen-Programme sind CCP-Eligible. 30+ Methodologien CCP-approved."
+    },
+    {
+      "id": 12,
+      "category": "Standards & Integrity",
+      "front": "ICVCM (Integrity Council for the Voluntary Carbon Market)",
+      "back": "Integritätsrat für den freiwilligen Kohlenstoffmarkt\n\nUnabhängiges Gremium, das die Core Carbon Principles (10 CCPs) entwickelt hat. Setzt Qualitätsstandards für den gesamten VCM.\n\nCCPs operativ seit 2024. Bewirkt Zwei-Klassen-Markt: CCP-zertifizierte Credits mit Premium vs. nicht-zertifizierte mit Abschlag."
+    },
+    {
+      "id": 13,
+      "category": "Standards & Integrity",
+      "front": "VCMI (Voluntary Carbon Markets Integrity Initiative)",
+      "back": "Integritätsinitiative für den freiwilligen Kohlenstoffmarkt (Käuferseite)\n\nRegelt mit dem Claims Code of Practice, wer welche Kompensations-Claims machen darf. Ergänzt ICVCM (Angebotsseite) um Käufer-Integritätsregeln.\n\nScope 3 Code definiert, wie Credits für Net-Zero-Ziele eingesetzt werden dürfen."
+    },
+    {
+      "id": 14,
+      "category": "Standards & Integrity",
+      "front": "Additionality",
+      "back": "Zusätzlichkeit\n\nNachweis, dass eine Emissionsreduktion ohne Carbon-Finanzierung nicht stattgefunden hätte (sog. «But-for»-Test). Eines der 10 Core Carbon Principles.\n\nKritisch: Fehlende Additionalität war Hauptkritikpunkt der Guardian-Enthüllung (2023) -- 90% der REDD+-Credits betroffen."
+    },
+    {
+      "id": 15,
+      "category": "Standards & Integrity",
+      "front": "Permanence",
+      "back": "Dauerhaftigkeit / Permanenz\n\nAnforderung, dass die CO2-Bindung dauerhaft bestehen bleibt. Bei Waldprojekten typischerweise mindestens 100 Jahre gefordert.\n\nRisiko: Reversal durch Waldbrand, Schädlingsbefall etc. Absicherung über Buffer Pools. DAC = geologisch permanent. Biochar = 100+ Jahre."
+    },
+    {
+      "id": 16,
+      "category": "Standards & Integrity",
+      "front": "Baseline",
+      "back": "Referenzszenario / Ausgangslage\n\nDas Business-as-usual-Szenario, gegen das Emissionsreduktionen gemessen werden. Bestimmt, wie viele Credits ein Projekt generieren kann.\n\nKritisch: Guardian-Enthüllung zeigte, dass REDD+-Baselines um 400-950% überschätzt wurden -- führte zu massivem Over-Crediting."
+    },
+    {
+      "id": 17,
+      "category": "Standards & Integrity",
+      "front": "Leakage",
+      "back": "Emissionsverlagerung\n\nEmissionen, die durch ein Projekt nicht reduziert, sondern lediglich an einen anderen Ort verlagert werden (ausserhalb der Projektgrenzen).\n\nBeispiel: Waldschutzprojekt in Region A führt dazu, dass in Region B stattdessen abgeholzt wird. Muss bei der Credit-Berechnung abgezogen werden."
+    },
+    {
+      "id": 18,
+      "category": "Standards & Integrity",
+      "front": "Double Counting",
+      "back": "Doppelzählung\n\nDieselbe Emissionsreduktion wird von zwei verschiedenen Parteien beansprucht. Eines der grössten Integritätsrisiken im Carbon-Markt.\n\nCorresponding Adjustments unter Art. 6 Paris Agreement sollen dies verhindern: Host-Land muss NDC-Bilanz anpassen bei ITMO-Export."
+    },
+    {
+      "id": 19,
+      "category": "Standards & Integrity",
+      "front": "Buffer Pool",
+      "back": "Risikopuffer / Reservepool\n\nReserve-Credits, die vom Projektentwickler zurückgehalten werden, um Verlustrisiken abzusichern (z.B. Waldbrand, Schädlingsbefall, politische Instabilität).\n\nTypisch 10-20% der generierten Credits. Bei Eintritt eines Reversal werden Buffer-Credits entwertet statt der verkauften Credits."
+    },
+    {
+      "id": 20,
+      "category": "Standards & Integrity",
+      "front": "MRV (Monitoring, Reporting, Verification)",
+      "back": "Messung, Berichterstattung, Verifizierung\n\nDer dreistufige Prozess zur Quantifizierung von Emissionsreduktionen: (1) Daten messen, (2) dokumentieren, (3) unabhängig prüfen lassen.\n\nTraditionell: manuell, jährlich, stichprobenbasiert, teuer. Trend: dMRV (digital) mit Sensoren, Satelliten und KI -- kontinuierlich und manipulationssicherer."
+    },
+    {
+      "id": 21,
+      "category": "Registries & Players",
+      "front": "Verra / VCS (Verified Carbon Standard)",
+      "back": "Verra / Verifizierter Kohlenstoffstandard\n\nGrösster VCM-Standard weltweit (~16% Marktanteil, 2'000+ Projekte). Non-Profit mit Sitz in den USA. CCP-Eligible.\n\nKrise 2023: Guardian-Enthüllung (90% REDD+-Credits ohne Klimaeffekt) → CEO-Rücktritt, Reform (VCS v4.5). 100+ Methodologien."
+    },
+    {
+      "id": 22,
+      "category": "Registries & Players",
+      "front": "VCU (Verified Carbon Unit)",
+      "back": "Verifizierte Kohlenstoffeinheit\n\nDie Credit-Einheit im Verra/VCS-System. Jeder VCU repräsentiert 1 tCO2e vermiedener oder entfernter Emissionen.\n\nJeder VCU erhält eine einzigartige Seriennummer im Verra-Registry und kann nur einmal retired werden."
+    },
+    {
+      "id": 23,
+      "category": "Registries & Players",
+      "front": "Gold Standard",
+      "back": "Gold Standard (Zertifizierungsstandard)\n\nVon WWF gegründeter Standard (2003) mit Sitz in Genf. Fokus auf SDG-Co-Benefits und Entwicklungsländer. CCP-Pflicht ab Januar 2026 -- frühe Adoption.\n\nStärke: Hohe Glaubwürdigkeit durch SDG-Nachweis. Schwerpunkte: Erneuerbare Energie und Cookstove-Projekte."
+    },
+    {
+      "id": 24,
+      "category": "Registries & Players",
+      "front": "Social Carbon",
+      "back": "Social Carbon (Co-Standard)\n\nCo-Standard für soziale Co-Benefits, basierend auf dem Hexagon-Modell (6 Ressourcen-Dimensionen). Kann zusätzlich zu VCS oder Gold Standard verwendet werden.\n\n11 NBS-Methodologien. Registry betrieben durch Wilder Earth. SCD0003: Eddy-Covariance-basierte GHG-Quantifizierung."
+    },
+    {
+      "id": 25,
+      "category": "Registries & Players",
+      "front": "Registry",
+      "back": "Register / Emissionsregister\n\nZentrale Datenbank für Credit-Serialisierung, Kontenverwaltung und Transaktionen. Jeder Credit erhält eine einzigartige ID.\n\nFunktionen: Issuance, Transfer, Cancellation, Retirement. Öffentlicher Zugang zu Projektdokumenten. Art. 6-Schnittstelle zu nationalen Registern und UNFCCC."
+    },
+    {
+      "id": 26,
+      "category": "Registries & Players",
+      "front": "Project Developer",
+      "back": "Projektentwickler\n\nUnternehmen, das Carbon-Projekte plant, umsetzt und die Credit-Generierung organisiert (Design, MRV, Vermarktung).\n\nTypische Vergütung: 20-40% des Credit-Erlöses. Grösster Entwickler: South Pole (Zürich, ~18% Marktanteil). Rekapitalisierung 2025 wegen Qualitätsproblemen."
+    },
+    {
+      "id": 27,
+      "category": "Registries & Players",
+      "front": "VVB (Validation/Verification Body)",
+      "back": "Validierungs-/Verifizierungsstelle\n\nUnabhängiger, akkreditierter Auditor, der Carbon-Projekte in zwei Phasen prüft: (1) Validation des Projektdesigns, (2) Verification der tatsächlichen Emissionsreduktionen.\n\nStrukturelles Problem: VVBs werden vom Developer bezahlt → Interessenkonflikt und Anreiz zur Beschönigung."
+    },
+    {
+      "id": 28,
+      "category": "Registries & Players",
+      "front": "Rating Agency (Carbon)",
+      "back": "Carbon-Credit-Ratingagentur\n\nUnternehmen, die Carbon Credits mittels KI und Datenanalyse qualitativ bewerten. Zunehmend einflussreich auf die Preisbildung.\n\nFührende Anbieter: Sylvera, Pachama, Calyx Global, BeZero. Nutzen KI für Anomalie-Erkennung und Over-Crediting-Muster."
+    },
+    {
+      "id": 29,
+      "category": "Project Lifecycle",
+      "front": "PDD (Project Design Document)",
+      "back": "Projektbeschreibungsdokument\n\nFormale Projektbeschreibung bei der Registrierung eines Carbon-Projekts. Enthält: Standard, gewählte Methodologie, Baseline-Szenario, erwartete Emissionsreduktionen.\n\nSchritt 2 im 10-Schritte-Lifecycle. Wird vom VVB bei der Validation geprüft. Öffentlich einsehbar im Registry."
+    },
+    {
+      "id": 30,
+      "category": "Project Lifecycle",
+      "front": "Validation",
+      "back": "Validierung\n\nPrüfung des Projektdesigns (PDD) durch einen unabhängigen VVB vor Projektstart. Bestätigt, dass das Projekt die Standard-Anforderungen erfüllt.\n\nSchritt 3 im Lifecycle. Prüft: Additionality, Baseline-Methodik, Monitoring-Plan, Stakeholder-Konsultation. Muss vor Registrierung abgeschlossen sein."
+    },
+    {
+      "id": 31,
+      "category": "Project Lifecycle",
+      "front": "Verification",
+      "back": "Verifizierung\n\nPrüfung der tatsächlichen Emissionsreduktionen durch einen VVB nach der Monitoring-Phase. Bestätigt, dass die berichteten Reduktionen korrekt gemessen wurden.\n\nSchritt 7 im Lifecycle. Traditionell alle 5 Jahre, mit dMRV potenziell kontinuierlich. Erst nach Verification erfolgt die Credit-Issuance."
+    },
+    {
+      "id": 32,
+      "category": "Project Lifecycle",
+      "front": "Issuance",
+      "back": "Credit-Ausstellung / Emission\n\nErzeugung der Carbon Credits im Registry nach erfolgreicher Verification. Jeder Credit erhält eine einzigartige Seriennummer.\n\nSchritt 8 im Lifecycle. Credits werden dem Project Account gutgeschrieben und können danach transferiert oder retired werden."
+    },
+    {
+      "id": 33,
+      "category": "Project Lifecycle",
+      "front": "Monitoring",
+      "back": "Überwachung / Datenerhebung\n\nKontinuierliche Erhebung von Emissionsdaten während der Projektlaufzeit. Basis für den Verification-Bericht.\n\nSchritt 6 im Lifecycle. Traditionell: manuell, stichprobenbasiert. dMRV: automatisiert mit IoT-Sensoren, Satelliten und KI. Dauer: gesamte Projektlaufzeit (oft 20-30+ Jahre)."
+    },
+    {
+      "id": 34,
+      "category": "Project Lifecycle",
+      "front": "REDD+ (Reducing Emissions from Deforestation and Forest Degradation)",
+      "back": "Reduktion von Emissionen aus Entwaldung und Walddegradation\n\nUN-Mechanismus zum Schutz bestehender Wälder. Generiert Avoidance Credits durch verhinderte Abholzung. Grösste Projektkategorie im VCM.\n\nKontrovers: Guardian-Enthüllung 2023 zeigte 90% ohne Klimaeffekt. Baselines um 400-950% überschätzt. Reformiert durch VM0048 (Verra)."
+    },
+    {
+      "id": 35,
+      "category": "Project Lifecycle",
+      "front": "ARR (Afforestation, Reforestation, Revegetation)",
+      "back": "Aufforstung, Wiederaufforstung, Renaturierung\n\nProjektkategorie für die Neuanpflanzung von Wäldern oder Wiederherstellung von Vegetation. Generiert Removal Credits.\n\nPreis: USD 10-30/t. Permanenz: 30-100 Jahre (Risiko: Feuer, Schädlinge). Absicherung über Buffer Pool. Weniger kontrovers als REDD+."
+    },
+    {
+      "id": 36,
+      "category": "Project Lifecycle",
+      "front": "NBS (Nature-Based Solutions)",
+      "back": "Naturbasierte Lösungen\n\nOberbegriff für Carbon-Projekte, die auf natürlichen Ökosystemen basieren: Waldschutz (REDD+), Aufforstung (ARR), Bodenkohlenstoff, Mangroven etc.\n\nPreise: USD 15-35/t (Nature-Based Removal). Social Carbon hat 11 NBS-spezifische Methodologien. Dominieren den VCM nach Volumen."
+    },
+    {
+      "id": 37,
+      "category": "Article 6 & Paris",
+      "front": "Paris Agreement",
+      "back": "Pariser Klimaabkommen (2015)\n\nGlobales Klimaabkommen mit 195+ Vertragsstaaten. Jedes Land setzt eigene Klimaziele (NDCs) mit Verschärfungsmechanismus (Ratchet). Artikel 6 regelt internationale Kohlenstoffmärkte.\n\nZiel: Erwärmung auf 1.5°C begrenzen. Art. 6 Regelbuch verabschiedet bei COP26 Glasgow (2021). Erste ITMO-Transfers 2024/2025."
+    },
+    {
+      "id": 38,
+      "category": "Article 6 & Paris",
+      "front": "NDC (Nationally Determined Contribution)",
+      "back": "National festgelegter Klimabeitrag\n\nDas nationale Klimaziel jedes Staates unter dem Paris Agreement. Wird alle 5 Jahre verschärft (Ratchet-Mechanismus).\n\nBeispiele: Schweiz -50% bis 2030 (vs. 1990), davon 75% Inland / 25% Ausland. Indonesien: -31.89% (unconditional) / -43.2% (conditional)."
+    },
+    {
+      "id": 39,
+      "category": "Article 6 & Paris",
+      "front": "ITMO (Internationally Transferable Mitigation Outcome)",
+      "back": "International übertragbares Minderungsergebnis\n\nDie Handelseinheit unter Artikel 6.2 des Paris Agreement. Staaten transferieren ITMOs bilateral, um ihre NDC-Ziele zu erfüllen.\n\n90+ bilaterale Abkommen weltweit (März 2026). Schweiz: 16 Abkommen (Nr. 2 weltweit nach Japan). Erster ITMO-Transfer: Thailand-Schweiz (Jan. 2024)."
+    },
+    {
+      "id": 40,
+      "category": "Article 6 & Paris",
+      "front": "Corresponding Adjustment (CA)",
+      "back": "Korrespondierende Anpassung\n\nBuchhalterische Anpassung der Emissionsbilanz: Das Host-Land addiert die exportierten ITMOs zu seinen Emissionen, das Käuferland subtrahiert sie.\n\nVerhindert Double Counting. Ohne CA würde dieselbe Reduktion doppelt gezählt. CA wird zum Preisaufschlag: autorisierte Credits > nicht-autorisierte."
+    },
+    {
+      "id": 41,
+      "category": "Article 6 & Paris",
+      "front": "Article 6.2 (Bilateral Cooperation)",
+      "back": "Artikel 6.2 (Bilaterale Kooperation)\n\nErmöglicht Staaten den direkten bilateralen Handel mit ITMOs. Flexibler als Art. 6.4, da keine UN-Aufsicht erforderlich.\n\n90+ Abkommen, 176 Pilotaktivitäten (März 2026). 147 davon Japan JCM. 31 Autorisierungspolitiken, 25 ITMO-Registries weltweit."
+    },
+    {
+      "id": 42,
+      "category": "Article 6 & Paris",
+      "front": "Article 6.4 / PACM (Paris Agreement Crediting Mechanism)",
+      "back": "Artikel 6.4 / Pariser Klimaschutz-Kreditierungsmechanismus\n\nZentralisierter UN-Mechanismus unter Aufsicht des Supervisory Body. Nachfolger des CDM. Generiert standardisierte A6.4ERs.\n\nCDM-Transition: 1'389 Projekte eingereicht, 124 genehmigt. Potenzial: >900 Mio. tCO2e. Erste A6.4ER-Issuance verschoben auf Anfang 2026."
+    },
+    {
+      "id": 43,
+      "category": "Article 6 & Paris",
+      "front": "Host Country Authorization (LoA)",
+      "back": "Gastland-Autorisierung (Letter of Authorization)\n\nStaatliche Genehmigung für den Export von ITMOs. Definiert die autorisierte Menge und die CA-Verpflichtung des Gastlandes.\n\nOhne LoA kann ein Credit nicht als ITMO international transferiert werden. Verknüpft mit bilateralem Art. 6.2-Abkommen."
+    },
+    {
+      "id": 44,
+      "category": "Article 6 & Paris",
+      "front": "CDM (Clean Development Mechanism)",
+      "back": "Mechanismus für umweltverträgliche Entwicklung\n\nKyoto-Mechanismus (1997) für Klimaprojekte in Entwicklungsländern. Generierte CERs (Certified Emission Reductions). Vorgänger von Art. 6.4.\n\nCDM-Transition zu Art. 6.4: 1'389 Projekte eingereicht, 124 genehmigt. Art. 6.4 hat strengere Regeln als CDM."
+    },
+    {
+      "id": 45,
+      "category": "Market Trends",
+      "front": "CCP Premium",
+      "back": "CCP-Preisaufschlag\n\nPreisaufschlag für Carbon Credits mit CCP-Label (Core Carbon Principles des ICVCM). Käufer zahlen mehr für qualitätsgeprüfte Credits.\n\n+25% Preispremium, +35% Preisanstieg in CCP-Kategorien (H2 2024). Qualitätsspreizung: High-Integrity Credits kosten 300% mehr als Low-Quality."
+    },
+    {
+      "id": 46,
+      "category": "Market Trends",
+      "front": "Anti-Greenwashing Regulation",
+      "back": "Anti-Greenwashing-Regulierung\n\nEU Empowering Consumers Directive: Verbietet ab September 2026 generische Claims wie «klimaneutral» oder «CO2-kompensiert» ohne spezifische, verifizierbare Belege.\n\nKonsequenz: VCM konsolidiert sich, Billig-Credits werden unverkäuflich. CCP-Label oder vergleichbare Zertifizierung wird faktisch Pflicht."
+    },
+    {
+      "id": 47,
+      "category": "Market Trends",
+      "front": "CORSIA (Carbon Offsetting and Reduction Scheme for International Aviation)",
+      "back": "CO2-Kompensations- und Reduktionsprogramm für die internationale Luftfahrt\n\nICAO-Programm, ab 2024 verpflichtend für internationale Flüge. Akzeptiert bestimmte VCM-Credits als Offsets.\n\nPreis: ~EUR 19/t. Wichtige Brücke zwischen VCM und Compliance-Markt, da Airline-Nachfrage VCM-Volumen stützt."
+    },
+    {
+      "id": 48,
+      "category": "Market Trends",
+      "front": "CBAM (Carbon Border Adjustment Mechanism)",
+      "back": "CO2-Grenzausgleichsmechanismus\n\nEU-Importsteuer auf CO2-intensive Güter. Definitive Phase ab 1.1.2026 (Übergang seit Okt. 2023). Sektoren: Stahl, Aluminium, Zement, Dünger, Strom, Wasserstoff.\n\nStrafe: EUR 100/t bei Nichterfüllung. Erfordert präzise Emissions-Messung in Lieferketten. Treiber für dMRV-Nachfrage."
+    },
+    {
+      "id": 49,
+      "category": "Market Trends",
+      "front": "Two-Class Market",
+      "back": "Zwei-Klassen-Markt\n\nMegatrend im VCM: Aufspaltung in CCP-zertifizierte High-Integrity-Credits mit Preispremium und nicht-zertifizierte Low-Quality-Credits mit Preisverfall.\n\n84% der Credits gelten als High-Risk (Nature Communications, 2024). CCP-Label wird zur Trennlinie. Anti-Greenwashing-Regulierung beschleunigt diese Entwicklung."
+    },
+    {
+      "id": 50,
+      "category": "Market Trends",
+      "front": "dMRV (Digital Monitoring, Reporting, Verification)",
+      "back": "Digitale Messung, Berichterstattung, Verifizierung\n\nAutomatisiertes MRV mit IoT-Sensoren, Satellitenfernerkundung, KI-Analytics und Datenplattformen. Antwort auf die Integritätskrise des VCM.\n\nVorteile: kontinuierlich statt jährlich, sensorbasiert statt Stichprobe, manipulationssicherer. 60%+ neuer Carbon-Plattformen nutzen Blockchain (2025)."
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "profile": "patrick",
+  "sets": [
+    {
+      "id": "glossar-core",
+      "file": "sets/glossar-core.json",
+      "title": "Glossar Core — Carbon Market Terminology",
+      "domain": "glossar",
+      "cardCount": 50,
+      "tags": ["VCM", "terminology", "DE-EN", "standards", "Art. 6"],
+      "materials": [
+        {"type": "referenz", "title": "Market Map", "file": "materials/ref-market-map.html"}
+      ]
+    },
+    {
+      "id": "glossar-recht",
+      "file": "sets/glossar-recht.json",
+      "title": "Glossar Recht — Contract & Tax Terminology",
+      "domain": "glossar",
+      "cardCount": 25,
+      "tags": ["CISG", "arbitration", "WHT", "indemnity", "FPIC"],
+      "materials": [
+        {"type": "referenz", "title": "Vertragsarchitektur", "file": "materials/ref-vertragsarchitektur.html"}
+      ]
+    },
+    {
+      "id": "glossar-jurisdiktion",
+      "file": "sets/glossar-jurisdiktion.json",
+      "title": "Glossar Jurisdiktion — Regulatory Frameworks",
+      "domain": "glossar",
+      "cardCount": 20,
+      "tags": ["OHADA", "EU ETS", "ARMCA", "SRUK", "Swiss OR"],
+      "materials": [
+        {"type": "referenz", "title": "Laendervergleich", "file": "materials/ref-laendervergleich.html"}
+      ]
+    }
+  ],
+  "media": [
+    {
+      "id": "ep01",
+      "type": "podcast",
+      "title": "EP01: The Carbon Credit Universe",
+      "file": "media/ep01.mp3",
+      "duration": "",
+      "description": "VCM vs Compliance, 300x Preisspread, Integrity Crisis, ICVCM CCPs, Two-Class Market",
+      "domain": "markt",
+      "linkedSet": "glossar-core",
+      "linkedRef": "ref-market-map"
+    },
+    {
+      "id": "ep02",
+      "type": "podcast",
+      "title": "EP02: From PDD to Retirement — Carbon Credit Lifecycle",
+      "file": "media/ep02.mp3",
+      "duration": "",
+      "description": "8-Step Lifecycle, PDD, VVB Conflict, Registry Accounts, Permanence, Buffer Pool",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep03",
+      "type": "podcast",
+      "title": "EP03: Standards, Registries & the Integrity Revolution",
+      "file": "media/ep03.mp3",
+      "duration": "",
+      "description": "Verra, Gold Standard, Social Carbon, ICVCM 10 CCPs, AI Rating Agencies",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep04",
+      "type": "podcast",
+      "title": "EP04: The Regulatory Tsunami",
+      "file": "media/ep04.mp3",
+      "duration": "",
+      "description": "EU ETS, CBAM, CSRD, Anti-Greenwashing Sept 2026, CORSIA, 6 Megatrends",
+      "domain": "regulierung",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep05",
+      "type": "podcast",
+      "title": "EP05: Article 6 Paris Agreement — The Game Changer",
+      "file": "media/ep05.mp3",
+      "duration": "",
+      "description": "Art. 6.2, ITMOs, Corresponding Adjustments, CH 16 Bilateral, KliK Foundation",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep06",
+      "type": "podcast",
+      "title": "EP06: The Great Convergence",
+      "file": "media/ep06.mp3",
+      "duration": "",
+      "description": "VCM meets Compliance, Dual-Pathway Architecture, 4x Price Arbitrage, DRC Case",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep07",
+      "type": "podcast",
+      "title": "EP07: Who Owns the Carbon?",
+      "file": "media/ep07.mp3",
+      "duration": "",
+      "description": "Carbon Rights, 3-Layer Consent Architecture, FPIC, Carbon Land Grab, 9 Safeguards",
+      "domain": "glossar",
+      "linkedSet": "glossar-recht"
+    },
+    {
+      "id": "ep08",
+      "type": "podcast",
+      "title": "EP08: Country Risk Deep Dive",
+      "file": "media/ep08.mp3",
+      "duration": "",
+      "description": "DRC 7 Risk Categories, Indonesia GO, Malaysia, Bolivia, 24 DD Questions",
+      "domain": "laender",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep09",
+      "type": "podcast",
+      "title": "EP09: Technology — dMRV, aMRV & Trust",
+      "file": "media/ep09.mp3",
+      "duration": "",
+      "description": "Eddy Covariance, LI-COR, Blockchain (Hedera/Chainlink), SCD0003, Data Ownership",
+      "domain": "technik",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep10",
+      "type": "podcast",
+      "title": "EP10: Contracting Carbon — The Playbook",
+      "file": "media/ep10.mp3",
+      "duration": "",
+      "description": "5-Fee Architecture, CSA-A/B, Warranty Pass-Through, Country Annexes, Multi-Jurisdictional",
+      "domain": "vertrag",
+      "linkedSet": "glossar-recht"
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-market-map",
+      "title": "Market Map",
+      "file": "materials/ref-market-map.html",
+      "domain": "markt",
+      "description": "VCM vs Compliance, Marktgroessen, Preisbaender, 6 Megatrends 2026"
+    },
+    {
+      "id": "ref-standards-vergleich",
+      "title": "Standards Vergleich",
+      "file": "materials/ref-standards-vergleich.html",
+      "domain": "markt",
+      "description": "Verra vs Gold Standard vs Social Carbon — Scope, Methodiken, CCP, Art. 6"
+    },
+    {
+      "id": "ref-lifecycle-flowchart",
+      "title": "Lifecycle Flowchart",
+      "file": "materials/ref-lifecycle-flowchart.html",
+      "domain": "markt",
+      "description": "8 Schritte visuell, Akteure pro Schritt, Geldfluss, Contract Touchpoints"
+    },
+    {
+      "id": "ref-regulierung-timeline",
+      "title": "Regulierung Timeline",
+      "file": "materials/ref-regulierung-timeline.html",
+      "domain": "regulierung",
+      "description": "EU ETS → CBAM → CSRD → Anti-Greenwashing → CORSIA mit Daten"
+    },
+    {
+      "id": "ref-article-6",
+      "title": "Article 6 Uebersicht",
+      "file": "materials/ref-article-6.html",
+      "domain": "regulierung",
+      "description": "6.2 vs 6.4, CH-Bilaterale (16 Laender), KliK Budget, ITMO-Preise"
+    },
+    {
+      "id": "ref-fee-matrix",
+      "title": "Fee Matrix",
+      "file": "materials/ref-fee-matrix.html",
+      "domain": "vertrag",
+      "description": "5 Fees x 2 Modelle x 3 Infrastructure — wer zahlt was"
+    },
+    {
+      "id": "ref-drc-dashboard",
+      "title": "DRC Risiko-Dashboard",
+      "file": "materials/ref-drc-dashboard.html",
+      "domain": "laender",
+      "description": "7 Risiken, 6 Showstopper, 12 Instrumente, 50/25/25 Waterfall"
+    },
+    {
+      "id": "ref-laendervergleich",
+      "title": "Laendervergleich",
+      "file": "materials/ref-laendervergleich.html",
+      "domain": "laender",
+      "description": "DRC vs Indonesien vs Malaysia vs Bolivien — WHT, PE, Art. 6, CPI"
+    },
+    {
+      "id": "ref-company-profil",
+      "title": "COMPANY Profil",
+      "file": "materials/ref-company-profil.html",
+      "domain": "technik",
+      "description": "aMRV, Team, Partner, SCD0003, Technologie-Stack"
+    },
+    {
+      "id": "ref-vertragsarchitektur",
+      "title": "Vertragsarchitektur",
+      "file": "materials/ref-vertragsarchitektur.html",
+      "domain": "vertrag",
+      "description": "FA → CSA-A/B → WO → Country Annex — Hierarchie visuell"
+    }
+  ]
+}

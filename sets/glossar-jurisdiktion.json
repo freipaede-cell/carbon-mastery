@@ -1,0 +1,128 @@
+{
+  "id": "glossar-jurisdiktion",
+  "title": "Carbon Market Jurisdiction-Specific Terminology",
+  "domain": "glossar",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "International",
+      "front": "OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires)",
+      "back": "Organisation für die Harmonisierung des Wirtschaftsrechts in Afrika\n\nHarmonisiertes Wirtschaftsrecht für 17 westafrikanische Staaten (inkl. DRC, Mitglied seit 12.09.2012). Umfasst Gesellschaftsrecht (AUSCGIE), Handelsregister (RCCM) und Buchführung (SYSCOHADA).\n\nGesellschaftsformen: SARL (kein Mindestkapital), SAS (flexibel), SA (XAF 10 Mio. Mindestkapital)."
+    },
+    {
+      "id": 2,
+      "category": "International",
+      "front": "BIT (Bilateral Investment Treaty)",
+      "back": "Bilaterales Investitionsschutzabkommen\n\nStaatsvertrag zum Schutz ausländischer Investitionen gegen Enteignung, Diskriminierung und unfaire Behandlung. Ermöglicht Investor-Staat-Schiedsverfahren.\n\nBeispiele: BIT CH-Indonesien (2022, erneuert), BIT CH-Malaysia (1978). DRC: Mining Code 2018 erlaubte einseitige Royalty-Erhöhung und 29 Lizenzentzüge."
+    },
+    {
+      "id": 3,
+      "category": "International",
+      "front": "ICSID (International Centre for Settlement of Investment Disputes)",
+      "back": "Internationales Zentrum zur Beilegung von Investitionsstreitigkeiten\n\nSchiedsinstitution der Weltbank für Investor-Staat-Streitigkeiten. Zuständig wenn BIT-Klausel auf ICSID verweist.\n\nRelevant bei Enteignungsrisiken im Carbon-Bereich: DRC hat «extreme risk» beim Verisk Resource Nationalism Index (Rang 1). Alles Land formal Staatseigentum."
+    },
+    {
+      "id": 4,
+      "category": "International",
+      "front": "Hague Convention",
+      "back": "Haager Übereinkommen\n\nSammelbegriff für multilaterale Abkommen zur internationalen Rechtshilfe, Zustellung und Urteilsanerkennung. Erleichtert grenzüberschreitende Prozessführung.\n\nPraktische Bedeutung: Zustellung gerichtlicher Dokumente in Carbon-Streitigkeiten. Ergänzt NYC 1958 (Schiedssprüche) um staatliche Gerichtsurteile."
+    },
+    {
+      "id": 5,
+      "category": "International",
+      "front": "UNCITRAL (United Nations Commission on International Trade Law)",
+      "back": "UN-Kommission für internationales Handelsrecht\n\nUN-Organ, das internationale Handelsrechtsstandards entwickelt. Erstellt Modellgesetze und Schiedsregeln (UNCITRAL Arbitration Rules).\n\nAlternative zu ICC-Schiedsverfahren: Keine Institution verwaltet das Verfahren, daher günstiger. UNCITRAL Model Law bildet Basis vieler nationaler Schiedsgesetze."
+    },
+    {
+      "id": 6,
+      "category": "Swiss",
+      "front": "OR (Obligationenrecht / Swiss Code of Obligations)",
+      "back": "Obligationenrecht (Schweizer Vertragsrecht)\n\nZentrales Schweizer Vertragsrecht. Wichtige zwingende Bestimmungen für Carbon-Verträge: OR 100(1) Haftung bei Vorsatz/grober Fahrlässigkeit nicht abbedingbar. OR 404(1) Auftrag jederzeit widerrufbar.\n\nOR 73: Verzugszins 5%. OR 160-163: Konventionalstrafe richterlich herabsetzbar (Art. 163(3)). OR 119: Unmöglichkeit → beide Leistungspflichten erlöschen."
+    },
+    {
+      "id": 7,
+      "category": "Swiss",
+      "front": "EHS (Emissionshandelssystem / Swiss ETS)",
+      "back": "Schweizer Emissionshandelssystem\n\nSchweizer Cap-and-Trade-System, seit 2020 mit dem EU ETS verknüpft. Teil der Schweizer Klimapolitik mit CO2-Abgabe von CHF 120/t auf Brennstoffe.\n\nNet-Zero-Ziel: 2050 (Klimaschutzgesetz 2023). Reduktionsziel: -50% bis 2030 (vs. 1990), davon 75% Inland / 25% Ausland."
+    },
+    {
+      "id": 8,
+      "category": "Swiss",
+      "front": "DSG (Datenschutzgesetz / Swiss Data Protection Act)",
+      "back": "Schweizer Datenschutzgesetz\n\nRevidiertes DSG seit 01.09.2023, inhaltlich der EU-DSGVO angenähert. Relevant für dMRV-Datenverarbeitung bei Carbon-Projekten.\n\nSanktionen: bis CHF 250'000 (gegen natürliche Personen). Drittlandtransfer: Swiss-US DPF für zertifizierte US-Unternehmen, sonst SCC + DSFA erforderlich."
+    },
+    {
+      "id": 9,
+      "category": "Swiss",
+      "front": "SECO (State Secretariat for Economic Affairs)",
+      "back": "Staatssekretariat für Wirtschaft\n\nSchweizer Bundesbehörde für Wirtschaftspolitik, Sanktionen und Exportkontrolle. Setzt UN/EU-Sanktionen in der Schweiz um.\n\nRelevant: SECO-Sanktionsliste für Carbon-Partner-Screening. SECO übernimmt OFAC-Sanktionen NICHT automatisch -- eigene Prüfung erforderlich."
+    },
+    {
+      "id": 10,
+      "category": "Swiss",
+      "front": "KliK Foundation",
+      "back": "Stiftung Klimaschutz und CO2-Kompensation (KliK)\n\nZentrale Schweizer ITMO-Käuferin. Finanziert durch die CO2-Kompensationspflicht der Treibstoffimporteure.\n\nMeilensteine: Thailand (Jan. 2024, erster ITMO-Kauf weltweit), Ghana (Juli 2025, 11'733 ITMOs aus Cookstoves), Norwegen (Juni 2025, weltweit erstes CDR-ITMO)."
+    },
+    {
+      "id": 11,
+      "category": "EU",
+      "front": "EU ETS (European Union Emissions Trading System)",
+      "back": "EU-Emissionshandelssystem\n\nGrösstes Cap-and-Trade-System weltweit. Volumen: ~1.4 Mrd. t (EU + CH + EWR). Seit 2020 mit Schweizer EHS verknüpft.\n\nPreis Ende 2025: EUR 60-82/t. Prognose 2030: EUR 149/t (BNEF). EU ETS 2 ab 2027: Erweiterung auf Gebäude und Strassenverkehr."
+    },
+    {
+      "id": 12,
+      "category": "EU",
+      "front": "CSRD (Corporate Sustainability Reporting Directive)",
+      "back": "EU-Richtlinie zur Nachhaltigkeitsberichterstattung\n\nAb 2024 stufenweise, betrifft ~50'000 Unternehmen. Pflicht zur Berichterstattung über Scope 1/2/3-Emissionen nach ESRS-Standards.\n\nExtern geprüft (Limited → Reasonable Assurance). Nicht-EU-Unternehmen ab EUR 150 Mio. EU-Umsatz betroffen. Haupttreiber für Carbon-Accounting-Nachfrage."
+    },
+    {
+      "id": 13,
+      "category": "EU",
+      "front": "CBAM (Carbon Border Adjustment Mechanism)",
+      "back": "CO2-Grenzausgleichsmechanismus der EU\n\nEU-Importsteuer auf CO2-intensive Güter, definitiv ab 1.1.2026. Sektoren: Stahl, Aluminium, Zement, Dünger, Strom, Wasserstoff.\n\nStrafe: EUR 100/t bei Nichterfüllung. Importeure müssen Emissionen deklarieren und CBAM-Zertifikate kaufen. Erfordert präzise Emissions-Messung in Lieferketten."
+    },
+    {
+      "id": 14,
+      "category": "EU",
+      "front": "GDPR / DSGVO (General Data Protection Regulation)",
+      "back": "Datenschutz-Grundverordnung (EU)\n\nEU-Datenschutzrecht mit extraterritorialer Wirkung (Art. 3). Relevant für dMRV-Datenverarbeitung bei Carbon-Projekten mit EU-Bezug.\n\nSanktionen: bis EUR 20 Mio. oder 4% Jahresumsatz. Art. 28: DPA zwingend. Art. 22: Automatisierte Entscheidungen eingeschränkt. Drittlandtransfer: SCC oder Angemessenheitsbeschluss."
+    },
+    {
+      "id": 15,
+      "category": "EU",
+      "front": "EU Taxonomy",
+      "back": "EU-Taxonomie (Klassifikation nachhaltiger Aktivitäten)\n\nEU-Regelwerk zur Klassifikation «nachhaltiger» wirtschaftlicher Aktivitäten. Carbon-Projekte müssen Taxonomy-Kriterien erfüllen, um als «grün» zu gelten.\n\nVerbindung zu CSRD: Unternehmen müssen Taxonomy-Konformität ihrer Umsätze, CapEx und OpEx berichten. Beeinflusst, welche Carbon-Credits als nachhaltig anerkannt werden."
+    },
+    {
+      "id": 16,
+      "category": "Emerging Markets",
+      "front": "ARMCA (Autorité de Régulation des Marchés de Carbone)",
+      "back": "Regulierungsbehörde für Kohlenstoffmärkte (DRC)\n\nDRC-Carbon-Marktbehörde, gegründet durch Decree 23/22 (14.06.2023). Operativ seit COP30 (20.11.2025) mit digitalem Carbon-Register (Blockchain/AI, TRST01).\n\n8 Carbon-Konzessionen im Jan. 2024 annulliert (inkl. Isangi). 6 von 9 Durchführungsverordnungen fehlen noch (März 2026). Regulierungsvakuum."
+    },
+    {
+      "id": 17,
+      "category": "Emerging Markets",
+      "front": "SRUK (Sistem Registrasi Unit Karbon)",
+      "back": "Indonesisches Carbon Unit Registry\n\nNationales Register für Carbon-Einheiten in Indonesien. Geplant operativ 2026. Unterscheidet CA-Units (Art. 6, NDC-Abzug) und Non-CA-Units (freiwilliger Markt).\n\nDual-Registry-System: SRUK + SRN PPI (Klima-NDC-Register). Perpres 110/2025 anerkennt internationale Standards (Verra, Gold Standard) -- kein MRA-Verfahren mehr nötig."
+    },
+    {
+      "id": 18,
+      "category": "Emerging Markets",
+      "front": "OFAC (Office of Foreign Assets Control)",
+      "back": "US-Sanktionsbehörde\n\nUS-Behörde für Wirtschaftssanktionen und Handelsembargos. Sanktionslisten sind extraterritorial relevant (auch für Nicht-US-Unternehmen bei USD-Transaktionen).\n\n02.03.2026: OFAC sanktionierte Rwanda Defence Force wegen M23-Unterstützung in DRC. 50%-Regel: Entität gilt als sanktioniert wenn ≥50% von einem SDN gehalten."
+    },
+    {
+      "id": 19,
+      "category": "Emerging Markets",
+      "front": "Perpres 110/2025 (Indonesian Carbon Economic Value Regulation)",
+      "back": "Indonesische Carbon-Handelsverordnung 110/2025\n\nIn Kraft seit 10.10.2025, ersetzt Perpres 98/2021. Hebt das Moratorium auf -- Carbon-Handel VOR NDC-Zielerreichung erlaubt (Art. 58(1)).\n\nArt. 66: Internationale Standards anerkannt (Verra, Gold Standard). Neues Konzept «Alokasi Karbon» (Emissionsquoten). Übergangsfrist bis Oktober 2026."
+    },
+    {
+      "id": 20,
+      "category": "Emerging Markets",
+      "front": "MACC Section 17A (Malaysian Anti-Corruption Commission)",
+      "back": "Malaysische Antikorruptionskommission, Abschnitt 17A\n\nCorporate-Liability-Bestimmung: Unternehmen haften für Korruptionshandlungen ihrer Mitarbeiter, Agenten oder verbundenen Personen, sofern keine «adequate procedures» implementiert sind.\n\nMalaysia CPI 2024: Score 52, Rang 54/180. Relevant bei Carbon-Projekten in Sabah (eigene Carbon-Credit-Regeln seit 2025)."
+    }
+  ]
+}

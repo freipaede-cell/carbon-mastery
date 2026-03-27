@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Carbon Mastery</title>
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Carbon Mastery">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192.png">
+<meta name="theme-color" content="#2BBFB3">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a2744; --bg-deep: #111c33; --card: #223352; --card-hover: #2a3d60;
+  --text: #e8ecf2; --text-muted: #8a9bb8; --accent: #2BBFB3; --green: #43A047;
+  --red: #ef5350; --yellow: #fbbf24; --pink: #f472b6; --purple: #c084fc;
+  --radius: 14px; --radius-sm: 10px; --shadow: 0 4px 20px rgba(0,0,0,0.35);
+  --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* domain colors */
+  --d-glossar: #38bdf8; --d-markt: #4ade80; --d-regulierung: #fbbf24;
+  --d-technik: #c084fc; --d-laender: #f87171; --d-vertrag: #2BBFB3;
+}
+html, body { height: 100%; overflow: hidden; }
+body { font-family: -apple-system, system-ui, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; }
+.app { height: 100%; display: flex; flex-direction: column; padding-top: var(--safe-top); }
+
+/* HEADER */
+.header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; min-height: 52px; flex-shrink: 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.header-left { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
+.header-logo { font-size: 18px; font-weight: 700; color: var(--accent); letter-spacing: -0.3px; white-space: nowrap; }
+.header-subtitle { font-size: 13px; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-right { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.btn-icon { width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(255,255,255,0.07); color: var(--text); font-size: 17px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s; }
+.btn-icon:active { background: rgba(255,255,255,0.14); }
+.header-back { font-size: 22px; }
+.header-progress { font-size: 13px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+/* SCREENS */
+.screen { display: none; flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; padding: 0 16px 100px; }
+.screen.active { display: flex; flex-direction: column; }
+.screen.no-scroll { overflow: hidden; padding-bottom: 100px; }
+
+/* BOTTOM NAV */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-deep); border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-around; padding: 6px 0 calc(6px + var(--safe-bottom)); z-index: 50; }
+.nav-tab { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 12px; border: none; background: none; color: var(--text-muted); font-size: 10px; font-weight: 600; cursor: pointer; transition: color 0.2s; min-width: 60px; }
+.nav-tab .nav-icon { font-size: 20px; line-height: 1; }
+.nav-tab.active { color: var(--accent); }
+.nav-tab:active { opacity: 0.7; }
+
+/* HOME DASHBOARD */
+#screen-home { gap: 12px; padding-top: 12px; }
+.home-title { font-size: 22px; font-weight: 700; color: var(--accent); text-align: center; letter-spacing: -0.5px; }
+.streak-bar { text-align: center; padding: 8px; font-weight: 700; font-size: 14px; color: var(--yellow); }
+.due-bar { text-align: center; padding: 4px 12px; font-size: 13px; color: var(--green); background: rgba(67,160,71,0.1); border-radius: 20px; align-self: center; }
+.due-bar.urgent { color: var(--red); background: rgba(239,83,80,0.1); }
+.search-wrap { position: relative; margin-top: 4px; }
+.search-input { width: 100%; padding: 10px 14px 10px 38px; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); background: var(--card); color: var(--text); font-size: 14px; font-family: inherit; outline: none; }
+.search-input:focus { border-color: var(--accent); }
+.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 15px; color: var(--text-muted); pointer-events: none; }
+.search-results { margin-top: 8px; }
+.search-result-item { background: var(--card); border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 6px; cursor: pointer; transition: background 0.2s; }
+.search-result-item:active { background: var(--card-hover); }
+.search-result-title { font-size: 14px; font-weight: 600; }
+.search-result-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.home-section-title { font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 8px; }
+.quick-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+.quick-tile { background: var(--card); border-radius: var(--radius-sm); padding: 14px; cursor: pointer; transition: transform 0.2s; }
+.quick-tile:active { transform: scale(0.97); }
+.quick-tile-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+.quick-tile-value { font-size: 15px; font-weight: 600; margin-top: 4px; }
+.quick-tile-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* DOMAIN TILES */
+.domain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 12px; }
+.domain-tile { background: var(--card); border-radius: var(--radius); padding: 18px 14px; cursor: pointer; transition: transform 0.2s, background 0.2s; box-shadow: var(--shadow); text-align: center; position: relative; overflow: hidden; }
+.domain-tile:active { transform: scale(0.97); background: var(--card-hover); }
+.domain-tile-icon { font-size: 28px; margin-bottom: 6px; }
+.domain-tile-name { font-size: 14px; font-weight: 600; }
+.domain-tile-meta { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+.domain-tile-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.05); }
+.domain-tile-bar-fill { height: 100%; transition: width 0.5s; }
+
+/* SET LIST */
+#screen-setlist { gap: 8px; padding-top: 8px; }
+.set-card { background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 8px; cursor: pointer; transition: transform 0.2s; box-shadow: var(--shadow); }
+.set-card:active { transform: scale(0.98); }
+.set-card-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.set-card-meta { font-size: 12px; color: var(--text-muted); }
+.set-card-bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+.set-card-bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s; }
+.set-card-progress { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-align: right; }
+.archive-section { margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; }
+.archive-toggle { font-size: 13px; color: var(--text-muted); cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.archive-list { margin-top: 8px; }
+.archive-item { font-size: 12px; color: #64748b; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; justify-content: space-between; align-items: center; }
+.archive-restore { font-size: 11px; color: var(--accent); cursor: pointer; padding: 4px 8px; }
+.empty-section { text-align: center; padding: 60px 20px; color: var(--text-muted); font-size: 14px; }
+
+/* SET DETAIL */
+#screen-setdetail { gap: 12px; padding-top: 8px; }
+.detail-header { text-align: center; padding: 12px 0; }
+.detail-title { font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+.detail-domain { font-size: 13px; color: var(--text-muted); }
+.detail-stats { display: flex; justify-content: center; gap: 20px; padding: 8px 0; }
+.detail-stat { text-align: center; }
+.detail-stat-value { font-size: 22px; font-weight: 700; }
+.detail-stat-label { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.due-info { text-align: center; font-size: 13px; color: var(--green); font-weight: 600; }
+.topic-actions { display: flex; flex-direction: column; gap: 10px; }
+.btn-action { width: 100%; padding: 14px; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.15s; text-align: center; }
+.btn-action:active { transform: scale(0.97); }
+.btn-learn { background: var(--accent); color: var(--bg); }
+.btn-all { background: var(--card); border: 2px solid var(--accent); color: var(--accent); }
+.btn-exam { background: rgba(251,191,36,0.12); color: var(--yellow); border: 1px solid rgba(251,191,36,0.25); }
+.btn-reverse { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.25); }
+.btn-favorites-only { background: rgba(244,114,182,0.12); color: var(--pink); border: 1px solid rgba(244,114,182,0.25); }
+.btn-archive-set { background: transparent; color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); margin-top: 8px; }
+
+/* LEARN VIEW */
+#screen-learn { justify-content: center; align-items: center; padding: 0 16px; gap: 20px; }
+.flashcard-container { width: 100%; max-width: 440px; aspect-ratio: 3 / 4; max-height: 50vh; perspective: 1200px; cursor: pointer; position: relative; }
+.flashcard { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0.0,0.2,1); }
+.flashcard.flipped { transform: rotateY(180deg); }
+.flashcard-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; text-align: center; box-shadow: var(--shadow); overflow-y: auto; }
+.flashcard-front { background: var(--card); border: 1px solid rgba(255,255,255,0.08); }
+.flashcard-back { background: linear-gradient(135deg, #1e3a5f, var(--card)); border: 1px solid rgba(43,191,179,0.2); transform: rotateY(180deg); }
+.flashcard-label { position: absolute; top: 14px; left: 0; right: 0; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); text-align: center; }
+.flashcard-text { font-size: 17px; line-height: 1.5; word-break: break-word; }
+.flashcard-front .flashcard-text { font-weight: 600; font-size: 19px; }
+.flashcard-box-indicator { position: absolute; bottom: 14px; font-size: 10px; color: var(--text-muted); }
+.btn-favorite { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 19px; cursor: pointer; color: var(--text-muted); z-index: 5; padding: 4px; }
+.btn-favorite.active { color: var(--pink); }
+.answer-buttons { display: flex; gap: 14px; width: 100%; max-width: 440px; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.answer-buttons.visible { opacity: 1; pointer-events: auto; }
+.btn-answer { flex: 1; padding: 15px; border: none; border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; cursor: pointer; transition: transform 0.15s; min-height: 50px; color: #fff; }
+.btn-answer:active { transform: scale(0.95); }
+.btn-nochmal { background: var(--red); }
+.btn-gewusst { background: var(--green); }
+.flashcard-slide-left { animation: slideLeft 0.3s ease forwards; }
+.flashcard-slide-right { animation: slideRight 0.3s ease forwards; }
+@keyframes slideLeft { to { transform: translateX(-120%) rotate(-8deg); opacity: 0; } }
+@keyframes slideRight { to { transform: translateX(120%) rotate(8deg); opacity: 0; } }
+.flashcard-enter { animation: cardEnter 0.3s ease forwards; }
+@keyframes cardEnter { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* SESSION SUMMARY */
+.session-summary { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 20px; width: 100%; max-width: 440px; }
+.summary-title { font-size: 22px; font-weight: 700; }
+.summary-stats { display: flex; gap: 24px; }
+.summary-stat { text-align: center; }
+.summary-stat-value { font-size: 32px; font-weight: 700; }
+.summary-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.btn-primary { width: 100%; max-width: 440px; padding: 15px; border: none; border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; cursor: pointer; background: var(--accent); color: var(--bg); transition: transform 0.15s; }
+.btn-primary:active { transform: scale(0.97); }
+
+/* STATS */
+#screen-stats { gap: 16px; padding-top: 8px; }
+.stats-chart-container { display: flex; justify-content: center; padding: 12px 0; }
+.stats-chart { position: relative; width: 160px; height: 160px; }
+.stats-chart svg { transform: rotate(-90deg); }
+.stats-chart-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.stats-chart-percent { font-size: 26px; font-weight: 700; }
+.stats-chart-label { font-size: 11px; color: var(--text-muted); }
+.stats-legend { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.stats-legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-muted); }
+.stats-legend-dot { width: 9px; height: 9px; border-radius: 50%; }
+.stats-table { width: 100%; background: var(--card); border-radius: var(--radius); overflow: hidden; }
+.stats-table-header { display: grid; grid-template-columns: 1fr 50px 65px; padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.stats-table-row { display: grid; grid-template-columns: 1fr 50px 65px; padding: 10px 14px; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.04); align-items: center; }
+.stats-table-row:last-child { border-bottom: none; }
+.stats-table-question { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 6px; }
+.stats-table-box { text-align: center; font-weight: 600; font-size: 12px; }
+.stats-table-status { text-align: center; font-size: 11px; padding: 2px 6px; border-radius: 8px; font-weight: 600; }
+.status-new { background: rgba(148,163,184,0.15); color: #94a3b8; }
+.status-learning { background: rgba(251,191,36,0.15); color: var(--yellow); }
+.status-mastered { background: rgba(74,222,128,0.15); color: var(--green); }
+.btn-danger { width: 100%; padding: 13px; border: 2px solid var(--red); border-radius: var(--radius-sm); background: transparent; color: var(--red); font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 4px; }
+.btn-danger:active { background: rgba(239,83,80,0.12); }
+
+/* REFERENZ */
+#screen-referenz { gap: 8px; padding-top: 12px; }
+.ref-card { background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 8px; cursor: pointer; transition: transform 0.2s; box-shadow: var(--shadow); display: flex; align-items: flex-start; gap: 12px; text-decoration: none; color: inherit; }
+.ref-card:active { transform: scale(0.98); }
+.ref-badge { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.4px; flex-shrink: 0; margin-top: 2px; }
+.ref-info { flex: 1; min-width: 0; }
+.ref-title { font-size: 14px; font-weight: 600; }
+.ref-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+
+/* BIBLIOTHEK */
+#screen-bibliothek { gap: 8px; padding-top: 8px; }
+.filter-bar { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 8px; -webkit-overflow-scrolling: touch; flex-shrink: 0; }
+.filter-btn { padding: 7px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; background: transparent; color: var(--text-muted); font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.filter-btn:active { opacity: 0.7; }
+.media-card { background: var(--card); border-radius: var(--radius); padding: 14px; margin-bottom: 8px; cursor: pointer; transition: transform 0.2s; box-shadow: var(--shadow); }
+.media-card:active { transform: scale(0.98); }
+.media-card-top { display: flex; align-items: center; gap: 12px; }
+.media-type-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.media-info { flex: 1; min-width: 0; }
+.media-title { font-size: 14px; font-weight: 600; }
+.media-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.media-status { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px; flex-shrink: 0; }
+.media-status.new { background: rgba(43,191,179,0.15); color: var(--accent); }
+.media-status.consumed { background: rgba(255,255,255,0.06); color: var(--text-muted); }
+.media-links { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.media-link { font-size: 10px; color: var(--accent); padding: 2px 8px; border: 1px solid rgba(43,191,179,0.25); border-radius: 6px; text-decoration: none; }
+
+/* AUDIO PLAYER */
+.audio-player { background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; }
+.audio-player-title { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.audio-controls { display: flex; align-items: center; gap: 12px; }
+.btn-play { width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--accent); color: var(--bg); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.btn-play:active { transform: scale(0.95); }
+.audio-progress-wrap { flex: 1; }
+.audio-progress { width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; appearance: none; -webkit-appearance: none; cursor: pointer; outline: none; }
+.audio-progress::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); cursor: pointer; margin-top: -5px; }
+.audio-progress::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.1); }
+.audio-time { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* VIDEO PLAYER */
+.video-container { width: 100%; max-width: 440px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; background: #000; }
+.video-container video { width: 100%; display: block; }
+
+/* INLINE VIEWER */
+.inline-viewer { width: 100%; border: none; border-radius: var(--radius); min-height: 60vh; background: #fff; }
+
+/* SETTINGS */
+#screen-settings { gap: 12px; padding-top: 8px; }
+.settings-section { background: var(--card); border-radius: var(--radius); padding: 16px; }
+.settings-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.btn-settings { width: 100%; padding: 13px; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); background: transparent; color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer; margin-bottom: 8px; text-align: center; }
+.btn-settings:active { background: rgba(255,255,255,0.05); }
+
+/* DIALOG */
+.dialog-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; align-items: center; justify-content: center; padding: 24px; }
+.dialog-overlay.visible { display: flex; }
+.dialog-box { background: var(--card); border-radius: var(--radius); padding: 24px 20px; max-width: 300px; width: 100%; text-align: center; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+.dialog-title { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.dialog-text { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
+.dialog-buttons { display: flex; gap: 10px; }
+.dialog-btn { flex: 1; padding: 11px; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; }
+.dialog-btn-cancel { background: rgba(255,255,255,0.08); color: var(--text); }
+.dialog-btn-confirm { background: var(--red); color: #fff; }
+
+/* EXAM / REVERSE BADGES */
+.exam-mode-badge { font-size: 11px; font-weight: 600; color: var(--yellow); background: rgba(251,191,36,0.15); padding: 3px 9px; border-radius: 16px; }
+.reverse-badge { font-size: 11px; font-weight: 600; color: var(--green); background: rgba(74,222,128,0.15); padding: 3px 9px; border-radius: 16px; }
+
+/* CONFETTI */
+.confetti-canvas { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
+
+/* LOADING */
+.loading { display: flex; align-items: center; justify-content: center; padding: 60px; color: var(--text-muted); font-size: 14px; }
+.spinner { width: 22px; height: 22px; border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 10px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Utility */
+.hidden { display: none !important; }
+.max-w { max-width: 440px; margin-left: auto; margin-right: auto; width: 100%; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="header" id="app-header">
+    <div class="header-left">
+      <button class="btn-icon header-back hidden" id="btn-back" aria-label="Zurück">&#8249;</button>
+      <span class="header-logo" id="header-logo">Carbon Mastery</span>
+      <span class="header-subtitle" id="header-subtitle"></span>
+    </div>
+    <div class="header-right">
+      <span class="header-progress" id="header-progress"></span>
+      <span id="header-badge"></span>
+      <button class="btn-icon hidden" id="btn-stats-hdr" aria-label="Statistik">&#9432;</button>
+      <button class="btn-icon hidden" id="btn-settings-hdr" aria-label="Einstellungen">&#9881;</button>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <div class="screen active" id="screen-home">
+    <div class="home-title">Carbon Mastery</div>
+    <div class="streak-bar" id="streak-bar"></div>
+    <div class="due-bar" id="due-bar"></div>
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" id="search-input" type="text" placeholder="Suche Karten, Referenzen, Medien...">
+    </div>
+    <div class="search-results hidden" id="search-results"></div>
+    <div id="home-quick"></div>
+  </div>
+
+  <!-- LERNEN (domain list) -->
+  <div class="screen" id="screen-lernen">
+    <div class="domain-grid" id="domain-grid"></div>
+  </div>
+
+  <!-- SET LIST -->
+  <div class="screen" id="screen-setlist">
+    <div id="setlist-content"></div>
+  </div>
+
+  <!-- SET DETAIL -->
+  <div class="screen" id="screen-setdetail">
+    <div id="setdetail-content"></div>
+  </div>
+
+  <!-- LEARN -->
+  <div class="screen no-scroll" id="screen-learn">
+    <div class="flashcard-container" id="flashcard-container">
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-face flashcard-front">
+          <span class="flashcard-label">Frage</span>
+          <button class="btn-favorite" id="btn-favorite">&#9734;</button>
+          <div class="flashcard-text" id="flashcard-question"></div>
+          <span class="flashcard-box-indicator" id="flashcard-box-front"></span>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <span class="flashcard-label">Antwort</span>
+          <div class="flashcard-text" id="flashcard-answer"></div>
+          <span class="flashcard-box-indicator" id="flashcard-box-back"></span>
+        </div>
+      </div>
+    </div>
+    <div class="answer-buttons" id="answer-buttons">
+      <button class="btn-answer btn-nochmal" id="btn-nochmal">Nochmal</button>
+      <button class="btn-answer btn-gewusst" id="btn-gewusst">Gewusst!</button>
+    </div>
+    <div class="session-summary hidden" id="session-summary">
+      <div class="summary-title" id="summary-title">Session fertig!</div>
+      <div class="summary-stats">
+        <div class="summary-stat"><div class="summary-stat-value" id="summary-correct" style="color:var(--green)">0</div><div class="summary-stat-label">Gewusst</div></div>
+        <div class="summary-stat"><div class="summary-stat-value" id="summary-wrong" style="color:var(--red)">0</div><div class="summary-stat-label">Nochmal</div></div>
+        <div class="summary-stat"><div class="summary-stat-value" id="summary-total" style="color:var(--text-muted)">0</div><div class="summary-stat-label">Total</div></div>
+      </div>
+      <div id="summary-score" class="hidden" style="font-size:18px; font-weight:700; color:var(--yellow);"></div>
+      <button class="btn-primary" id="btn-back-from-learn">Zurück</button>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="screen" id="screen-stats">
+    <div class="stats-chart-container"><div class="stats-chart"><svg viewBox="0 0 160 160" width="160" height="160" id="stats-svg"></svg><div class="stats-chart-center"><span class="stats-chart-percent" id="stats-percent">0%</span><span class="stats-chart-label">gemeistert</span></div></div></div>
+    <div class="stats-legend" id="stats-legend"></div>
+    <div class="stats-table" id="stats-table"></div>
+    <button class="btn-danger" id="btn-reset-progress">Fortschritt zurücksetzen</button>
+  </div>
+
+  <!-- REFERENZ -->
+  <div class="screen" id="screen-referenz">
+    <div id="referenz-content"></div>
+  </div>
+
+  <!-- BIBLIOTHEK -->
+  <div class="screen" id="screen-bibliothek">
+    <div class="filter-bar" id="filter-bar"></div>
+    <div id="bibliothek-content"></div>
+  </div>
+
+  <!-- MEDIA PLAYER -->
+  <div class="screen" id="screen-player">
+    <div id="player-content"></div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="screen" id="screen-settings">
+    <div class="settings-section">
+      <div class="settings-title">Daten</div>
+      <button class="btn-settings" id="btn-export">Fortschritt exportieren</button>
+      <button class="btn-settings" id="btn-import">Fortschritt importieren</button>
+      <input type="file" id="import-file" accept=".json" style="display:none;">
+    </div>
+    <div class="settings-section" style="margin-top:12px;">
+      <div class="settings-title">Info</div>
+      <p style="font-size:12px; color:var(--text-muted);">Carbon Mastery v1.0 — Patrick</p>
+    </div>
+  </div>
+
+  <!-- DIALOG -->
+  <div class="dialog-overlay" id="dialog-overlay">
+    <div class="dialog-box">
+      <div class="dialog-title" id="dialog-title">Bist du sicher?</div>
+      <div class="dialog-text" id="dialog-text"></div>
+      <div class="dialog-buttons">
+        <button class="dialog-btn dialog-btn-cancel" id="dialog-cancel">Abbrechen</button>
+        <button class="dialog-btn dialog-btn-confirm" id="dialog-confirm">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav" id="bottom-nav">
+  <button class="nav-tab active" data-tab="home"><span class="nav-icon">&#127968;</span>Home</button>
+  <button class="nav-tab" data-tab="lernen"><span class="nav-icon">&#127924;</span>Lernen</button>
+  <button class="nav-tab" data-tab="referenz"><span class="nav-icon">&#128218;</span>Referenz</button>
+  <button class="nav-tab" data-tab="bibliothek"><span class="nav-icon">&#128194;</span>Bibliothek</button>
+</nav>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== CONFIG =====
+  const PROFILE = 'patrick';
+  const SESSION_SIZE = 15;
+  const SETS_INDEX_URL = 'sets/index.json';
+  const LEITNER_INTERVALS = { 1: 1, 2: 2, 3: 4, 4: 8, 5: 16 };
+
+  const DOMAINS = [
+    { key: 'glossar',      name: 'Glossar',      icon: '\u{1F4D6}', color: 'var(--d-glossar)' },
+    { key: 'markt',        name: 'Markt',         icon: '\u{1F30D}', color: 'var(--d-markt)' },
+    { key: 'regulierung',  name: 'Regulierung',   icon: '\u2696\uFE0F',  color: 'var(--d-regulierung)' },
+    { key: 'technik',      name: 'Technik',       icon: '\u{1F527}', color: 'var(--d-technik)' },
+    { key: 'laender',      name: 'Länder',        icon: '\u{1F5FA}\uFE0F', color: 'var(--d-laender)' },
+    { key: 'vertrag',      name: 'Vertrag',       icon: '\u{1F4BC}', color: 'var(--d-vertrag)' }
+  ];
+
+  const MEDIA_TYPES = [
+    { key: 'all',           label: 'Alle',           icon: '' },
+    { key: 'podcast',       label: 'Podcasts',       icon: '\u{1F3A7}' },
+    { key: 'video',         label: 'Videos',         icon: '\u{1F3AC}' },
+    { key: 'presentation',  label: 'Präsentationen', icon: '\u{1F4CA}' },
+    { key: 'pdf',           label: 'PDFs',           icon: '\u{1F4C4}' }
+  ];
+
+  // ===== STATE =====
+  let setsIndex = [];
+  let mediaIndex = [];
+  let refsIndex = [];
+  let setsCache = {};
+  let currentDomain = null;
+  let currentSetId = null;
+  let currentSetData = null;
+  let sessionCards = [];
+  let sessionIndex = 0;
+  let sessionCorrect = 0;
+  let sessionWrong = 0;
+  let isFlipped = false;
+  let isAnimating = false;
+  let isExamMode = false;
+  let isReverseMode = false;
+  let dialogCallback = null;
+  let currentMediaFilter = 'all';
+  let currentAudio = null;
+  let currentAudioId = null;
+
+  // ===== DOM =====
+  const $ = id => document.getElementById(id);
+  const btnBack = $('btn-back');
+  const headerLogo = $('header-logo');
+  const headerSubtitle = $('header-subtitle');
+  const headerProgress = $('header-progress');
+  const headerBadge = $('header-badge');
+  const btnStatsHdr = $('btn-stats-hdr');
+  const btnSettingsHdr = $('btn-settings-hdr');
+
+  const screens = {
+    home: $('screen-home'),
+    lernen: $('screen-lernen'),
+    setlist: $('screen-setlist'),
+    setdetail: $('screen-setdetail'),
+    learn: $('screen-learn'),
+    stats: $('screen-stats'),
+    referenz: $('screen-referenz'),
+    bibliothek: $('screen-bibliothek'),
+    player: $('screen-player'),
+    settings: $('screen-settings')
+  };
+
+  const allScreens = Object.values(screens);
+
+  const flashcardContainer = $('flashcard-container');
+  const flashcard = $('flashcard');
+  const flashcardQuestion = $('flashcard-question');
+  const flashcardAnswer = $('flashcard-answer');
+  const flashcardBoxFront = $('flashcard-box-front');
+  const flashcardBoxBack = $('flashcard-box-back');
+  const btnFavorite = $('btn-favorite');
+  const answerButtons = $('answer-buttons');
+  const sessionSummary = $('session-summary');
+  const dialogOverlay = $('dialog-overlay');
+  const bottomNav = $('bottom-nav');
+
+  // ===== NAVIGATION =====
+  let navStack = [];
+  let activeTab = 'home';
+
+  function showScreen(name, pushStack = true) {
+    if (pushStack) navStack.push(name);
+    activateScreen(name);
+  }
+
+  function activateScreen(name) {
+    allScreens.forEach(s => s.classList.remove('active'));
+    const scr = screens[name];
+    if (scr) scr.classList.add('active');
+
+    // Header
+    const isDeep = !['home', 'lernen', 'referenz', 'bibliothek'].includes(name);
+    btnBack.classList.toggle('hidden', !isDeep);
+    btnStatsHdr.classList.toggle('hidden', name !== 'learn');
+    btnSettingsHdr.classList.toggle('hidden', name !== 'home');
+    headerProgress.textContent = '';
+    headerBadge.innerHTML = '';
+    headerSubtitle.textContent = '';
+
+    switch (name) {
+      case 'home': headerLogo.textContent = 'Carbon Mastery'; break;
+      case 'lernen': headerLogo.textContent = 'Lernen'; break;
+      case 'setlist':
+        const dom = DOMAINS.find(d => d.key === currentDomain);
+        headerLogo.textContent = dom ? dom.name : 'Sets';
+        break;
+      case 'setdetail':
+        const info = setsIndex.find(s => s.id === currentSetId);
+        headerLogo.textContent = info ? info.title : '';
+        break;
+      case 'learn':
+        headerLogo.textContent = 'Lernen';
+        if (isExamMode) headerBadge.innerHTML = '<span class="exam-mode-badge">Prüfung</span>';
+        if (isReverseMode) headerBadge.innerHTML = '<span class="reverse-badge">Umgekehrt</span>';
+        break;
+      case 'stats': headerLogo.textContent = 'Statistik'; break;
+      case 'referenz': headerLogo.textContent = 'Referenz'; break;
+      case 'bibliothek': headerLogo.textContent = 'Bibliothek'; break;
+      case 'player': headerLogo.textContent = 'Player'; break;
+      case 'settings': headerLogo.textContent = 'Einstellungen'; break;
+    }
+
+    // Bottom nav visibility and active state
+    const tabScreens = ['home', 'lernen', 'referenz', 'bibliothek'];
+    if (tabScreens.includes(name)) {
+      activeTab = name;
+      bottomNav.querySelectorAll('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+    }
+  }
+
+  function goBack() {
+    if (navStack.length > 1) {
+      navStack.pop();
+      const prev = navStack[navStack.length - 1];
+      activateScreen(prev);
+      if (prev === 'home') renderHome();
+      else if (prev === 'lernen') renderDomains();
+      else if (prev === 'setlist') renderSetList(currentDomain);
+      else if (prev === 'setdetail') renderSetDetail(currentSetId);
+      else if (prev === 'referenz') renderReferenz();
+      else if (prev === 'bibliothek') renderBibliothek();
+    }
+  }
+
+  function switchTab(tab) {
+    navStack = [tab];
+    showScreen(tab, false);
+    activateScreen(tab);
+    switch (tab) {
+      case 'home': renderHome(); break;
+      case 'lernen': renderDomains(); break;
+      case 'referenz': renderReferenz(); break;
+      case 'bibliothek': renderBibliothek(); break;
+    }
+  }
+
+  // ===== HELPERS =====
+  function esc(str) { if (!str) return ''; const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
+  function formatText(str) { if (!str) return ''; return esc(str).replace(/\\n/g, '<br>').replace(/\n/g, '<br>'); }
+  function todayStr() { return new Date().toISOString().split('T')[0]; }
+  function cacheBust(url) { return url + (url.includes('?') ? '&' : '?') + '_cb=' + Date.now(); }
+
+  // ===== LOCALSTORAGE =====
+  function lsGet(key) { try { return JSON.parse(localStorage.getItem(key)); } catch { return null; } }
+  function lsSet(key, val) { localStorage.setItem(key, JSON.stringify(val)); }
+  function lsKey(suffix) { return 'cm_' + suffix; }
+
+  function loadProgress(setId) { return lsGet(lsKey(setId)); }
+  function saveProgress(setId, data) { lsSet(lsKey(setId), data); }
+  function resetProgress(setId) { localStorage.removeItem(lsKey(setId)); }
+
+  function getCardProgress(setId, cardIndex) {
+    const prog = loadProgress(setId);
+    if (!prog || !prog.cards || !prog.cards[cardIndex]) return { box: 1, lastSeen: 0, correctCount: 0 };
+    return prog.cards[cardIndex];
+  }
+
+  function setCardProgress(setId, cardIndex, cardProg) {
+    let prog = loadProgress(setId) || { cards: {} };
+    if (!prog.cards) prog.cards = {};
+    prog.cards[cardIndex] = cardProg;
+    saveProgress(setId, prog);
+  }
+
+  // ===== STREAK =====
+  function getStreak() { return lsGet(lsKey('streak')) || { current: 0, best: 0, lastDate: '' }; }
+  function saveStreak(s) { lsSet(lsKey('streak'), s); }
+
+  function updateStreak() {
+    const s = getStreak();
+    const today = todayStr();
+    if (s.lastDate === today) return s;
+    const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+    const yStr = yesterday.toISOString().split('T')[0];
+    if (s.lastDate === yStr) { s.current++; }
+    else if (s.lastDate !== today) { s.current = 1; }
+    s.lastDate = today;
+    s.best = Math.max(s.best, s.current);
+    saveStreak(s);
+    return s;
+  }
+
+  // ===== DUE CARDS =====
+  function isCardDue(setId, cardIndex) {
+    const prog = getCardProgress(setId, cardIndex);
+    if (prog.box >= 5 && prog.correctCount >= 2) return false;
+    if (!prog.lastSeen) return true;
+    const interval = LEITNER_INTERVALS[prog.box] || 1;
+    const dueDate = new Date(new Date(prog.lastSeen).getTime() + interval * 86400000);
+    return new Date() >= dueDate;
+  }
+
+  function countDueCards(setId, cardCount) {
+    let due = 0;
+    for (let i = 0; i < cardCount; i++) { if (isCardDue(setId, i)) due++; }
+    return due;
+  }
+
+  function getTotalDue() {
+    let total = 0;
+    const archived = getArchived();
+    setsIndex.forEach(set => {
+      if (!archived.includes(set.id)) {
+        total += countDueCards(set.id, set.cardCount || 0);
+      }
+    });
+    return total;
+  }
+
+  // ===== ARCHIVE =====
+  function getArchived() { return lsGet(lsKey('archived')) || []; }
+  function saveArchived(list) { lsSet(lsKey('archived'), list); }
+  function archiveSet(setId) { const a = getArchived(); if (!a.includes(setId)) { a.push(setId); saveArchived(a); } }
+  function unarchiveSet(setId) { saveArchived(getArchived().filter(id => id !== setId)); }
+
+  // ===== FAVORITES =====
+  function getFavorites(setId) { return lsGet(lsKey('fav_' + setId)) || []; }
+  function saveFavorites(setId, list) { lsSet(lsKey('fav_' + setId), list); }
+  function toggleFavorite(setId, cardIndex) {
+    const favs = getFavorites(setId);
+    const idx = favs.indexOf(cardIndex);
+    if (idx >= 0) favs.splice(idx, 1); else favs.push(cardIndex);
+    saveFavorites(setId, favs);
+    return favs.includes(cardIndex);
+  }
+
+  // ===== MEDIA PROGRESS =====
+  function getMediaProgress(mediaId) { return lsGet(lsKey('media_' + mediaId)) || { position: 0, consumed: false }; }
+  function saveMediaProgress(mediaId, data) { lsSet(lsKey('media_' + mediaId), data); }
+
+  // ===== SET STATS =====
+  function getSetStats(setId, cardCount) {
+    const prog = loadProgress(setId);
+    if (!prog || !prog.cards) return { mastered: 0, learning: 0, newCards: cardCount, percent: 0 };
+    let mastered = 0, learning = 0;
+    for (let i = 0; i < cardCount; i++) {
+      const c = prog.cards[i];
+      if (c) { if (c.box >= 4) mastered++; else if (c.box > 1) learning++; }
+    }
+    return { mastered, learning, newCards: cardCount - mastered - learning, percent: cardCount > 0 ? Math.round((mastered / cardCount) * 100) : 0 };
+  }
+
+  // ===== DATA LOADING =====
+  async function loadSetsIndex() {
+    try {
+      const resp = await fetch(cacheBust(SETS_INDEX_URL));
+      const data = await resp.json();
+      setsIndex = data.sets || [];
+      mediaIndex = data.media || [];
+      refsIndex = data.references || [];
+    } catch (e) {
+      setsIndex = []; mediaIndex = []; refsIndex = [];
+    }
+  }
+
+  async function loadSetData(setInfo) {
+    if (setsCache[setInfo.id]) return setsCache[setInfo.id];
+    try {
+      const resp = await fetch(cacheBust(setInfo.file));
+      const data = await resp.json();
+      setsCache[setInfo.id] = data;
+      return data;
+    } catch (e) { return null; }
+  }
+
+  function getDomainSets(domainKey) {
+    return setsIndex.filter(s => s.domain === domainKey);
+  }
+
+  function getDomainColor(domainKey) {
+    const d = DOMAINS.find(x => x.key === domainKey);
+    return d ? d.color : 'var(--accent)';
+  }
+
+  function getDomainName(domainKey) {
+    const d = DOMAINS.find(x => x.key === domainKey);
+    return d ? d.name : domainKey;
+  }
+
+  // ===== HOME =====
+  function renderHome() {
+    // Streak
+    const s = getStreak();
+    const streakBar = $('streak-bar');
+    if (s.current > 0) {
+      streakBar.innerHTML = '&#128293; ' + s.current + ' Tag' + (s.current > 1 ? 'e' : '') + ' in Folge';
+      streakBar.style.color = 'var(--yellow)';
+    } else {
+      streakBar.textContent = 'Starte deine Lernserie!';
+      streakBar.style.color = 'var(--text-muted)';
+    }
+
+    // Due bar
+    const dueBar = $('due-bar');
+    const due = getTotalDue();
+    if (due > 0) {
+      dueBar.textContent = 'Heute ' + due + ' Karte' + (due > 1 ? 'n' : '') + ' fällig';
+      dueBar.className = 'due-bar' + (due > 20 ? ' urgent' : '');
+    } else {
+      dueBar.textContent = 'Alles erledigt!';
+      dueBar.className = 'due-bar';
+    }
+
+    // Quick tiles
+    const archived = getArchived();
+    let weakest = null, weakestPct = 101;
+    setsIndex.forEach(set => {
+      if (archived.includes(set.id)) return;
+      const stats = getSetStats(set.id, set.cardCount || 0);
+      if (stats.percent < weakestPct && (set.cardCount || 0) > 0) {
+        weakestPct = stats.percent;
+        weakest = set;
+      }
+    });
+
+    let html = '';
+    html += '<div class="home-section-title">Überblick</div>';
+    html += '<div class="quick-tiles">';
+
+    // Weakest set tile
+    if (weakest) {
+      html += '<div class="quick-tile" data-action="goto-set" data-set-id="' + weakest.id + '">' +
+        '<div class="quick-tile-label">Schwächstes Set</div>' +
+        '<div class="quick-tile-value">' + esc(weakest.title) + '</div>' +
+        '<div class="quick-tile-sub">' + weakestPct + '% gemeistert</div></div>';
+    } else {
+      html += '<div class="quick-tile"><div class="quick-tile-label">Sets</div><div class="quick-tile-value">Keine Sets</div></div>';
+    }
+
+    // Total stats tile
+    let totalCards = 0, totalMastered = 0;
+    setsIndex.forEach(set => {
+      if (archived.includes(set.id)) return;
+      const cc = set.cardCount || 0;
+      totalCards += cc;
+      totalMastered += getSetStats(set.id, cc).mastered;
+    });
+    html += '<div class="quick-tile"><div class="quick-tile-label">Gesamtfortschritt</div>' +
+      '<div class="quick-tile-value">' + (totalCards > 0 ? Math.round((totalMastered / totalCards) * 100) : 0) + '%</div>' +
+      '<div class="quick-tile-sub">' + totalMastered + ' / ' + totalCards + ' Karten</div></div>';
+
+    // Media tile
+    const consumedMedia = mediaIndex.filter(m => getMediaProgress(m.id).consumed).length;
+    html += '<div class="quick-tile" data-action="goto-tab" data-tab="bibliothek">' +
+      '<div class="quick-tile-label">Medien</div>' +
+      '<div class="quick-tile-value">' + consumedMedia + ' / ' + mediaIndex.length + '</div>' +
+      '<div class="quick-tile-sub">konsumiert</div></div>';
+
+    // Reference tile
+    html += '<div class="quick-tile" data-action="goto-tab" data-tab="referenz">' +
+      '<div class="quick-tile-label">Referenzen</div>' +
+      '<div class="quick-tile-value">' + refsIndex.length + '</div>' +
+      '<div class="quick-tile-sub">verfügbar</div></div>';
+
+    html += '</div>';
+    $('home-quick').innerHTML = html;
+
+    // Event listeners for quick tiles
+    $('home-quick').querySelectorAll('[data-action="goto-set"]').forEach(el => {
+      el.addEventListener('click', () => {
+        currentSetId = el.dataset.setId;
+        const set = setsIndex.find(s => s.id === currentSetId);
+        if (set) currentDomain = set.domain;
+        renderSetDetail(currentSetId);
+        showScreen('setdetail');
+      });
+    });
+    $('home-quick').querySelectorAll('[data-action="goto-tab"]').forEach(el => {
+      el.addEventListener('click', () => switchTab(el.dataset.tab));
+    });
+  }
+
+  // ===== SEARCH =====
+  function setupSearch() {
+    const input = $('search-input');
+    const results = $('search-results');
+    let debounce = null;
+
+    input.addEventListener('input', () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        const q = input.value.trim().toLowerCase();
+        if (q.length < 2) { results.classList.add('hidden'); return; }
+        performSearch(q);
+      }, 250);
+    });
+
+    input.addEventListener('focus', () => {
+      const q = input.value.trim().toLowerCase();
+      if (q.length >= 2) performSearch(q);
+    });
+  }
+
+  async function performSearch(query) {
+    const results = $('search-results');
+    let html = '';
+    let count = 0;
+
+    // Search sets
+    for (const set of setsIndex) {
+      if (count >= 10) break;
+      if (set.title.toLowerCase().includes(query) || (set.domain || '').toLowerCase().includes(query)) {
+        html += '<div class="search-result-item" data-action="search-set" data-set-id="' + set.id + '" data-domain="' + (set.domain || '') + '">' +
+          '<div class="search-result-title">' + esc(set.title) + '</div>' +
+          '<div class="search-result-meta">Set · ' + getDomainName(set.domain) + ' · ' + (set.cardCount || 0) + ' Karten</div></div>';
+        count++;
+      }
+    }
+
+    // Search cards in loaded sets
+    for (const set of setsIndex) {
+      if (count >= 10) break;
+      const data = setsCache[set.id];
+      if (!data || !data.cards) continue;
+      for (const card of data.cards) {
+        if (count >= 10) break;
+        const front = (card.front || card.question || card.q || '').toLowerCase();
+        const back = (card.back || card.answer || card.a || '').toLowerCase();
+        if (front.includes(query) || back.includes(query)) {
+          html += '<div class="search-result-item" data-action="search-set" data-set-id="' + set.id + '" data-domain="' + (set.domain || '') + '">' +
+            '<div class="search-result-title">' + esc(card.front || card.question || card.q || '') + '</div>' +
+            '<div class="search-result-meta">Karte in ' + esc(set.title) + '</div></div>';
+          count++;
+        }
+      }
+    }
+
+    // Search references
+    for (const ref of refsIndex) {
+      if (count >= 10) break;
+      if ((ref.title || '').toLowerCase().includes(query) || (ref.description || '').toLowerCase().includes(query)) {
+        html += '<div class="search-result-item" data-action="search-ref" data-file="' + esc(ref.file || '') + '">' +
+          '<div class="search-result-title">' + esc(ref.title) + '</div>' +
+          '<div class="search-result-meta">Referenz · ' + getDomainName(ref.domain) + '</div></div>';
+        count++;
+      }
+    }
+
+    // Search media
+    for (const m of mediaIndex) {
+      if (count >= 10) break;
+      if ((m.title || '').toLowerCase().includes(query)) {
+        html += '<div class="search-result-item" data-action="search-media" data-media-id="' + esc(m.id) + '">' +
+          '<div class="search-result-title">' + esc(m.title) + '</div>' +
+          '<div class="search-result-meta">Medien · ' + esc(m.type || '') + '</div></div>';
+        count++;
+      }
+    }
+
+    if (!html) html = '<div class="search-result-item"><div class="search-result-title" style="color:var(--text-muted)">Keine Ergebnisse</div></div>';
+
+    results.innerHTML = html;
+    results.classList.remove('hidden');
+
+    // Event listeners
+    results.querySelectorAll('[data-action="search-set"]').forEach(el => {
+      el.addEventListener('click', () => {
+        currentSetId = el.dataset.setId;
+        currentDomain = el.dataset.domain;
+        $('search-input').value = '';
+        results.classList.add('hidden');
+        renderSetDetail(currentSetId);
+        showScreen('setdetail');
+      });
+    });
+    results.querySelectorAll('[data-action="search-ref"]').forEach(el => {
+      el.addEventListener('click', () => {
+        $('search-input').value = '';
+        results.classList.add('hidden');
+        const file = el.dataset.file;
+        if (file) window.open(file, '_blank');
+      });
+    });
+    results.querySelectorAll('[data-action="search-media"]').forEach(el => {
+      el.addEventListener('click', () => {
+        $('search-input').value = '';
+        results.classList.add('hidden');
+        const media = mediaIndex.find(m => m.id === el.dataset.mediaId);
+        if (media) openMedia(media);
+      });
+    });
+  }
+
+  // ===== DOMAINS =====
+  function renderDomains() {
+    const archived = getArchived();
+    let html = '';
+    DOMAINS.forEach(dom => {
+      const sets = getDomainSets(dom.key).filter(s => !archived.includes(s.id));
+      const totalCards = sets.reduce((sum, s) => sum + (s.cardCount || 0), 0);
+      let totalMastered = 0;
+      sets.forEach(s => { totalMastered += getSetStats(s.id, s.cardCount || 0).mastered; });
+      const pct = totalCards > 0 ? Math.round((totalMastered / totalCards) * 100) : 0;
+
+      html += '<div class="domain-tile" data-domain="' + dom.key + '">' +
+        '<div class="domain-tile-icon">' + dom.icon + '</div>' +
+        '<div class="domain-tile-name">' + esc(dom.name) + '</div>' +
+        '<div class="domain-tile-meta">' + sets.length + ' Set' + (sets.length !== 1 ? 's' : '') + ' · ' + totalCards + ' Karten</div>' +
+        '<div class="domain-tile-bar"><div class="domain-tile-bar-fill" style="width:' + pct + '%;background:' + dom.color + '"></div></div></div>';
+    });
+    $('domain-grid').innerHTML = html;
+
+    $('domain-grid').querySelectorAll('.domain-tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        currentDomain = tile.dataset.domain;
+        renderSetList(currentDomain);
+        showScreen('setlist');
+      });
+    });
+  }
+
+  // ===== SET LIST =====
+  function renderSetList(domainKey) {
+    const sets = getDomainSets(domainKey);
+    const archived = getArchived();
+    const activeSets = sets.filter(s => !archived.includes(s.id));
+    const archivedSets = sets.filter(s => archived.includes(s.id));
+    const domColor = getDomainColor(domainKey);
+
+    let html = '';
+    if (!activeSets.length && !archivedSets.length) {
+      html = '<div class="empty-section">Noch keine Sets in diesem Bereich.</div>';
+    } else {
+      activeSets.forEach(set => {
+        const stats = getSetStats(set.id, set.cardCount || 0);
+        const due = countDueCards(set.id, set.cardCount || 0);
+        html += '<div class="set-card" data-set-id="' + set.id + '">' +
+          '<div class="set-card-title">' + esc(set.title) + '</div>' +
+          '<div class="set-card-meta">' + (set.cardCount || 0) + ' Karten · ' + due + ' fällig</div>' +
+          '<div class="set-card-bar"><div class="set-card-bar-fill" style="width:' + stats.percent + '%;background:' + domColor + '"></div></div>' +
+          '<div class="set-card-progress">' + stats.percent + '% gemeistert</div></div>';
+      });
+
+      if (archivedSets.length) {
+        html += '<div class="archive-section"><div class="archive-toggle" id="archive-toggle">&#9660; Archiv (' + archivedSets.length + ')</div>' +
+          '<div class="archive-list hidden" id="archive-list">';
+        archivedSets.forEach(set => {
+          html += '<div class="archive-item"><span>' + esc(set.title) + '</span><span class="archive-restore" data-set-id="' + set.id + '">Wiederherstellen</span></div>';
+        });
+        html += '</div></div>';
+      }
+    }
+
+    $('setlist-content').innerHTML = html;
+
+    $('setlist-content').querySelectorAll('.set-card').forEach(card => {
+      card.addEventListener('click', () => {
+        currentSetId = card.dataset.setId;
+        renderSetDetail(currentSetId);
+        showScreen('setdetail');
+      });
+    });
+
+    const toggleBtn = document.getElementById('archive-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const list = document.getElementById('archive-list');
+        list.classList.toggle('hidden');
+        toggleBtn.innerHTML = list.classList.contains('hidden')
+          ? '&#9660; Archiv (' + archivedSets.length + ')'
+          : '&#9650; Archiv (' + archivedSets.length + ')';
+      });
+    }
+
+    $('setlist-content').querySelectorAll('.archive-restore').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        unarchiveSet(btn.dataset.setId);
+        renderSetList(domainKey);
+      });
+    });
+  }
+
+  // ===== SET DETAIL =====
+  function renderSetDetail(setId) {
+    const info = setsIndex.find(s => s.id === setId);
+    if (!info) return;
+
+    const cc = info.cardCount || 0;
+    const stats = getSetStats(setId, cc);
+    const due = countDueCards(setId, cc);
+    const favs = getFavorites(setId);
+    const domColor = getDomainColor(info.domain);
+
+    let html = '<div class="detail-header">' +
+      '<div class="detail-title">' + esc(info.title) + '</div>' +
+      '<div class="detail-domain" style="color:' + domColor + '">' + getDomainName(info.domain) + ' · ' + cc + ' Karten</div></div>';
+
+    // Due info
+    if (due > 0) {
+      html += '<div class="due-info">' + due + ' Karte' + (due > 1 ? 'n' : '') + ' fällig</div>';
+    } else {
+      html += '<div class="due-info" style="color:var(--text-muted);">Keine Karten fällig</div>';
+    }
+
+    // Stats mini
+    html += '<div class="detail-stats">' +
+      '<div class="detail-stat"><div class="detail-stat-value" style="color:var(--green);">' + stats.percent + '%</div><div class="detail-stat-label">Gemeistert</div></div>' +
+      '<div class="detail-stat"><div class="detail-stat-value" style="color:var(--yellow);">' + stats.learning + '</div><div class="detail-stat-label">Lernt</div></div>' +
+      '<div class="detail-stat"><div class="detail-stat-value" style="color:var(--text-muted);">' + stats.newCards + '</div><div class="detail-stat-label">Neu</div></div></div>';
+
+    // Action buttons
+    html += '<div class="topic-actions">';
+    html += '<button class="btn-action btn-learn" id="btn-start-learn">Lernen' + (due > 0 ? ' (' + due + ' fällig)' : '') + '</button>';
+    html += '<button class="btn-action btn-all" id="btn-start-all">Alle Karten üben</button>';
+    html += '<button class="btn-action btn-exam" id="btn-start-exam">Prüfung simulieren</button>';
+    html += '<button class="btn-action btn-reverse" id="btn-start-reverse">Umgekehrt lernen</button>';
+    if (favs.length > 0) {
+      html += '<button class="btn-action btn-favorites-only" id="btn-start-favorites">Schwierige üben (' + favs.length + ')</button>';
+    }
+    html += '<button class="btn-action btn-archive-set" id="btn-archive">Als erledigt markieren</button>';
+    html += '</div>';
+
+    $('setdetail-content').innerHTML = html;
+
+    // Button events
+    document.getElementById('btn-start-learn').addEventListener('click', () => {
+      isExamMode = false; isReverseMode = false;
+      startLearning(setId, 'due');
+    });
+    document.getElementById('btn-start-all').addEventListener('click', () => {
+      isExamMode = false; isReverseMode = false;
+      startLearning(setId, 'all');
+    });
+    document.getElementById('btn-start-exam').addEventListener('click', () => {
+      isExamMode = true; isReverseMode = false;
+      startLearning(setId, 'all');
+    });
+    document.getElementById('btn-start-reverse').addEventListener('click', () => {
+      isExamMode = false; isReverseMode = true;
+      startLearning(setId, 'due');
+    });
+    const btnFavOnly = document.getElementById('btn-start-favorites');
+    if (btnFavOnly) {
+      btnFavOnly.addEventListener('click', () => {
+        isExamMode = false; isReverseMode = false;
+        startLearning(setId, 'favorites');
+      });
+    }
+    document.getElementById('btn-archive').addEventListener('click', () => {
+      showDialog('Set abschliessen?', 'Das Set wird ins Archiv verschoben. Du kannst es jederzeit wiederherstellen.', () => {
+        archiveSet(setId); goBack();
+      });
+    });
+  }
+
+  // ===== LEARNING =====
+  async function startLearning(setId, mode) {
+    const setInfo = setsIndex.find(s => s.id === setId);
+    if (!setInfo) return;
+
+    const data = await loadSetData(setInfo);
+    if (!data || !data.cards) return;
+
+    currentSetId = setId;
+    currentSetData = data;
+
+    let cardEntries = data.cards.map((card, idx) => ({
+      index: idx, card, prog: getCardProgress(setId, idx)
+    }));
+
+    if (mode === 'due') {
+      cardEntries = cardEntries.filter(e => isCardDue(setId, e.index));
+      cardEntries.sort((a, b) => a.prog.box !== b.prog.box ? a.prog.box - b.prog.box : Math.random() - 0.5);
+      cardEntries = cardEntries.slice(0, SESSION_SIZE);
+    } else if (mode === 'favorites') {
+      const favs = getFavorites(setId);
+      cardEntries = cardEntries.filter(e => favs.includes(e.index));
+      cardEntries.sort(() => Math.random() - 0.5);
+    } else {
+      cardEntries.sort(() => Math.random() - 0.5);
+    }
+
+    if (!cardEntries.length) {
+      showDialog('Keine Karten', mode === 'favorites' ? 'Du hast keine Karten als schwierig markiert.' : 'Keine Karten fällig. Komm später wieder!', null);
+      $('dialog-confirm').style.display = 'none';
+      return;
+    }
+
+    sessionCards = cardEntries;
+    sessionIndex = 0;
+    sessionCorrect = 0;
+    sessionWrong = 0;
+
+    showScreen('learn');
+    sessionSummary.classList.add('hidden');
+    $('summary-score').classList.add('hidden');
+    flashcardContainer.style.display = 'block';
+    answerButtons.classList.remove('visible');
+    showCurrentCard();
+  }
+
+  function showCurrentCard() {
+    if (sessionIndex >= sessionCards.length) {
+      showSessionSummary();
+      return;
+    }
+
+    const entry = sessionCards[sessionIndex];
+    isFlipped = false;
+    isAnimating = false;
+    flashcard.classList.remove('flipped');
+    answerButtons.classList.remove('visible');
+
+    const front = entry.card.front || entry.card.question || entry.card.q || '';
+    const back = entry.card.back || entry.card.answer || entry.card.a || '';
+
+    if (isReverseMode) {
+      flashcardQuestion.innerHTML = formatText(back);
+      flashcardAnswer.innerHTML = formatText(front);
+    } else {
+      flashcardQuestion.innerHTML = formatText(front);
+      flashcardAnswer.innerHTML = formatText(back);
+    }
+
+    const boxLabel = isExamMode ? '' : 'Box ' + entry.prog.box;
+    flashcardBoxFront.textContent = boxLabel;
+    flashcardBoxBack.textContent = boxLabel;
+
+    // Favorite
+    const favs = getFavorites(currentSetId);
+    btnFavorite.innerHTML = favs.includes(entry.index) ? '&#9733;' : '&#9734;';
+    btnFavorite.classList.toggle('active', favs.includes(entry.index));
+
+    headerProgress.textContent = (sessionIndex + 1) + '/' + sessionCards.length;
+
+    flashcardContainer.classList.remove('flashcard-slide-left', 'flashcard-slide-right', 'flashcard-enter');
+    void flashcardContainer.offsetWidth;
+    flashcardContainer.classList.add('flashcard-enter');
+  }
+
+  function flipCard() {
+    if (isFlipped || isAnimating) return;
+    isFlipped = true;
+    flashcard.classList.add('flipped');
+    setTimeout(() => answerButtons.classList.add('visible'), 300);
+  }
+
+  function answerCard(correct) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const entry = sessionCards[sessionIndex];
+
+    if (!isExamMode) {
+      const prog = entry.prog;
+      if (correct) {
+        prog.box = Math.min(prog.box + 1, 5);
+        prog.correctCount = (prog.correctCount || 0) + 1;
+      } else {
+        prog.box = 1;
+      }
+      prog.lastSeen = Date.now();
+      setCardProgress(currentSetId, entry.index, prog);
+    }
+
+    if (correct) sessionCorrect++; else sessionWrong++;
+
+    const animClass = correct ? 'flashcard-slide-right' : 'flashcard-slide-left';
+    flashcardContainer.classList.add(animClass);
+    answerButtons.classList.remove('visible');
+
+    setTimeout(() => {
+      flashcardContainer.classList.remove(animClass);
+      sessionIndex++;
+      showCurrentCard();
+    }, 300);
+  }
+
+  function showSessionSummary() {
+    updateStreak();
+    flashcardContainer.style.display = 'none';
+    answerButtons.classList.remove('visible');
+    headerProgress.textContent = '';
+    btnStatsHdr.classList.add('hidden');
+
+    $('summary-correct').textContent = sessionCorrect;
+    $('summary-wrong').textContent = sessionWrong;
+    $('summary-total').textContent = sessionCards.length;
+
+    if (isExamMode) {
+      $('summary-title').textContent = 'Prüfung fertig!';
+      const pct = sessionCards.length > 0 ? Math.round((sessionCorrect / sessionCards.length) * 100) : 0;
+      $('summary-score').textContent = pct + '% richtig';
+      $('summary-score').classList.remove('hidden');
+    } else {
+      $('summary-title').textContent = 'Session fertig!';
+      $('summary-score').classList.add('hidden');
+    }
+
+    sessionSummary.classList.remove('hidden');
+
+    // Confetti if all mastered
+    const info = setsIndex.find(s => s.id === currentSetId);
+    if (info) {
+      const stats = getSetStats(currentSetId, info.cardCount || 0);
+      if (stats.percent === 100) fireConfetti();
+    }
+  }
+
+  // ===== STATS =====
+  function renderStats() {
+    if (!currentSetData || !currentSetId) return;
+    const cards = currentSetData.cards;
+    const total = cards.length;
+    let mastered = 0, learning = 0, newCount = 0;
+    const rows = [];
+
+    cards.forEach((card, idx) => {
+      const prog = getCardProgress(currentSetId, idx);
+      let status, statusClass;
+      if (prog.box >= 4) { mastered++; status = 'Gemeistert'; statusClass = 'status-mastered'; }
+      else if (prog.box > 1) { learning++; status = 'Lernt'; statusClass = 'status-learning'; }
+      else { newCount++; status = 'Neu'; statusClass = 'status-new'; }
+      rows.push({ question: card.front || card.question || card.q || '', box: prog.box, status, statusClass });
+    });
+
+    const percent = total > 0 ? Math.round((mastered / total) * 100) : 0;
+    $('stats-percent').textContent = percent + '%';
+
+    const r = 65, cx = 80, cy = 80, strokeW = 16;
+    const circ = 2 * Math.PI * r;
+    const segments = [{ count: mastered, color: '#43A047' }, { count: learning, color: '#fbbf24' }, { count: newCount, color: '#3a4a6b' }];
+    let svg = '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#223352" stroke-width="' + strokeW + '"/>';
+    let offset = 0;
+    segments.forEach(seg => {
+      if (!seg.count) return;
+      const len = (seg.count / total) * circ;
+      svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="' + seg.color + '" stroke-width="' + strokeW + '" stroke-dasharray="' + len + ' ' + (circ - len) + '" stroke-dashoffset="' + (-offset) + '" stroke-linecap="round"/>';
+      offset += len;
+    });
+    $('stats-svg').innerHTML = svg;
+    $('stats-legend').innerHTML =
+      '<div class="stats-legend-item"><span class="stats-legend-dot" style="background:#43A047"></span>Gemeistert (' + mastered + ')</div>' +
+      '<div class="stats-legend-item"><span class="stats-legend-dot" style="background:#fbbf24"></span>Lernt (' + learning + ')</div>' +
+      '<div class="stats-legend-item"><span class="stats-legend-dot" style="background:#3a4a6b"></span>Neu (' + newCount + ')</div>';
+
+    let tableHtml = '<div class="stats-table-header"><span>Frage</span><span style="text-align:center">Box</span><span style="text-align:center">Status</span></div>';
+    rows.forEach(row => {
+      tableHtml += '<div class="stats-table-row"><span class="stats-table-question">' + esc(row.question) + '</span><span class="stats-table-box">' + row.box + '</span><span class="stats-table-status ' + row.statusClass + '">' + row.status + '</span></div>';
+    });
+    $('stats-table').innerHTML = tableHtml;
+  }
+
+  // ===== REFERENZ =====
+  function renderReferenz() {
+    let html = '';
+    if (!refsIndex.length) {
+      html = '<div class="empty-section">Noch keine Referenzen verfügbar.<br>Referenzen werden über sets/index.json geladen.</div>';
+    } else {
+      refsIndex.forEach(ref => {
+        const domColor = getDomainColor(ref.domain);
+        html += '<a class="ref-card" href="' + esc(ref.file || '#') + '" target="_blank" rel="noopener">' +
+          '<span class="ref-badge" style="background:' + domColor + '20;color:' + domColor + '">' + getDomainName(ref.domain) + '</span>' +
+          '<div class="ref-info"><div class="ref-title">' + esc(ref.title) + '</div>' +
+          '<div class="ref-desc">' + esc(ref.description || '') + '</div></div></a>';
+      });
+    }
+    $('referenz-content').innerHTML = html;
+  }
+
+  // ===== BIBLIOTHEK =====
+  function renderBibliothek() {
+    // Filter bar
+    let filterHtml = '';
+    MEDIA_TYPES.forEach(mt => {
+      filterHtml += '<button class="filter-btn' + (currentMediaFilter === mt.key ? ' active' : '') + '" data-filter="' + mt.key + '">' +
+        (mt.icon ? mt.icon + ' ' : '') + mt.label + '</button>';
+    });
+    $('filter-bar').innerHTML = filterHtml;
+
+    // Filter buttons
+    $('filter-bar').querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentMediaFilter = btn.dataset.filter;
+        renderBibliothek();
+      });
+    });
+
+    // Media list
+    const filtered = currentMediaFilter === 'all' ? mediaIndex : mediaIndex.filter(m => m.type === currentMediaFilter);
+
+    let html = '';
+    if (!filtered.length) {
+      html = '<div class="empty-section">Keine Medien' + (currentMediaFilter !== 'all' ? ' in dieser Kategorie' : ' verfügbar') + '.</div>';
+    } else {
+      filtered.forEach(media => {
+        const prog = getMediaProgress(media.id);
+        const typeConfig = {
+          podcast: { icon: '\u{1F3A7}', bg: 'rgba(43,191,179,0.15)' },
+          video: { icon: '\u{1F3AC}', bg: 'rgba(192,132,252,0.15)' },
+          presentation: { icon: '\u{1F4CA}', bg: 'rgba(251,191,36,0.15)' },
+          pdf: { icon: '\u{1F4C4}', bg: 'rgba(248,113,113,0.15)' }
+        };
+        const tc = typeConfig[media.type] || { icon: '\u{1F4C1}', bg: 'rgba(255,255,255,0.1)' };
+
+        html += '<div class="media-card" data-media-id="' + esc(media.id) + '">' +
+          '<div class="media-card-top">' +
+          '<div class="media-type-icon" style="background:' + tc.bg + '">' + tc.icon + '</div>' +
+          '<div class="media-info"><div class="media-title">' + esc(media.title) + '</div>' +
+          '<div class="media-meta">' + esc(media.type || '') + (media.duration ? ' · ' + esc(media.duration) : '') + '</div></div>' +
+          '<span class="media-status ' + (prog.consumed ? 'consumed' : 'new') + '">' + (prog.consumed ? 'Gehört' : 'Neu') + '</span></div>';
+
+        // Linked set + reference
+        if (media.linkedSet || media.linkedRef) {
+          html += '<div class="media-links">';
+          if (media.linkedSet) html += '<span class="media-link">Set: ' + esc(media.linkedSet) + '</span>';
+          if (media.linkedRef) html += '<span class="media-link">Ref: ' + esc(media.linkedRef) + '</span>';
+          html += '</div>';
+        }
+        html += '</div>';
+      });
+    }
+
+    $('bibliothek-content').innerHTML = html;
+
+    // Media card click
+    $('bibliothek-content').querySelectorAll('.media-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const media = mediaIndex.find(m => m.id === card.dataset.mediaId);
+        if (media) openMedia(media);
+      });
+    });
+  }
+
+  // ===== MEDIA PLAYER =====
+  function openMedia(media) {
+    const type = media.type;
+
+    if (type === 'pdf') {
+      window.open(media.file, '_blank');
+      const prog = getMediaProgress(media.id);
+      prog.consumed = true;
+      saveMediaProgress(media.id, prog);
+      renderBibliothek();
+      return;
+    }
+
+    showScreen('player');
+    let html = '';
+
+    if (type === 'podcast') {
+      html = renderAudioPlayer(media);
+    } else if (type === 'video') {
+      html = '<div class="video-container"><video controls preload="metadata" src="' + esc(media.file) + '"></video></div>';
+    } else if (type === 'presentation') {
+      html = '<iframe class="inline-viewer" src="' + esc(media.file) + '" sandbox="allow-scripts allow-same-origin"></iframe>';
+    }
+
+    html += '<div style="padding:16px;text-align:center;">' +
+      '<button class="btn-primary" id="btn-mark-consumed" style="max-width:300px;">Als gehört markieren</button></div>';
+
+    $('player-content').innerHTML = html;
+    headerLogo.textContent = media.title || 'Player';
+
+    // Mark consumed button
+    document.getElementById('btn-mark-consumed').addEventListener('click', () => {
+      const prog = getMediaProgress(media.id);
+      prog.consumed = true;
+      saveMediaProgress(media.id, prog);
+      document.getElementById('btn-mark-consumed').textContent = 'Erledigt!';
+      document.getElementById('btn-mark-consumed').style.background = 'var(--green)';
+    });
+
+    // Audio player setup
+    if (type === 'podcast') {
+      setupAudioPlayer(media);
+    }
+
+    // Video end handler
+    if (type === 'video') {
+      const video = $('player-content').querySelector('video');
+      if (video) {
+        video.addEventListener('ended', () => {
+          const prog = getMediaProgress(media.id);
+          prog.consumed = true;
+          saveMediaProgress(media.id, prog);
+        });
+      }
+    }
+  }
+
+  function renderAudioPlayer(media) {
+    return '<div class="audio-player">' +
+      '<div class="audio-player-title">' + esc(media.title) + '</div>' +
+      '<div class="audio-controls">' +
+      '<button class="btn-play" id="btn-play-audio">&#9654;</button>' +
+      '<div class="audio-progress-wrap">' +
+      '<input type="range" class="audio-progress" id="audio-progress" min="0" max="100" value="0">' +
+      '<div class="audio-time" id="audio-time">0:00 / 0:00</div>' +
+      '</div></div></div>';
+  }
+
+  function setupAudioPlayer(media) {
+    if (currentAudio) { currentAudio.pause(); currentAudio = null; }
+
+    const audio = new Audio(media.file);
+    currentAudio = audio;
+    currentAudioId = media.id;
+
+    const btnPlay = document.getElementById('btn-play-audio');
+    const progressBar = document.getElementById('audio-progress');
+    const timeDisplay = document.getElementById('audio-time');
+
+    // Restore position
+    const prog = getMediaProgress(media.id);
+    if (prog.position > 0) {
+      audio.currentTime = prog.position;
+    }
+
+    function formatTime(s) {
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    btnPlay.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        btnPlay.innerHTML = '&#9646;&#9646;';
+      } else {
+        audio.pause();
+        btnPlay.innerHTML = '&#9654;';
+      }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) {
+        progressBar.value = (audio.currentTime / audio.duration) * 100;
+        timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+        // Save position periodically
+        if (Math.floor(audio.currentTime) % 5 === 0) {
+          const p = getMediaProgress(media.id);
+          p.position = audio.currentTime;
+          saveMediaProgress(media.id, p);
+        }
+      }
+    });
+
+    progressBar.addEventListener('input', () => {
+      if (audio.duration) {
+        audio.currentTime = (progressBar.value / 100) * audio.duration;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      btnPlay.innerHTML = '&#9654;';
+      const p = getMediaProgress(media.id);
+      p.consumed = true;
+      p.position = 0;
+      saveMediaProgress(media.id, p);
+    });
+  }
+
+  // ===== CONFETTI =====
+  function fireConfetti() {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'confetti-canvas';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+    const particles = [];
+    const colors = ['#43A047', '#2BBFB3', '#fbbf24', '#f472b6', '#c084fc', '#38bdf8'];
+    for (let i = 0; i < 80; i++) {
+      particles.push({
+        x: Math.random() * canvas.width, y: -10 - Math.random() * 100,
+        w: 6 + Math.random() * 6, h: 4 + Math.random() * 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        vx: (Math.random() - 0.5) * 4, vy: 2 + Math.random() * 4,
+        rot: Math.random() * 360, rotV: (Math.random() - 0.5) * 10
+      });
+    }
+    let frame = 0;
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.rot += p.rotV; p.vy += 0.1;
+        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot * Math.PI / 180);
+        ctx.fillStyle = p.color; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+      });
+      frame++;
+      if (frame < 120) requestAnimationFrame(draw); else canvas.remove();
+    }
+    draw();
+  }
+
+  // ===== DIALOG =====
+  function showDialog(title, text, onConfirm) {
+    $('dialog-title').textContent = title;
+    $('dialog-text').textContent = text;
+    dialogCallback = onConfirm;
+    dialogOverlay.classList.add('visible');
+  }
+
+  // ===== EXPORT / IMPORT =====
+  function exportData() {
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('cm_')) {
+        data[key] = localStorage.getItem(key);
+      }
+    }
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'carbon_mastery_backup.json';
+    a.click();
+  }
+
+  function importData(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        Object.entries(data).forEach(([key, val]) => {
+          if (key.startsWith('cm_')) localStorage.setItem(key, val);
+        });
+        showDialog('Import erfolgreich', Object.keys(data).length + ' Einträge importiert.', null);
+        $('dialog-confirm').style.display = 'none';
+      } catch {
+        showDialog('Fehler', 'Datei konnte nicht gelesen werden.', null);
+        $('dialog-confirm').style.display = 'none';
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // ===== EVENT LISTENERS =====
+  btnBack.addEventListener('click', goBack);
+
+  btnSettingsHdr.addEventListener('click', () => showScreen('settings'));
+
+  // Bottom nav
+  bottomNav.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+  });
+
+  // Flashcard
+  flashcardContainer.addEventListener('click', (e) => {
+    if (e.target === btnFavorite || btnFavorite.contains(e.target)) return;
+    if (!isFlipped) flipCard();
+  });
+
+  btnFavorite.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!sessionCards.length) return;
+    const entry = sessionCards[sessionIndex];
+    const isFav = toggleFavorite(currentSetId, entry.index);
+    btnFavorite.innerHTML = isFav ? '&#9733;' : '&#9734;';
+    btnFavorite.classList.toggle('active', isFav);
+  });
+
+  $('btn-nochmal').addEventListener('click', () => answerCard(false));
+  $('btn-gewusst').addEventListener('click', () => answerCard(true));
+
+  $('btn-back-from-learn').addEventListener('click', () => {
+    isExamMode = false; isReverseMode = false;
+    goBack();
+  });
+
+  btnStatsHdr.addEventListener('click', () => {
+    renderStats();
+    showScreen('stats');
+  });
+
+  $('btn-reset-progress').addEventListener('click', () => {
+    showDialog('Fortschritt zurücksetzen?', 'Der gesamte Lernfortschritt für dieses Set wird gelöscht.', () => {
+      if (currentSetId) { resetProgress(currentSetId); renderStats(); }
+    });
+  });
+
+  $('dialog-cancel').addEventListener('click', () => {
+    dialogOverlay.classList.remove('visible');
+    $('dialog-confirm').style.display = '';
+  });
+
+  $('dialog-confirm').addEventListener('click', () => {
+    dialogOverlay.classList.remove('visible');
+    $('dialog-confirm').style.display = '';
+    if (dialogCallback) dialogCallback();
+    dialogCallback = null;
+  });
+
+  dialogOverlay.addEventListener('click', (e) => {
+    if (e.target === dialogOverlay) {
+      dialogOverlay.classList.remove('visible');
+      $('dialog-confirm').style.display = '';
+    }
+  });
+
+  $('btn-export').addEventListener('click', exportData);
+  $('btn-import').addEventListener('click', () => $('import-file').click());
+  $('import-file').addEventListener('change', (e) => {
+    if (e.target.files.length) importData(e.target.files[0]);
+    e.target.value = '';
+  });
+
+  // Close search on outside click
+  document.addEventListener('click', (e) => {
+    const searchResults = $('search-results');
+    const searchInput = $('search-input');
+    if (!searchResults.contains(e.target) && e.target !== searchInput) {
+      searchResults.classList.add('hidden');
+    }
+  });
+
+  // Cleanup audio on navigation
+  function cleanupAudio() {
+    if (currentAudio) { currentAudio.pause(); currentAudio = null; currentAudioId = null; }
+  }
+
+  // ===== INIT =====
+  async function init() {
+    await loadSetsIndex();
+    navStack = ['home'];
+    activateScreen('home');
+    renderHome();
+    setupSearch();
+  }
+
+  init();
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>

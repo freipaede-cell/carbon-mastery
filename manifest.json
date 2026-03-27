@@ -1,0 +1,22 @@
+{
+  "name": "Carbon Mastery",
+  "short_name": "Carbon",
+  "description": "Carbon Markets Learning Platform",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a2744",
+  "theme_color": "#2BBFB3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
