@@ -48,6 +48,24 @@
       "linkedRef": "ref-market-map"
     },
     {
+      "id": "ep01-script-en",
+      "type": "presentation",
+      "title": "EP01 Script — The Carbon Credit Universe (EN)",
+      "file": "materials/ep01-script-en.html",
+      "description": "Full podcast script in English — read along while listening",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep01-script-de",
+      "type": "presentation",
+      "title": "EP01 Skript — Das Carbon-Credit-Universum (DE)",
+      "file": "materials/ep01-script-de.html",
+      "description": "Vollständiges Podcast-Skript auf Deutsch mit Vokabular-Boxen (EN→DE)",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
       "id": "ep02",
       "type": "podcast",
       "title": "EP02: From PDD to Retirement — Carbon Credit Lifecycle",
