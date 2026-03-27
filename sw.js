@@ -1,4 +1,4 @@
-const CACHE_NAME = 'carbon-mastery-v1';
+const CACHE_NAME = 'carbon-mastery-v2';
 const CORE_ASSETS = ['index.html', 'manifest.json'];
 
 // Install: cache core assets
@@ -29,7 +29,7 @@ self.addEventListener('fetch', e => {
   }
 
   // Audio (mp3): stale-while-revalidate
-  if (/\.mp3$/i.test(path)) {
+  if (/\.(mp3|m4a|wav|ogg)$/i.test(path)) {
     e.respondWith(
       caches.open(CACHE_NAME).then(cache =>
         cache.match(e.request).then(cached => {
