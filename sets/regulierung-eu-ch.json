@@ -1,0 +1,188 @@
+{
+  "id": "regulierung-eu-ch",
+  "title": "Carbon Regulation: EU, Switzerland & Global Frameworks",
+  "domain": "regulierung",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "EU ETS",
+      "front": "What is the EU ETS?",
+      "back": "The EU Emissions Trading System is the world's largest cap-and-trade system.\n\nVolume: ~1.4 billion tonnes (EU + CH + EEA). Price range 2025: EUR 60-82/t. Linked with the Swiss EHS since January 2020.\n\nEU ETS 2 launching 2027: extends coverage to buildings and road transport."
+    },
+    {
+      "id": 2,
+      "category": "EU ETS",
+      "front": "How does cap-and-trade work?",
+      "back": "Government sets an annual emissions cap that decreases over time. Allowances are auctioned or freely allocated to emitters.\n\nCompanies must surrender allowances equal to their emissions at year-end. Surplus allowances can be sold; shortfall must be purchased on the market.\n\nPenalty for non-compliance: EUR 100/t. The declining cap creates scarcity, driving prices upward."
+    },
+    {
+      "id": 3,
+      "category": "EU ETS",
+      "front": "What is the EU ETS price trajectory?",
+      "back": "2025: EUR 60-82/t (current range).\n2026 forecast: EUR 90-93/t.\n2030 forecast: EUR 149/t (BloombergNEF).\n\nThe upward trajectory is driven by the tightening cap (linear reduction factor increased to 4.3%/year from 2024 under 'Fit for 55') and the Market Stability Reserve absorbing surplus allowances."
+    },
+    {
+      "id": 4,
+      "category": "EU ETS",
+      "front": "What is the 'Fit for 55' impact on EU ETS?",
+      "back": "EU legislative package aiming for 55% emissions reduction by 2030 (vs. 1990).\n\nKey ETS change: linear reduction factor increased to 4.3% per year from 2024, accelerating cap decline. This tightens supply faster than before.\n\nResult: structurally higher carbon prices and expanded coverage via EU ETS 2 (buildings + transport from 2027)."
+    },
+    {
+      "id": 5,
+      "category": "EU ETS",
+      "front": "What is the Market Stability Reserve (MSR)?",
+      "back": "Automatic mechanism that absorbs surplus emission allowances when the market is oversupplied, and releases them when supply is tight.\n\nPurpose: prevents price collapse from accumulated surplus (a problem in early ETS phases). Supports price stability and ensures the cap remains effective.\n\nKey factor behind EU ETS price resilience since its introduction."
+    },
+    {
+      "id": 6,
+      "category": "EU ETS",
+      "front": "How is the Swiss EHS linked to the EU ETS?",
+      "back": "Linked since January 2020 through a bilateral agreement -- the first full linkage of a non-EU country to the EU ETS.\n\nMutual recognition of allowances: Swiss and EU allowances are interchangeable. EU regulatory changes (e.g., Fit for 55, MSR adjustments) flow through directly to Switzerland.\n\nCovers ~55 large Swiss industrial emitters."
+    },
+    {
+      "id": 7,
+      "category": "CBAM",
+      "front": "What is CBAM?",
+      "back": "Carbon Border Adjustment Mechanism -- EU import levy on CO2-intensive goods. Transition phase since October 2023; definitive phase from January 1, 2026.\n\nImporters must declare embedded emissions and purchase CBAM certificates at EU ETS price. Penalty: EUR 100/t for non-compliance.\n\nPurpose: prevent carbon leakage (production moving to countries without carbon pricing)."
+    },
+    {
+      "id": 8,
+      "category": "CBAM",
+      "front": "Which sectors does CBAM cover?",
+      "back": "Six sectors: steel, aluminum, cement, fertilizer, electricity, and hydrogen.\n\nThese are the most carbon-intensive traded goods where carbon leakage risk is highest. Importers must report embedded emissions across the full supply chain.\n\nRequires precise emissions measurement data -- a major driver for dMRV and carbon accounting services."
+    },
+    {
+      "id": 9,
+      "category": "CBAM",
+      "front": "How does CBAM affect developing countries?",
+      "back": "Developing countries exporting CBAM-covered goods to the EU must either price carbon domestically or lose competitiveness.\n\nExample: Indonesia is exposed through cement and fertilizer exports. Countries with domestic carbon pricing can deduct that from CBAM obligations.\n\nCreates strong incentive for global carbon pricing adoption -- countries without it face a de facto EU-imposed carbon tax on exports."
+    },
+    {
+      "id": 10,
+      "category": "CBAM",
+      "front": "What is a CBAM certificate?",
+      "back": "EU importers must purchase CBAM certificates equal to the embedded carbon in imported goods. Certificate price mirrors the EU ETS allowance price.\n\nIf the country of origin already has a carbon price, that amount can be deducted from the CBAM obligation. No deduction for VCM-only credits.\n\nCertificates are not tradeable between importers -- they must be purchased from the EU authority and surrendered quarterly."
+    },
+    {
+      "id": 11,
+      "category": "CBAM",
+      "front": "Why does CBAM matter for carbon credits?",
+      "back": "CBAM creates pressure for global carbon pricing, which increases demand for compliance-grade credits and high-integrity VCM credits.\n\nCountries seeking CBAM deductions need verifiable domestic carbon pricing. This drives investment in MRV infrastructure and emissions data quality.\n\nIndirect effect: elevates quality standards across the entire carbon market as compliance requirements cascade through supply chains."
+    },
+    {
+      "id": 12,
+      "category": "CSRD",
+      "front": "What is CSRD?",
+      "back": "Corporate Sustainability Reporting Directive -- EU regulation requiring ~50,000 companies to report sustainability data under ESRS standards.\n\nPhased rollout since 2024 (large companies first). Non-EU companies with EU revenue >EUR 150 million also covered.\n\nMandates Scope 1/2/3 emissions reporting with external assurance (limited, moving to reasonable assurance)."
+    },
+    {
+      "id": 13,
+      "category": "CSRD",
+      "front": "What does CSRD require for emissions reporting?",
+      "back": "Mandatory disclosure of Scope 1 (direct), Scope 2 (energy), and Scope 3 (value chain) emissions under European Sustainability Reporting Standards (ESRS).\n\nExternal assurance required -- initially limited assurance, transitioning to reasonable assurance (full audit-grade).\n\nCompanies need audit-trail-compatible data systems, driving demand for digital MRV and carbon accounting platforms."
+    },
+    {
+      "id": 14,
+      "category": "CSRD",
+      "front": "Why does CSRD drive carbon credit demand?",
+      "back": "Companies reporting under CSRD need audit-grade carbon data, which increases demand for technologically verified (dMRV-backed) credits with full traceability.\n\nLow-quality credits without proper documentation become unusable for CSRD-compliant companies. Premium for verifiable, CCP-certified credits increases.\n\nCSRD also makes Scope 3 emissions visible, revealing compensation gaps that drive credit purchases."
+    },
+    {
+      "id": 15,
+      "category": "CSRD",
+      "front": "What is Scope 3 and why does it matter?",
+      "back": "All indirect value chain emissions -- both upstream (supply chain) and downstream (product use, disposal). Most complex to measure, typically 70-90% of total corporate footprint.\n\nCSRD makes Scope 3 reporting mandatory. Most relevant category for carbon credits because companies cannot directly control these emissions.\n\nMeasurement requires supply chain emissions data -- driving demand for carbon accounting services across entire value chains."
+    },
+    {
+      "id": 16,
+      "category": "Anti-Greenwashing",
+      "front": "What is the EU Anti-Greenwashing Directive?",
+      "back": "The EU Empowering Consumers Directive, effective September 2026.\n\nBans generic environmental claims unless substantiated with specific, verifiable evidence. Enforced through national consumer protection authorities.\n\nPurpose: protect consumers from misleading sustainability claims and force companies to back up environmental marketing with real data."
+    },
+    {
+      "id": 17,
+      "category": "Anti-Greenwashing",
+      "front": "What environmental claims are banned under EU anti-greenwashing rules?",
+      "back": "Generic claims like 'climate neutral', 'carbon neutral', 'eco-friendly', and 'CO2-compensated' are banned without specific substantiation.\n\nCompanies must provide verifiable evidence for any environmental claim -- general offsetting statements are no longer sufficient.\n\nConsequence: cheap, unverified carbon credits become unusable for marketing. The VCM consolidates around high-integrity, certified credits."
+    },
+    {
+      "id": 18,
+      "category": "Anti-Greenwashing",
+      "front": "What credit quality is required under anti-greenwashing rules?",
+      "back": "Credits must be CCP-certified (ICVCM Core Carbon Principles) or equivalent, with specific verifiable evidence of emissions impact.\n\nGeneric 'we offset our emissions' claims are insufficient. Companies must demonstrate the specific project, methodology, verification, and additionality.\n\nEffectively makes CCP certification or comparable quality labels a market requirement, not just a premium feature."
+    },
+    {
+      "id": 19,
+      "category": "Anti-Greenwashing",
+      "front": "What are the penalties for greenwashing in the EU?",
+      "back": "Up to 4% of annual EU revenue, enforced by national consumer protection authorities.\n\nThis mirrors GDPR-level penalties, signaling the EU treats misleading environmental claims as seriously as data protection violations.\n\nCompanies with significant EU operations face material financial risk from unsubstantiated sustainability claims."
+    },
+    {
+      "id": 20,
+      "category": "CORSIA",
+      "front": "What is CORSIA?",
+      "back": "Carbon Offsetting and Reduction Scheme for International Aviation -- ICAO mandate for airlines to offset emissions growth above 2019 baseline.\n\nPilot phase 2024-2026, compliance phase 2027-2035. Price: ~EUR 19/t.\n\nBridge between VCM and compliance market: airlines must purchase eligible carbon credits, creating massive institutional demand."
+    },
+    {
+      "id": 21,
+      "category": "CORSIA",
+      "front": "What is CORSIA's demand impact on the carbon market?",
+      "back": "Estimated 1.6-3.3 billion credits needed through the compliance phase (2027-2035) -- a massive new buyer class entering the VCM.\n\nThis institutional demand dwarfs current VCM retirement volumes (USD 1.04 billion in 2025). Airlines become price-setting buyers for eligible credits.\n\nCORSIA creates a quality-stratified market: only ICAO-approved credits qualify, splitting VCM into CORSIA-eligible and non-eligible tiers."
+    },
+    {
+      "id": 22,
+      "category": "CORSIA",
+      "front": "What are CORSIA eligibility criteria?",
+      "back": "The ICAO Technical Advisory Body (TAB) approves specific programs and methodologies for CORSIA compliance.\n\nNot all VCM credits qualify -- only those from TAB-approved programs meeting CORSIA-specific integrity requirements. This creates a quality tier within the VCM.\n\nCORSIA eligibility becomes a price-relevant attribute, similar to CCP certification but serving a different buyer segment."
+    },
+    {
+      "id": 23,
+      "category": "CORSIA",
+      "front": "Which countries participate in CORSIA?",
+      "back": "Mandatory for states responsible for the majority of international aviation activity. Voluntary participation available for others.\n\nIndonesia confirmed participation in January 2026. Major aviation nations (EU, US, UK, Japan, etc.) all participating.\n\nParticipation means domestic airlines face compliance obligations, creating demand for carbon credits in those jurisdictions."
+    },
+    {
+      "id": 24,
+      "category": "Swiss Regulation",
+      "front": "What is Switzerland's carbon tax?",
+      "back": "CHF 120/t CO2 on heating fuels -- one of the highest carbon taxes globally.\n\nApplies to fossil heating fuels (oil, gas). One-third of revenue is redistributed to the population, one-third funds the buildings program.\n\nComparison: EU ETS EUR 60-82/t, Canada CAD 80/t, Singapore SGD 25/t. Switzerland's high carbon price reflects its ambitious climate targets."
+    },
+    {
+      "id": 25,
+      "category": "Swiss Regulation",
+      "front": "What is Switzerland's climate target?",
+      "back": "Net-zero by 2050 (Climate Protection Act 2023). Interim target: -50% by 2030 vs. 1990 baseline.\n\nCritical split: 75% domestic reductions / 25% international (via carbon credits and Art. 6 cooperation). This 25% international share drives Swiss demand for ITMOs.\n\nKliK Foundation channels fuel importer obligations into international carbon projects."
+    },
+    {
+      "id": 26,
+      "category": "Swiss Regulation",
+      "front": "What is BAFU's role in carbon markets?",
+      "back": "Federal Office for the Environment (Bundesamt fuer Umwelt) -- Switzerland's competent authority for Article 6 of the Paris Agreement.\n\nNegotiates bilateral Art. 6.2 agreements (16 as of early 2026, second only to Japan). Approves projects and authorizes ITMO transfers.\n\nAlso oversees the Swiss EHS (linked to EU ETS) and administers the CO2 levy."
+    },
+    {
+      "id": 27,
+      "category": "Swiss Regulation",
+      "front": "What is the Swiss EHS and how does it relate to EU ETS?",
+      "back": "Swiss Emissions Trading System (Emissionshandelssystem), linked to EU ETS since January 2020 -- the first full linkage of a non-EU country.\n\nMutual recognition of allowances means EU ETS regulatory changes flow through directly to Switzerland. Same price signals, same cap dynamics.\n\nCovers large Swiss industrial emitters. Complemented by the CHF 120/t carbon tax on heating fuels for non-EHS sectors."
+    },
+    {
+      "id": 28,
+      "category": "Megatrends 2026",
+      "front": "What are the 6 megatrends shaping carbon markets in 2026?",
+      "back": "1. Two-class market: CCP-certified vs. legacy credits diverge in price.\n2. CBAM effect: EU carbon border tax goes definitive Jan 2026.\n3. Removals boom: 62% of buyers prefer removal credits.\n4. Art. 6 becomes real: first ITMO transfers completed.\n5. Anti-greenwashing: EU bans generic climate claims from Sept 2026.\n6. China ETS expansion: +3 billion tCO2e (cement, steel, aluminum from March 2025)."
+    },
+    {
+      "id": 29,
+      "category": "Megatrends 2026",
+      "front": "What is the two-class market in carbon credits?",
+      "back": "The VCM is splitting into CCP-certified high-integrity credits (with +25% price premium) and legacy/unverified credits facing a demand death spiral.\n\n84% of existing credits are classified as high-risk (Nature Communications, 2024). CCP label becomes the dividing line.\n\nAnti-greenwashing regulation accelerates this: companies can only use certified credits for environmental claims, making low-quality credits effectively unmarketable."
+    },
+    {
+      "id": 30,
+      "category": "Megatrends 2026",
+      "front": "What is the removals boom?",
+      "back": "62% of corporate buyers now prefer removal credits (active CO2 removal from atmosphere) over avoidance credits (preventing emissions).\n\nMajor commitments: Microsoft, Stripe, and the Frontier coalition are driving demand for tech-based removals (DAC, biochar) at USD 150-500+/t.\n\nNature-based removals (afforestation) at USD 15-35/t offer a more affordable entry point. Removals are seen as more credible than avoidance for net-zero claims."
+    }
+  ]
+}

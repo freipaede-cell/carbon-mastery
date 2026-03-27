@@ -33,6 +33,85 @@
       "materials": [
         {"type": "referenz", "title": "Laendervergleich", "file": "materials/ref-laendervergleich.html"}
       ]
+    },
+    {
+      "id": "regulierung-eu-ch",
+      "file": "sets/regulierung-eu-ch.json",
+      "title": "Carbon Regulation: EU, Switzerland & Global Frameworks",
+      "domain": "regulierung",
+      "cardCount": 30,
+      "tags": ["EU ETS", "CBAM", "CSRD", "CORSIA", "Swiss EHS", "anti-greenwashing", "megatrends"],
+      "materials": [
+        {"type": "referenz", "title": "Regulierung Timeline", "file": "materials/ref-regulierung-timeline.html"}
+      ]
+    },
+    {
+      "id": "article-6-deep-dive",
+      "file": "sets/article-6-deep-dive.json",
+      "title": "Article 6 Paris Agreement: Deep Dive",
+      "domain": "regulierung",
+      "cardCount": 25,
+      "tags": ["Art. 6.2", "Art. 6.4", "ITMO", "CA", "KliK", "BAFU", "dual-pathway", "registry"],
+      "materials": [
+        {"type": "referenz", "title": "Article 6 Uebersicht", "file": "materials/ref-article-6.html"}
+      ]
+    },
+    {
+      "id": "standards-registries",
+      "file": "sets/standards-registries.json",
+      "title": "Carbon Standards, Registries & Market Players",
+      "domain": "markt",
+      "cardCount": 30,
+      "tags": ["Verra", "Gold Standard", "Social Carbon", "ICVCM", "CCP", "rating agencies", "KliK"],
+      "materials": [
+        {"type": "referenz", "title": "Standards Vergleich", "file": "materials/ref-standards-vergleich.html"}
+      ]
+    },
+    {
+      "id": "carbon-lifecycle",
+      "file": "sets/carbon-lifecycle.json",
+      "title": "Carbon Credit Lifecycle & Economics",
+      "domain": "markt",
+      "cardCount": 25,
+      "tags": ["lifecycle", "PDD", "VVB", "issuance", "retirement", "CDR", "forward purchase"],
+      "materials": [
+        {"type": "referenz", "title": "Lifecycle Flowchart", "file": "materials/ref-lifecycle-flowchart.html"}
+      ]
+    },
+    {
+      "id": "drc-risk-profile",
+      "file": "sets/drc-risk-profile.json",
+      "title": "DRC Country Risk & Emerging Market Due Diligence",
+      "domain": "laender",
+      "cardCount": 35,
+      "tags": ["DRC", "sanctions", "OFAC", "FPIC", "ARMCA", "Indonesia", "due diligence", "country annex"],
+      "materials": [
+        {"type": "referenz", "title": "DRC Risiko-Dashboard", "file": "materials/ref-drc-dashboard.html"},
+        {"type": "referenz", "title": "Laendervergleich", "file": "materials/ref-laendervergleich.html"}
+      ]
+    },
+    {
+      "id": "fee-architecture",
+      "file": "sets/fee-architecture.json",
+      "title": "Fee Structure & Contract Architecture",
+      "domain": "vertrag",
+      "cardCount": 20,
+      "tags": ["fees", "CSA", "PaaS", "warranty", "revenue sharing", "margin protection", "lease"],
+      "materials": [
+        {"type": "referenz", "title": "Fee Matrix", "file": "materials/ref-fee-matrix.html"},
+        {"type": "referenz", "title": "Vertragsarchitektur", "file": "materials/ref-vertragsarchitektur.html"}
+      ]
+    },
+    {
+      "id": "technology-amrv",
+      "file": "sets/technology-amrv.json",
+      "title": "dMRV, aMRV & Carbon Technology",
+      "domain": "technik",
+      "cardCount": 20,
+      "tags": ["dMRV", "aMRV", "Eddy Covariance", "blockchain", "Hedera", "Chainlink", "SCD0003", "data ownership"],
+      "materials": [
+        {"type": "referenz", "title": "COMPANY Profil", "file": "materials/ref-company-profil.html"}
+      ]
     }
   ],
   "media": [

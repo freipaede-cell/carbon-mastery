@@ -1,0 +1,218 @@
+{
+  "id": "drc-risk-profile",
+  "title": "DRC Country Risk & Emerging Market Due Diligence",
+  "domain": "laender",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Sanctions Risk",
+      "front": "What are the 4 parallel sanctions regimes affecting DRC?",
+      "back": "Four overlapping regimes:\n1. UN Security Council (UNSCR 1533/1544) — designated persons\n2. OFAC (E.O. 13413) — 20+ designated persons/entities\n3. EU — 31+53 designated persons\n4. SECO — automatically adopts UN sanctions + selectively adopts EU sanctions\n\nAll four must be screened simultaneously for any DRC counterparty."
+    },
+    {
+      "id": 2,
+      "category": "Sanctions Risk",
+      "front": "What is the OFAC 50%-rule?",
+      "back": "An entity is treated as sanctioned if 50% or more is owned — directly or indirectly — by one or more SDN-listed persons (Specially Designated Nationals).\n\nThis means a DRC company with no sanctions listing of its own can still be blocked if its Ultimate Beneficial Owner (UBO) is on the SDN list. Requires UBO due diligence on every counterparty."
+    },
+    {
+      "id": 3,
+      "category": "Sanctions Risk",
+      "front": "What is the RDF sanction (March 2, 2026)?",
+      "back": "OFAC sanctioned the Rwanda Defence Force (RDF) plus 4 senior officers for supporting the M23 rebellion in eastern DRC.\n\nGeneral License 1 granted a wind-down period until April 1, 2026. Any entity linked to RDF or M23 is now SDN-listed. SECO does NOT automatically adopt OFAC sanctions — separate Swiss screening required."
+    },
+    {
+      "id": 4,
+      "category": "Sanctions Risk",
+      "front": "What are sanctions penalties for Swiss companies?",
+      "back": "Under Art. 9 of the Swiss Embargo Act (EmbG):\n- Up to CHF 500,000 fine\n- Up to 5 years imprisonment\n\nPrecedent: Glencore — CHF 2M fine + USD 150M disgorgement (August 2024) for DRC-related corruption and sanctions violations. Swiss extraterritorial enforcement is real."
+    },
+    {
+      "id": 5,
+      "category": "Sanctions Risk",
+      "front": "What equipment is dual-use classified in the carbon MRV context?",
+      "back": "Potentially export-controlled items:\n- Drones: ECCN 9A012\n- Thermal imaging sensors\n- RF communication modules\n\nSubject to US EAR (Export Administration Regulations) and ITAR. Export to DRC requires license review. Equipment with GPS, WLAN, or radio modules may trigger additional national controls."
+    },
+    {
+      "id": 6,
+      "category": "Corruption Risk",
+      "front": "What is DRC's Corruption Perceptions Index score?",
+      "back": "CPI 2024: 20/100 (Rank 163 of 182 countries) — categorized as extreme corruption.\n\nFor comparison: Switzerland scores 82, Indonesia 34, Malaysia 52. DRC ranks among the world's most corrupt jurisdictions. Verisk Resource Nationalism Index: DRC = Rank 1 ('extreme risk')."
+    },
+    {
+      "id": 7,
+      "category": "Corruption Risk",
+      "front": "What is Art. 322septies StGB (Swiss Criminal Code)?",
+      "back": "Swiss anti-bribery law with extraterritorial reach. Swiss companies and individuals are criminally liable for bribing foreign public officials — even if the bribery occurs entirely outside Switzerland.\n\nApplies to any payment, gift, or advantage to DRC government officials (ARMCA, provincial authorities, community leaders with public functions)."
+    },
+    {
+      "id": 8,
+      "category": "Corruption Risk",
+      "front": "What is the Glencore precedent for DRC operations?",
+      "back": "Glencore (August 2024): CHF 2M fine + USD 150M disgorgement, partly DRC-related.\n\nThe case established that Swiss prosecutors will pursue corruption in DRC supply chains. Combined with UK/US settlements, Glencore paid over USD 1.5B globally. Sets the benchmark for Swiss companies operating in high-corruption jurisdictions."
+    },
+    {
+      "id": 9,
+      "category": "Corruption Risk",
+      "front": "Is 'wilful blindness' a defense against corruption charges?",
+      "back": "No. Deliberate ignorance of corruption indicators does not protect a company or its directors.\n\nUnder Swiss law (Art. 12 StGB) and US FCPA jurisprudence, 'conscious avoidance' of knowledge is treated as equivalent to actual knowledge. Companies must implement active due diligence — passive non-awareness is insufficient."
+    },
+    {
+      "id": 10,
+      "category": "Tax & Counterparty Risk",
+      "front": "What is the DRC withholding tax on service fees?",
+      "back": "14% WHT on gross service fees (confirmed by PwC).\n\nNo Double Taxation Agreement (DBA) between Switzerland and DRC — only treaties with Belgium and South Africa exist. Competitive disadvantage: Belgian/South African companies pay 0% WHT via their treaties. Swiss lump-sum tax credit (Pauschalsteueranrechnung) possible but narrow without DBA."
+    },
+    {
+      "id": 11,
+      "category": "Tax & Counterparty Risk",
+      "front": "What is the Permanent Establishment (PE) risk in DRC?",
+      "back": "30% Corporate Income Tax if a PE is triggered, plus 20% Branch Profit Tax on 50% of net profit.\n\nPE can arise from >30 days physical presence or permanent equipment installation. Without a DBA, DRC domestic law thresholds apply with no treaty protection. Additional: 16% VAT on imported services, 1% minimum tax on revenue."
+    },
+    {
+      "id": 12,
+      "category": "Tax & Counterparty Risk",
+      "front": "Why are SPV counterparties particularly risky in DRC?",
+      "back": "DRC SPVs typically have:\n- Minimal capitalization (OHADA SARL: no minimum capital required)\n- Art. 664 AUSCGIE: forced dissolution if net assets < 50% of capital\n- DRC judiciary extremely corrupt (CPI 20/100)\n- OHADA annulment procedures available\n\nResult: An SPV can become worthless overnight, leaving COMPANY with no recourse against a shell entity."
+    },
+    {
+      "id": 13,
+      "category": "Tax & Counterparty Risk",
+      "front": "What is the BCC currency risk?",
+      "back": "Banque Centrale du Congo (BCC):\n- Only 11.8 weeks of import cover (critically low)\n- De-dollarization policy since June 2024: all domestic transactions must be in Congolese Franc (CDF)\n- BCC policy rate: 25%\n\nRisk: Fee payments denominated in CDF may lose significant value. USD payments face conversion barriers and Bank documentation requirements."
+    },
+    {
+      "id": 14,
+      "category": "Tax & Counterparty Risk",
+      "front": "Why is a Parent Company Guarantee (PCG) mandatory for DRC?",
+      "back": "The DRC SPV has no meaningful assets to seize in case of default. DRC judiciary is corrupt (CPI 20) and enforcement is unreliable even with NYC Convention (member since 2013).\n\nA PCG from the international parent company provides:\n- Creditworthy counterparty outside DRC jurisdiction\n- Enforceable claim in a reliable jurisdiction\n- Deterrent against strategic SPV abandonment."
+    },
+    {
+      "id": 15,
+      "category": "Regulatory & Operational Risk",
+      "front": "What is ARMCA and what is its implementation status?",
+      "back": "ARMCA = Autorité de Régulation des Marchés de Carbone (DRC Carbon Market Regulator).\n\nLegal basis: Decree 23/22 (June 14, 2023). Operational since COP30 (Nov 20, 2025) with digital carbon register.\n\nCritical gap: 6 of 9 implementing regulations still missing (March 2026). Creates a regulatory vacuum — rules can change retroactively."
+    },
+    {
+      "id": 16,
+      "category": "Regulatory & Operational Risk",
+      "front": "What happened to DRC carbon concessions in January 2024?",
+      "back": "8 concessions annulled, covering 1.94 million hectares:\n- 5 held by Tradelink (project area exceeded permitted size)\n- Including Isangi REDD+ (Blattner family, US)\n\nReasons: FPIC violations, area exceeding legal limits. Demonstrates that DRC authorities can and do annul concessions retroactively — project security is not guaranteed."
+    },
+    {
+      "id": 17,
+      "category": "Regulatory & Operational Risk",
+      "front": "What is the 50/25/25 benefit-sharing rule in DRC?",
+      "back": "Arrêté interministériel 006 (Nov 2023), operationalized Feb 2025:\n- 50% to the state\n- 25% to province and local communities\n- 25% to investor/developer\n\nBased on Forest Code 2002 (Loi 011/2002 Art. 89). Mai-Ndombe as pilot region. FCPF payment: USD 19.47M for 3.89M tCO2 (June 2025)."
+    },
+    {
+      "id": 18,
+      "category": "Regulatory & Operational Risk",
+      "front": "What is the DRC operational environment?",
+      "back": "Eastern DRC (March 2026):\n- M23 controls Goma + Bukavu since Jan/Feb 2025\n- 7.3 million internally displaced persons\n- Infrastructure: 19% electricity access, 32% mobile internet\n- Roads described as 'sparsest in the world'\n\nDoha ceasefire (Nov 2025) + Washington Accords (Dec 2025) — both violated. M23 drone attack on Kisangani (Feb 2, 2026)."
+    },
+    {
+      "id": 19,
+      "category": "Regulatory & Operational Risk",
+      "front": "What is the carbon land grab risk and its scale?",
+      "back": ">9 million hectares globally in carbon offset deals, >5.2 million hectares in Africa alone (Rainforest Foundation UK, Oct 2025).\n\nCongo Basin = epicenter of the debate (152M ha, second-largest rainforest). Net-zero targets could require up to 1 billion hectares by 2060. Any DRC engagement faces automatic heightened media/NGO scrutiny."
+    },
+    {
+      "id": 20,
+      "category": "FPIC & Due Diligence",
+      "front": "What is FPIC and why is it critical?",
+      "back": "FPIC = Free, Prior and Informed Consent — the right of indigenous peoples and local communities to give or withhold consent before projects affecting their land.\n\nLegal basis: UN Declaration on the Rights of Indigenous Peoples (UNDRIP), ILO Convention 169, Verra/Gold Standard requirements. In DRC: ARMCA makes FPIC a regulatory requirement. Violation = concession annulment."
+    },
+    {
+      "id": 21,
+      "category": "FPIC & Due Diligence",
+      "front": "What was the Isangi REDD+ scandal?",
+      "back": "Isangi REDD+ (DRC), annulled January 2024:\n- Blattner family (US) sold 1.39 million credits worth >USD 7 million\n- Community consent obtained 5 YEARS AFTER credit sales began\n- Annual payments of USD 300 to communities went unpaid for 7 years\n\nBecame the poster case for carbon land grab in DRC. Led to ARMCA concession annulments."
+    },
+    {
+      "id": 22,
+      "category": "FPIC & Due Diligence",
+      "front": "What is the DRC concession legality rate?",
+      "back": "Only 6% of 82 audited concessions meet legal criteria (APEM/Rainforest Foundation UK audit).\n\n94% of concessions have legal deficiencies — ranging from FPIC violations to area exceeding limits to missing regulatory approvals. This makes every DRC carbon project a potential compliance risk."
+    },
+    {
+      "id": 23,
+      "category": "FPIC & Due Diligence",
+      "front": "What are the 6 Showstopper DD questions for DRC?",
+      "back": "Any single YES = project cannot proceed:\n1. Is the UBO sanctions-listed (OFAC/EU/UN/SECO)?\n2. Are corruption methods involved (facilitation payments, government kickbacks)?\n3. Are armed groups linked to the project area (M23, FARDC units)?\n4. Is the project in an active conflict zone?\n5. Was FPIC properly obtained BEFORE project activities?\n6. Does the benefit-sharing comply with 50/25/25 framework?"
+    },
+    {
+      "id": 24,
+      "category": "FPIC & Due Diligence",
+      "front": "What are the 9 contractual safeguards for DRC projects?",
+      "back": "1. FPIC as Condition Precedent (no FPIC = no contract)\n2. Area verification (max 500,000 ha per concession)\n3. Independent audit right (annual, at COMPANY's discretion)\n4. Grievance mechanism for affected communities\n5. Ongoing monitoring (not just initial FPIC)\n6. Termination right for compliance breach\n7. Benefit-sharing compliance (50/25/25)\n8. Client DD history review\n9. Art. 6.2 preference (state oversight > pure VCM)"
+    },
+    {
+      "id": 25,
+      "category": "FPIC & Due Diligence",
+      "front": "What is the DRC carbon project economic reality?",
+      "back": "Example: 1M credits x USD 10/credit = USD 10M gross revenue\n- State takes 50% = USD 5M\n- Communities take 25% = USD 2.5M\n- SPV/developer retains 25% = USD 2.5M gross\n- Minus: WHT 14%, operational costs, ARMCA fees, MRV costs, legal/DD costs\n\nNet margin for SPV may be zero or negative. Questions whether projects are commercially viable under the benefit-sharing regime."
+    },
+    {
+      "id": 26,
+      "category": "12 Contractual Instruments",
+      "front": "List the 12 DRC risk mitigation instruments.",
+      "back": "1. Country Annex (DRC-specific contract supplement)\n2. Gross-up Clause (client covers WHT)\n3. Parent Company Guarantee (PCG)\n4. Compliance Representations & Warranties\n5. Conditions Precedent (FPIC, permits)\n6. Sanctions Termination Right\n7. Anti-Corruption Clause\n8. UBO Monitoring (quarterly)\n9. Escrow Account\n10. Shortened FM/MAC period\n11. DAP Incoterms (Delivered at Place)\n12. Flow-Down FA to Work Order"
+    },
+    {
+      "id": 27,
+      "category": "12 Contractual Instruments",
+      "front": "What is a Country Annex?",
+      "back": "A jurisdiction-specific contract supplement that modifies the base agreement for a particular country's risk profile.\n\nDRC Country Annex contains 12 specific measures addressing sanctions, corruption, FPIC, benefit-sharing, tax, and operational risks. Mandatory for DRC (Conditional GO assessment). Indonesia requires only 7 measures — no Country Annex needed."
+    },
+    {
+      "id": 28,
+      "category": "12 Contractual Instruments",
+      "front": "What is a Gross-up Clause?",
+      "back": "A contractual provision requiring the client to pay the gross amount so that COMPANY receives the full net fee after withholding tax deduction.\n\nDRC example: 14% WHT on service fees. Without gross-up, COMPANY receives only 86% of the agreed fee. With gross-up at 25% client override rate, the formula becomes: Client pays 125% so COMPANY nets 100%."
+    },
+    {
+      "id": 29,
+      "category": "12 Contractual Instruments",
+      "front": "What is UBO Monitoring?",
+      "back": "Quarterly confirmation of the Ultimate Beneficial Owner of the counterparty, combined with SDN (Specially Designated Nationals) screening against all 4 sanctions lists (OFAC, EU, UN, SECO).\n\nRequired because DRC ownership structures change frequently, and the OFAC 50%-rule means a change in UBO can instantly make the counterparty sanctioned."
+    },
+    {
+      "id": 30,
+      "category": "12 Contractual Instruments",
+      "front": "What is Flow-Down FA to Work Order?",
+      "back": "The mechanism by which DRC-specific compliance requirements from the Country Annex are passed through the contract chain:\n\nFramework Agreement (COMPANY <> MANUFACTURER) --> Work Order (project-specific)\n\nEnsures MANUFACTURER receives and must comply with all DRC-specific sanctions, anti-corruption, and export control obligations for each project."
+    },
+    {
+      "id": 31,
+      "category": "Indonesia Contrast",
+      "front": "What is Indonesia's risk assessment vs. DRC?",
+      "back": "Indonesia: GO with 7 measures, 0 Showstoppers, 3 Red Flags.\nDRC: CONDITIONAL GO with 12 measures, 5 Showstoppers, 4 Red Flags.\n\nEstimated costs: Indonesia CHF 12,000-21,000 vs. DRC CHF 50,000-120,000+ (first year). Indonesia needs no Country Annex. CPI: Indonesia 34 vs. DRC 20."
+    },
+    {
+      "id": 32,
+      "category": "Indonesia Contrast",
+      "front": "What is Perpres 110/2025?",
+      "back": "Indonesian Presidential Regulation replacing Perpres 98/2021, in force since October 10, 2025.\n\nKey changes:\n- Art. 58(1): Moratorium lifted — carbon trading allowed BEFORE NDC targets met\n- Art. 66: International standards recognized (Verra, Gold Standard, Plan Vivo) — no MRA procedure needed\n- Dual registry: SRN PPI (climate/NDC) + SRUK (carbon units)\n- 1-year transition for existing projects (until Oct 2026)"
+    },
+    {
+      "id": 33,
+      "category": "Indonesia Contrast",
+      "front": "What are Indonesia's Art. 6.2 bilateral agreements?",
+      "back": "Active bilateral agreements: Japan (JCM), Korea, Singapore, Norway.\nSwitzerland: in preparation (not yet signed, March 2026).\n\nJapan's JCM dominates globally with 147 of 176 total pilot activities. A CH-Indonesia Art. 6.2 agreement would enable ITMO transfers at premium prices (USD 20+ vs. VCM USD 5-10)."
+    },
+    {
+      "id": 34,
+      "category": "Indonesia Contrast",
+      "front": "What is SRUK?",
+      "back": "SRUK = Sistem Registrasi Unit Karbon (Carbon Unit Registration System).\n\nPlanned operational March 2026. Part of Indonesia's dual registry structure:\n- SRN PPI: Climate/NDC-level registry\n- SRUK: Carbon unit registry for individual credits\n\nDistinguishes CA-Units (Art. 6, with NDC adjustment) from Non-CA-Units (voluntary market only)."
+    },
+    {
+      "id": 35,
+      "category": "Indonesia Contrast",
+      "front": "What is the DBA CH-Indonesia WHT rate on service fees?",
+      "back": "5% WHT on service fees under the DBA Switzerland-Indonesia (1988, MLI-modified).\n\nVs. domestic rate of 20% — the treaty saves 75% on withholding tax. PE risk threshold: 60+ days of service in 12 months (domestic law), potentially higher under DBA Art. 5. Permanent equipment installation = independent PE trigger regardless of presence days."
+    }
+  ]
+}

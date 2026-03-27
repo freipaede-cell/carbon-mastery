@@ -1,0 +1,158 @@
+{
+  "id": "article-6-deep-dive",
+  "title": "Article 6 Paris Agreement: Deep Dive",
+  "domain": "regulierung",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Art. 6 Structure",
+      "front": "What is Article 6 of the Paris Agreement?",
+      "back": "The framework for international carbon market cooperation under the Paris Agreement (2015). Rulebook finalized at COP26 Glasgow (2021).\n\nThree sub-articles: 6.2 (bilateral cooperation), 6.4 (centralized UN mechanism), 6.8 (non-market approaches).\n\nEnables countries to trade emissions reductions internationally to meet their NDC targets more cost-effectively."
+    },
+    {
+      "id": 2,
+      "category": "Art. 6 Structure",
+      "front": "What is Article 6.2?",
+      "back": "Bilateral cooperative approaches: governments negotiate directly to trade ITMOs (Internationally Transferred Mitigation Outcomes).\n\n90+ arrangements and 176 pilot activities as of March 2026. No UN supervision required -- more flexible than Art. 6.4. 31 countries have published authorization policies, 25 have ITMO registries.\n\nDominant pathway: Japan leads with 147 JCM arrangements, Switzerland second with 16 bilateral agreements."
+    },
+    {
+      "id": 3,
+      "category": "Art. 6 Structure",
+      "front": "What is Article 6.4 / PACM?",
+      "back": "Paris Agreement Crediting Mechanism -- centralized UN mechanism under the Supervisory Body. Successor to the CDM (Kyoto Protocol).\n\nCDM transition: 1,389 projects submitted, only 124 approved. First A6.4ER (credit) issuance delayed to early 2026. Stricter rules than CDM.\n\nGenerates standardized emission reduction units with built-in corresponding adjustments. Slower to operationalize than Art. 6.2."
+    },
+    {
+      "id": 4,
+      "category": "Art. 6 Structure",
+      "front": "What is Article 6.8?",
+      "back": "Non-market approaches under the Paris Agreement: technology transfer, capacity building, and other cooperative mechanisms that do not involve carbon credit trading.\n\nLow commercial relevance for carbon market participants. Primarily about supporting developing countries through knowledge sharing and institutional capacity.\n\nNo credits generated, no trading mechanism -- purely cooperative framework."
+    },
+    {
+      "id": 5,
+      "category": "Art. 6 Structure",
+      "front": "Why did the CDM fail and what did Art. 6 fix?",
+      "back": "CDM failures: additionality gaming (projects that would have happened anyway), no double-counting protection, and massive oversupply that crashed CER prices to EUR 0.50.\n\nArt. 6 fixes: Corresponding Adjustments prevent double counting. Stricter additionality requirements. NDC integration ensures credits serve national climate targets.\n\nArt. 6.4 also addresses the CDM's auditor conflict of interest (developers paying their own verifiers)."
+    },
+    {
+      "id": 6,
+      "category": "Corresponding Adjustments",
+      "front": "What is a Corresponding Adjustment?",
+      "back": "When a host country exports ITMOs, it must add those transferred tonnes back to its own NDC emissions accounting. This prevents the same reduction from being counted by both buyer and seller.\n\nExample: Country A sells 1 million ITMOs to Country B. Country A adds 1M tonnes to its reported emissions; Country B subtracts 1M tonnes.\n\nThe core anti-double-counting mechanism of Article 6."
+    },
+    {
+      "id": 7,
+      "category": "Corresponding Adjustments",
+      "front": "Why do Corresponding Adjustments create a price premium?",
+      "back": "Credits with CA (= not double-counted) command USD 20+ vs. USD 5-10 for VCM-only credits without CA. That is a 2-4x premium.\n\nThe premium reflects real value: a CA-backed credit represents a genuine transfer of mitigation outcome that cannot be claimed by anyone else.\n\nBuyers (especially sovereign buyers like Switzerland) pay the premium because only CA-backed credits count toward their NDC targets."
+    },
+    {
+      "id": 8,
+      "category": "Corresponding Adjustments",
+      "front": "What happens to a credit without a Corresponding Adjustment?",
+      "back": "Without CA, the credit remains VCM-only: usable for voluntary corporate claims but not for NDC compliance. Price drops to USD 5-10 (roughly 75% reduction vs. ITMO pricing).\n\nThe host country can still count the underlying reduction toward its own NDC, so the buyer's claim is weaker (potential double counting).\n\nAnti-greenwashing regulation further weakens non-CA credits as companies need more substantiated claims."
+    },
+    {
+      "id": 9,
+      "category": "Corresponding Adjustments",
+      "front": "Who bears the cost of a Corresponding Adjustment?",
+      "back": "The host country -- because applying a CA makes its own NDC harder to achieve. Every exported ITMO is a tonne the host country can no longer count toward its domestic target.\n\nThis is a real sovereign sacrifice, not just an accounting entry. Countries must either reduce more domestically or accept a gap in their NDC.\n\nThis explains why some host countries are reluctant to grant CAs, and why authorization is a sovereign act that cannot be contractually guaranteed."
+    },
+    {
+      "id": 10,
+      "category": "ITMOs",
+      "front": "What is an ITMO?",
+      "back": "Internationally Transferred Mitigation Outcome -- the sovereign-authorized unit traded under Article 6.2. Not a 'credit' in the VCM sense.\n\nKey distinction: ITMOs are backed by government authorization and Corresponding Adjustments. They carry sovereign weight and cannot be double-counted.\n\n90+ bilateral agreements worldwide (March 2026). First operational transfer: Thailand to Switzerland, January 2024."
+    },
+    {
+      "id": 11,
+      "category": "ITMOs",
+      "front": "What is Host Country Authorization?",
+      "back": "Formal government approval (Letter of Authorization) for the transfer of ITMOs from the host country. A sovereign act that cannot be contractually guaranteed by private parties.\n\nWithout host country authorization, a project's credits remain VCM-only and cannot become ITMOs. Authorization defines the quantity and conditions of the transfer.\n\nRisk: authorization can be delayed, denied, or revoked due to policy changes, political instability, or NDC recalculation."
+    },
+    {
+      "id": 12,
+      "category": "ITMOs",
+      "front": "What is the ITMO price premium over VCM credits?",
+      "back": "ITMOs trade at USD 20+ vs. USD 5-10 for basic VCM credits -- a 2-4x premium.\n\nThe premium reflects: (1) Corresponding Adjustment = no double counting, (2) sovereign authorization = higher integrity, (3) NDC-eligible = usable for national climate targets.\n\nThis price differential is the economic incentive driving Art. 6 adoption and bilateral agreement negotiations."
+    },
+    {
+      "id": 13,
+      "category": "ITMOs",
+      "front": "What happens if host country authorization is denied?",
+      "back": "The credit stays VCM-only: still tradeable and retireable, but at significantly lower value (USD 5-10 vs. USD 20+). The 2-4x price premium disappears.\n\nContract implication: authorization denial must be treated as a Condition Precedent. Revenue projections must account for dual-pathway pricing.\n\nMitigation: treat authorization as a risk factor with probability weighting, not as an assumed outcome."
+    },
+    {
+      "id": 14,
+      "category": "Switzerland Art. 6",
+      "front": "How many bilateral Art. 6.2 agreements does Switzerland have?",
+      "back": "16 as of early 2026 -- second only to Japan worldwide. Switzerland is a pioneer in operationalizing Article 6.\n\nFirst Art. 6.2 agreement globally: Switzerland-Peru (2020). Network spans Latin America, Africa, and Southeast Asia.\n\nDriven by Switzerland's NDC requirement: 25% of its 2030 reduction target must come from international credits (ITMOs)."
+    },
+    {
+      "id": 15,
+      "category": "Switzerland Art. 6",
+      "front": "Name key Swiss bilateral Art. 6 partners and milestones.",
+      "back": "Peru: First Art. 6.2 agreement worldwide (2020).\nThailand: First operational ITMO transfer to Switzerland (January 2024) -- proof of concept for the entire Art. 6 system.\nGhana: 11,700 ITMOs transferred (July 2025).\nNorway: First CDR-ITMO (carbon dioxide removal) transfer (June 2025).\n\nSwiss bilateral network demonstrates Art. 6 works in practice across diverse geographies and project types."
+    },
+    {
+      "id": 16,
+      "category": "Switzerland Art. 6",
+      "front": "What is KliK Foundation?",
+      "back": "Central Swiss ITMO buyer. Funded through the legal obligation of Swiss fuel importers to compensate CO2 emissions.\n\nBudget: estimated CHF 2.5 billion to 2030. Channels fuel importer obligations into international carbon projects via Art. 6.2 bilateral agreements.\n\nKey milestones: Thailand transfer (Jan 2024), Ghana transfer (July 2025), Norway CDR transfer (June 2025). The primary institutional demand source for Swiss Art. 6 credits."
+    },
+    {
+      "id": 17,
+      "category": "Switzerland Art. 6",
+      "front": "What is BAFU's role in Article 6?",
+      "back": "Federal Office for the Environment (Bundesamt fuer Umwelt) -- Switzerland's competent authority for Article 6.\n\nNegotiates bilateral agreements with partner countries. Approves individual projects for ITMO generation. Authorizes international transfers.\n\n16 bilateral agreements negotiated as of early 2026. Works closely with KliK Foundation (buyer) and SECO (development cooperation)."
+    },
+    {
+      "id": 18,
+      "category": "Switzerland Art. 6",
+      "front": "Why is the CH-DRC Art. 6.2 gap critical?",
+      "back": "No bilateral Art. 6.2 treaty exists between Switzerland and the DRC. DRC is not a SECO priority country for development cooperation.\n\nWithout a bilateral agreement, DRC projects cannot generate ITMOs for Switzerland. Credits remain VCM-only at USD 5-10 instead of USD 20+ with CA.\n\nThis price differential (75% reduction) may make DRC projects uneconomical. Initiating a CH-DRC bilateral is a strategic lever but requires government-level engagement."
+    },
+    {
+      "id": 19,
+      "category": "Contract Implications",
+      "front": "What is dual-pathway architecture in carbon contracts?",
+      "back": "Contract design that accommodates both VCM and ITMO pathways for the same project. Essential because host country authorization is uncertain.\n\nIf authorization is granted: credits become ITMOs (USD 20+/t, CA-backed). If denied: credits remain VCM-only (USD 5-10/t).\n\nThe contract must define pricing, revenue sharing, and buyer obligations for both outcomes without renegotiation."
+    },
+    {
+      "id": 20,
+      "category": "Contract Implications",
+      "front": "Why must revenue sharing be pathway-differentiated?",
+      "back": "The 4-5x price difference between VCM (USD 5-10) and ITMO (USD 20+) credits makes a flat percentage revenue share inadequate.\n\nExample: a 20% share yields USD 1-2 on VCM credits but USD 4+ on ITMOs. Stakeholders who enable the ITMO pathway (government relations, CA negotiation) deserve differentiated compensation.\n\nContracts must specify separate formulas or tiers for each pathway to align incentives correctly."
+    },
+    {
+      "id": 21,
+      "category": "Contract Implications",
+      "front": "What sovereign risks does Article 6 introduce to carbon projects?",
+      "back": "Government refusal or delay in granting authorization. Policy changes affecting bilateral agreements. Bilateral treaty modification or termination. Political instability in the host country.\n\nThese are sovereign risks beyond any private party's control. They cannot be contractually guaranteed or fully mitigated.\n\nMitigation strategies: diversification across host countries, dual-pathway pricing, force majeure clauses, and political risk insurance."
+    },
+    {
+      "id": 22,
+      "category": "Contract Implications",
+      "front": "What is the significance of the Thailand-Switzerland ITMO transfer?",
+      "back": "January 2024: first operational Article 6.2 ITMO transfer globally (Thailand to Switzerland). Proof of concept for the entire Art. 6 system.\n\nDemonstrated that bilateral agreements can produce real, transferable, CA-backed credits. Validated the legal, technical, and institutional framework.\n\nFollowed by Ghana (11,700 ITMOs, July 2025) and Norway (first CDR-ITMO, June 2025) -- showing the system scales across geographies and project types."
+    },
+    {
+      "id": 23,
+      "category": "Registry Compatibility",
+      "front": "Is Social Carbon compatible with Article 6.2?",
+      "back": "NO. Social Carbon credits are structurally confined to the VCM and cannot become ITMOs.\n\nThe registry and standard architecture does not support Corresponding Adjustments or host country authorization processes required for Art. 6.2.\n\nStrategic consequence: projects registered under Social Carbon are limited to VCM pricing (USD 5-10/t) and cannot access the ITMO premium (USD 20+/t)."
+    },
+    {
+      "id": 24,
+      "category": "Registry Compatibility",
+      "front": "Are Verra and Gold Standard Article 6 ready?",
+      "back": "Both are actively engaging with Art. 6 requirements and developing integration pathways, but full compatibility is still in progress.\n\nVerra and Gold Standard are the dominant VCM registries (combined majority market share). Their Art. 6 readiness is critical for scaling ITMO volumes.\n\nKey challenge: bridging VCM registry infrastructure with national ITMO registries and UNFCCC reporting requirements."
+    },
+    {
+      "id": 25,
+      "category": "Registry Compatibility",
+      "front": "Why does registry choice matter strategically for carbon projects?",
+      "back": "Registry determines ITMO access: Art. 6.2-incompatible registries (e.g., Social Carbon) permanently lock credits into VCM-only pricing at USD 5-10/t.\n\nArt. 6-compatible registries open the pathway to ITMO pricing at USD 20+/t -- a 2-4x value difference.\n\nThis is not just a technical decision: it affects long-term credit value, buyer pool access, revenue projections, and the commercial viability of the entire project."
+    }
+  ]
+}

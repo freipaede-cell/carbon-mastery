@@ -1,0 +1,158 @@
+{
+  "id": "carbon-lifecycle",
+  "title": "Carbon Credit Lifecycle & Economics",
+  "domain": "markt",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Lifecycle Steps",
+      "front": "Step 1: Project Design & PDD",
+      "back": "The Project Design Document (PDD) is the 'constitutional document' of a carbon project — typically 50-100 pages.\n\nContains: chosen standard & methodology, baseline scenario, monitoring plan, additionality demonstration, expected emission reductions, stakeholder consultation.\n\nConditions Precedent must be met: FPIC documentation, registry registration, benefit-sharing plan. Developer bears all upfront costs."
+    },
+    {
+      "id": 2,
+      "category": "Lifecycle Steps",
+      "front": "Step 2: Validation",
+      "back": "Independent audit by a VVB (Validation/Verification Body) before project registration.\n\nVVB assesses: baseline realism, additionality proof, monitoring plan robustness, environmental permits, stakeholder consultation documentation.\n\nStructural issue: VVB is paid by the developer — like a building inspector paid by the contractor. This conflict of interest is a known integrity weakness."
+    },
+    {
+      "id": 3,
+      "category": "Lifecycle Steps",
+      "front": "Step 3: Registration",
+      "back": "The project is formally registered in the chosen registry (Verra, Gold Standard, etc.).\n\nKey outcomes: project receives a unique Project ID, becomes publicly listed with all documentation accessible, and is now 'real' in the system.\n\nNo credits are issued at this stage — registration simply confirms the project meets the standard's requirements and may proceed to implementation."
+    },
+    {
+      "id": 4,
+      "category": "Lifecycle Steps",
+      "front": "Step 4: Implementation & Monitoring",
+      "back": "Physical project implementation plus ongoing data collection. This is where dMRV transforms the traditional approach.\n\nTraditional MRV: manual, sample-based, annual field visits, expensive, manipulable.\ndMRV: IoT sensors, satellite imagery, AI analytics — 24/7 continuous monitoring, lower cost per data point, higher accuracy.\n\nMonitoring spans the entire project lifetime (often 20-30+ years). Data feeds into the verification report."
+    },
+    {
+      "id": 5,
+      "category": "Lifecycle Steps",
+      "front": "Step 5: Verification",
+      "back": "VVB audits the monitoring report to confirm that reported emission reductions are accurate and correctly measured.\n\nTraditional cycle: every 5 years. With dMRV: potentially continuous verification possible.\n\nVerification must be completed before any credits can be issued. The VVB checks data integrity, methodology compliance, and recalculates reductions independently."
+    },
+    {
+      "id": 6,
+      "category": "Lifecycle Steps",
+      "front": "Step 6: Issuance",
+      "back": "After successful verification, the registry creates serialized carbon credits and deposits them into the Project Account.\n\nEach credit receives a unique ID encoding: serial number, vintage year, project ID, methodology.\n\nThe number of credits issued equals the verified emission reductions minus the buffer pool contribution (5-20%). Only now do tradeable assets exist."
+    },
+    {
+      "id": 7,
+      "category": "Lifecycle Steps",
+      "front": "Step 7: Transfer & Trading",
+      "back": "Credits move from Project Account to buyer Holding Accounts via OTC deals or exchange trading.\n\nMain channels:\n- OTC (over-the-counter): direct bilateral deals, still dominant\n- Exchanges: Xpansiv/CBL (largest), AirCarbon Exchange, CIX\n- Forward purchase agreements: pre-purchase of future credits\n\nBuyer due diligence happens here: rating checks, vintage assessment, methodology review, CCP status verification."
+    },
+    {
+      "id": 8,
+      "category": "Lifecycle Steps",
+      "front": "Step 8: Retirement",
+      "back": "The credit is permanently delisted from the registry — irreversible. The emission reduction claim is consumed.\n\nAfter retirement, the credit cannot be traded, transferred, or reused. Only retired credits count as offsets for corporate claims.\n\nThe registry records: who retired, when, how many credits, for what purpose. This is the endpoint of the credit lifecycle."
+    },
+    {
+      "id": 9,
+      "category": "Key Concepts",
+      "front": "What is a PDD (Project Design Document)?",
+      "back": "The 'constitutional document' of a carbon credit project — 50-100 pages defining everything about the project before it begins.\n\nCore contents: standard selection, methodology, baseline scenario (business-as-usual), monitoring plan, additionality demonstration, expected reductions, stakeholder consultation, environmental & social impact assessment.\n\nPublicly accessible in the registry after registration. Forms the basis for both validation and all subsequent verification."
+    },
+    {
+      "id": 10,
+      "category": "Key Concepts",
+      "front": "What is the VVB conflict of interest?",
+      "back": "Validation/Verification Bodies (VVBs) are paid by the project developer they audit — like a building inspector paid by the contractor.\n\nThis creates a structural incentive to approve rather than reject: developers choose their VVB, pay their fees, and may not return if unsatisfied.\n\nThe conflict was a contributing factor to the REDD+ over-crediting scandal. dMRV partially mitigates this by providing objective, sensor-based data that reduces subjective judgment."
+    },
+    {
+      "id": 11,
+      "category": "Key Concepts",
+      "front": "What is a baseline in carbon projects?",
+      "back": "The business-as-usual (BAU) scenario — the counterfactual that estimates what emissions would have been without the carbon project.\n\nCredits = baseline emissions minus actual emissions. Therefore, the baseline directly determines how many credits a project can generate.\n\nCritical risk: the Guardian investigation showed REDD+ baselines were overstated by 400-950%, leading to massive over-crediting. Baseline integrity is the single most important quality factor."
+    },
+    {
+      "id": 12,
+      "category": "Key Concepts",
+      "front": "What is additionality?",
+      "back": "The 'but-for' test: would the emission reduction have happened anyway without carbon finance?\n\nIf yes → not additional → no credits should be issued.\nIf no → additional → credits are justified.\n\nOne of the 10 Core Carbon Principles. Lack of additionality was the primary criticism in the 2023 Guardian investigation. Proving additionality requires demonstrating financial, technological, or regulatory barriers that carbon revenue overcomes."
+    },
+    {
+      "id": 13,
+      "category": "Key Concepts",
+      "front": "What is permanence in carbon projects?",
+      "back": "The requirement that CO2 binding must last — minimum 100 years for forest projects.\n\nRisks: wildfire, pest infestation, land-use change, political instability.\n\nMitigation: Buffer Pool (5-20% of credits withheld as insurance). If reversal occurs, buffer credits are cancelled instead of sold credits.\n\nPermanence varies by technology: forests 30-100 years (risky), biochar 100+ years, DAC geological storage (permanent)."
+    },
+    {
+      "id": 14,
+      "category": "Key Concepts",
+      "front": "What is the Buffer Pool?",
+      "back": "An insurance mechanism: 5-20% of a project's generated credits are withheld in a reserve pool rather than issued to the developer.\n\nPurpose: if a reversal event occurs (fire, pest, political change), buffer credits are cancelled instead of the credits already sold to buyers.\n\nHigher-risk projects (e.g., tropical forests with fire risk) contribute a larger percentage. The buffer pool is managed at the registry level, pooling risk across all projects."
+    },
+    {
+      "id": 15,
+      "category": "Key Concepts",
+      "front": "Avoidance vs. Removal credits — what's the difference?",
+      "back": "Avoidance credits: emissions that would have occurred are prevented (e.g., protecting a forest from logging, replacing coal with solar). Baseline-dependent — vulnerable to overestimation.\n\nRemoval credits: CO2 is actively extracted from the atmosphere (e.g., afforestation, biochar, DAC). Can be directly measured.\n\n62% of buyers now prioritize removal credits (2026). Removal commands higher prices: USD 10-30 (nature-based) to USD 300-600 (DAC) vs. USD 0.88+ (generic avoidance)."
+    },
+    {
+      "id": 16,
+      "category": "Key Concepts",
+      "front": "What is over-crediting?",
+      "back": "More credits issued than actual emission reductions achieved. The core integrity failure in the carbon market.\n\nMain causes:\n1. Overstated baselines (BAU scenario inflated by 400-950%)\n2. Insufficient monitoring (sample-based, infrequent)\n3. VVB conflict of interest (auditor paid by developer)\n4. Weak additionality testing\n\n84% of VCM credits rated as high-risk (Nature Communications, 2024). dMRV and CCP standards are the market's response."
+    },
+    {
+      "id": 17,
+      "category": "Revenue & Economics",
+      "front": "What are typical revenue sharing splits?",
+      "back": "Standard splits in carbon projects:\n\n- Landowner/Farmer: 60-80% of credit revenue (provides land + carbon rights, 30-100 year commitment)\n- Project Developer: 20-40% (design, MRV, marketing, registry management)\n\nAdditional parties taking shares: host state (revenue share + SDB contributions for Art. 6), VVB (audit fees), registry (issuance fees).\n\nIn DRC specifically: 50% state / 25% province-communities / 25% investor."
+    },
+    {
+      "id": 18,
+      "category": "Revenue & Economics",
+      "front": "Who pays whom at each lifecycle stage?",
+      "back": "Cost flow through the lifecycle:\n\n- Developer → VVB: validation and verification audit fees\n- Developer → Registry: registration + issuance fees per credit\n- Developer → Landowner: revenue share (60-80%) from credit sales\n- Buyer → Developer: credit purchase price (OTC or exchange)\n- Developer → dMRV provider: monitoring technology + platform fees\n\nThe developer bears all upfront costs until credits are issued and sold — significant cash flow risk."
+    },
+    {
+      "id": 19,
+      "category": "Revenue & Economics",
+      "front": "What are CDR (Carbon Dioxide Removal) price ranges?",
+      "back": "Price per tCO2e by technology:\n\n- Afforestation/ARR: USD 10-30 (30-100 year permanence, fire risk)\n- Soil Carbon: USD 15-50 (uncertain permanence)\n- Enhanced Weathering: USD 50-200 (permanent)\n- Biochar: USD 100-200 (100+ years)\n- Ocean Alkalinity: USD 100-300 (permanent)\n- Direct Air Capture (DAC): USD 300-600 (geological, permanent)\n\nTrend: CDR is the premium segment. Norway-Switzerland CDR-ITMO = world's first state-level removal transfer."
+    },
+    {
+      "id": 20,
+      "category": "Revenue & Economics",
+      "front": "What is a credit vintage and why does it matter?",
+      "back": "The vintage is the year when the actual emission reduction occurred — not the year of credit issuance or sale.\n\nOlder vintages (>5 years) typically trade at a discount. Buyers prefer fresh vintages for credible compensation claims.\n\nVintage matters because: older credits may reflect outdated methodologies, signal unsold inventory, and face scrutiny under newer integrity standards. EU anti-greenwashing rules (Sept. 2026) will increase focus on vintage quality."
+    },
+    {
+      "id": 21,
+      "category": "Revenue & Economics",
+      "front": "What is the 300x price spread in the carbon market?",
+      "back": "The extreme price range in the VCM:\n\n- Low end: ~USD 0.88/t for generic avoidance credits (low quality, no CCP)\n- High end: USD 500+/t for technology-based removal (DAC)\n\nThis 300x spread reflects the two-class market: CCP-certified high-integrity credits with premium vs. non-certified credits facing price collapse.\n\nThe spread is widening as anti-greenwashing regulation (EU Sept. 2026) makes low-quality credits increasingly unmarketable."
+    },
+    {
+      "id": 22,
+      "category": "Contract Touchpoints",
+      "front": "Where does legal counsel intervene in the carbon credit lifecycle?",
+      "back": "Legal touchpoints at each stage:\n\n1. PDD phase: carbon rights agreements, FPIC documentation, benefit-sharing\n2. Registration: warranties on project eligibility, methodology compliance\n3. Monitoring: dMRV service-level agreements, data ownership, liability for measurement errors\n4. Transfer: purchase/sale mechanics, title transfer, representations & warranties\n5. Retirement: confirmation of retirement, offset claim documentation\n\nCross-cutting: force majeure, dispute resolution, regulatory change clauses."
+    },
+    {
+      "id": 23,
+      "category": "Contract Touchpoints",
+      "front": "What is a forward purchase agreement in carbon markets?",
+      "back": "A contract to pre-purchase carbon credits that haven't been issued yet — buying future reductions at a locked-in price.\n\nKey risks:\n- Non-delivery: project may generate fewer credits than projected\n- Replacement obligation: seller must source equivalent credits if shortfall occurs\n- Price risk: market price may diverge significantly from forward price\n- Methodology risk: standard may change during the contract period\n\nTypical forward price example: USD 12/tCO2e with minimum volume and delivery window."
+    },
+    {
+      "id": 24,
+      "category": "Contract Touchpoints",
+      "front": "What happens if a carbon methodology is invalidated?",
+      "back": "A methodology invalidation (like post-Guardian REDD+ reforms) can have severe consequences:\n\n- Existing credits may lose significant value (30-50% or more)\n- Force majeure question: is this a covered event under the contract?\n- Replacement obligation: does the seller need to source credits under the new methodology?\n- Rating downgrades follow quickly, accelerating price decline\n\nContractual protection: methodology change clauses, replacement obligations, price adjustment mechanisms, and force majeure definitions."
+    },
+    {
+      "id": 25,
+      "category": "Contract Touchpoints",
+      "front": "What is a Condition Precedent in carbon projects?",
+      "back": "Requirements that must be satisfied before a carbon project can formally proceed. Typically include:\n\n1. FPIC documentation (Free, Prior, Informed Consent of local communities)\n2. Registry registration confirmation\n3. Benefit-sharing plan agreed with all stakeholders\n4. Carbon rights legally secured (land title + carbon rights agreement)\n5. Environmental & social impact assessment completed\n\nIf CPs are not met, the project cannot proceed to validation/registration. Missing CPs in the PDD are a known gap in many draft contracts."
+    }
+  ]
+}

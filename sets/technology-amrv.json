@@ -1,0 +1,128 @@
+{
+  "id": "technology-amrv",
+  "title": "dMRV, aMRV & Carbon Technology",
+  "domain": "technik",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Traditional vs Digital MRV",
+      "front": "What is traditional MRV?",
+      "back": "Traditional Monitoring, Reporting, Verification:\n- Manual field measurements by trained staff\n- Annual data collection cycles\n- Sampling-based (not comprehensive)\n- PDF reports submitted to registries\n- 5-yearly verification by VVBs\n\nThe Guardian 2023 exposé showed that poor traditional MRV led to 90% of REDD+ credits having no real climate impact."
+    },
+    {
+      "id": 2,
+      "category": "Traditional vs Digital MRV",
+      "front": "What is dMRV (Digital MRV)?",
+      "back": "Digital Monitoring, Reporting, Verification:\n- IoT sensors for continuous automated data collection\n- Satellite remote sensing for land use monitoring\n- AI/ML analytics for pattern recognition and anomaly detection\n- Real-time dashboards and API access (vs. PDF reports)\n- 80%+ cost reduction per data point vs. traditional MRV\n\ndMRV-certified credits achieve higher market prices due to superior data integrity."
+    },
+    {
+      "id": 3,
+      "category": "Traditional vs Digital MRV",
+      "front": "What are the 6 dMRV components?",
+      "back": "1. IoT Sensors — real-time field data (gas concentrations, soil, weather)\n2. Satellite Remote Sensing — biomass estimation, NDVI, land use change\n3. Data Platform — aggregation, processing, secure storage\n4. AI/ML Analytics — baseline modeling, anomaly detection, predictions\n5. Reporting Module — generates registry-compatible reports automatically\n6. Verification Interface — direct data access for verifiers (VVBs)\n\n60%+ of new carbon platforms use blockchain for data integrity (2025)."
+    },
+    {
+      "id": 4,
+      "category": "Traditional vs Digital MRV",
+      "front": "How do major standards accept dMRV?",
+      "back": "Verra: 'Technology-Assisted MRV' recognized in VCS v4.5 — first projects accredited in renewables and forestry.\n\nGold Standard: Published dedicated dMRV Guidance in 2024.\n\ndMRV credits tend to achieve price premiums due to higher data quality and transparency. Standards are evolving from accepting dMRV to encouraging it."
+    },
+    {
+      "id": 5,
+      "category": "aMRV Technology",
+      "front": "What is aMRV (Atmospheric-based MRV)?",
+      "back": "COMPANY's specific approach to digital MRV: direct atmospheric gas measurement rather than proxy-based estimation.\n\nInstead of estimating emissions from activity data or satellite imagery, aMRV measures actual gas concentrations (CO2, CH4, N2O) in the atmosphere above the project site. This provides direct physical evidence of emission reductions."
+    },
+    {
+      "id": 6,
+      "category": "aMRV Technology",
+      "front": "What is Eddy Covariance?",
+      "back": "A micrometeorological technique measuring turbulent gas exchange between the Earth's surface and the atmosphere.\n\nOperates at 10-20 Hz (10-20 measurements per second), simultaneously measuring CO2, CH4, and N2O fluxes. Uses flux towers with sonic anemometers and gas analyzers. Considered the gold standard for ecosystem-level greenhouse gas monitoring."
+    },
+    {
+      "id": 7,
+      "category": "aMRV Technology",
+      "front": "Who manufactures the Eddy Covariance equipment?",
+      "back": "MANUFACTURER = LI-COR, a US-based company specializing in Eddy Covariance flux tower instrumentation.\n\nConfirmed via COMPANY's FAQ and research paper. LI-COR provides the hardware (sensors, stations, communication modules). COMPANY operates the platform + analytics layer. Infrastructure delivered as PaaS (default) or via purchase/lease."
+    },
+    {
+      "id": 8,
+      "category": "aMRV Technology",
+      "front": "How accurate is aMRV compared to traditional MRV?",
+      "back": "1.5-1.6x higher accuracy per COMPANY's research paper (March 2024).\n\nThe paper: 41 pages, 84 cited sources, references 250+ studies. Demonstrates that direct atmospheric measurement captures actual gas fluxes rather than relying on models, sampling, or satellite proxies. This accuracy premium translates to higher credit quality and pricing."
+    },
+    {
+      "id": 9,
+      "category": "aMRV Technology",
+      "front": "What is the typical installation timeline for aMRV equipment?",
+      "back": "Example: McEndree Ranch — 3 days from arrival to operational.\n\nHowever, this assumes accessible infrastructure. In DRC (19% electricity, minimal roads), transport alone takes 4-8 weeks. Installation timeline must account for:\n- Equipment import clearance (~12.6% CIF duties in DRC)\n- Power supply (solar likely required)\n- Communication infrastructure (32% mobile internet in DRC)"
+    },
+    {
+      "id": 10,
+      "category": "Blockchain & AI",
+      "front": "What is Hedera Guardian?",
+      "back": "A distributed ledger platform used by COMPANY for carbon credit lifecycle tracking.\n\nProvides: Immutable audit trail from measurement to credit issuance to retirement. Every data point, calculation, and transaction is recorded on-chain. Designed specifically for environmental asset tokenization and compliance."
+    },
+    {
+      "id": 11,
+      "category": "Blockchain & AI",
+      "front": "What is Chainlink Oracle?",
+      "back": "An oracle network that bridges real-world data (sensor readings, API data) into smart contracts on the blockchain.\n\nUsed by COMPANY to feed aMRV measurement data from IoT sensors into the Hedera Guardian ledger. Oracles solve the 'last mile' problem: blockchain ensures data integrity AFTER recording, but oracles connect the physical world to the chain."
+    },
+    {
+      "id": 12,
+      "category": "Blockchain & AI",
+      "front": "What does blockchain prove in the carbon context?",
+      "back": "Blockchain proves that data has NOT been tampered with after recording.\n\nIt creates an immutable audit trail: once a measurement, calculation, or credit transaction is recorded, it cannot be altered retroactively. This addresses the trust deficit from the 2023 integrity crisis where manual data could be manipulated without detection."
+    },
+    {
+      "id": 13,
+      "category": "Blockchain & AI",
+      "front": "What does blockchain NOT prove?",
+      "back": "Blockchain does NOT prove data accuracy at the point of capture.\n\n'Garbage in = immutable garbage.' If the sensor is miscalibrated, the baseline is inflated, or the FPIC documentation is fraudulent, blockchain faithfully records and preserves the wrong data. Blockchain ensures integrity of the chain, not correctness of the input."
+    },
+    {
+      "id": 14,
+      "category": "Legal Implications of Technology",
+      "front": "Who owns the measurement data?",
+      "back": "Open contractual question with competing claims:\n\n- COMPANY: Platform operator, processes and stores data, provides analytics\n- Client: Project owner, data originates from their land/operations\n\nMust be explicitly defined in CSA. Affects: data portability at contract end, IP rights on derived analytics, regulatory compliance (DSG/GDPR), and client lock-in concerns."
+    },
+    {
+      "id": 15,
+      "category": "Legal Implications of Technology",
+      "front": "What SLA uptime is discussed for aMRV systems?",
+      "back": "95% quarterly minimum uptime target.\n\nBelow threshold: service credits to the client for downtime. Equipment has built-in redundancy — single unit failure does not break the measurement chain.\n\nCritical because carbon credits depend on continuous measurement. Data gaps reduce creditable volume and can trigger verification issues with registries."
+    },
+    {
+      "id": 16,
+      "category": "Legal Implications of Technology",
+      "front": "What is the data retention requirement?",
+      "back": "Project lifetime = 10-30 years of data storage required.\n\nCarbon projects have crediting periods of 10-30+ years. All measurement data must be retained for the entire period plus verification buffer. Conflicts with GDPR/DSG data minimization principles if personal data is mixed with sensor data. Storage costs and technology migration over decades are non-trivial."
+    },
+    {
+      "id": 17,
+      "category": "Legal Implications of Technology",
+      "front": "What is the cross-border data transfer risk?",
+      "back": "IoT sensors in DRC/Indonesia generate data that flows to servers in Switzerland.\n\nImplications:\n- Swiss DSG: Data processing rules apply\n- EU GDPR: If EU clients involved\n- DRC Digital Code 2023: Data sovereignty requirements, future localization possible\n- Indonesia UU PDP 27/2022: Art. 56 requires protection standard proof\n\nNo DRC adequacy decision exists. Transfer mechanisms must be contractually secured."
+    },
+    {
+      "id": 18,
+      "category": "Legal Implications of Technology",
+      "front": "What is dual-use equipment risk?",
+      "back": "MRV equipment with military-applicable components faces export controls:\n- Drones: ECCN 9A012\n- Thermal imaging sensors\n- RF/communication modules\n\nSubject to US EAR (Export Administration Regulations) and ITAR. Export to DRC (conflict zone, sanctions) requires license review. Indonesia: DJID/SDPPI certification mandatory for devices with wireless modules (KEPMEN KOMDIGI 469/2025)."
+    },
+    {
+      "id": 19,
+      "category": "Legal Implications of Technology",
+      "front": "What is SCD0003?",
+      "back": "Social Carbon methodology for Eddy Covariance-based continuous GHG flux quantification.\n\nCo-developed by COMPANY with Social Carbon Foundation. Closes the critical aMRV methodology gap for Nature-Based Solutions (NBS) — previously no standard recognized atmospheric measurement for carbon crediting.\n\nLimitation: Only covers atmospheric equipment types. Not compatible with Art. 6.2 ITMO pathway."
+    },
+    {
+      "id": 20,
+      "category": "Legal Implications of Technology",
+      "front": "What is the 'trust equation' for premium carbon credits?",
+      "back": "Technology (aMRV) x Integrity (CCP) x Transparency (blockchain) = Premium credit value.\n\n- aMRV: 1.5-1.6x more accurate measurement\n- CCP: ICVCM Core Carbon Principles, +25% price premium\n- Blockchain: Immutable audit trail via Hedera Guardian + Chainlink\n\nHigh-integrity credits command 300% more than low-quality credits. This equation is COMPANY's core value proposition."
+    }
+  ]
+}

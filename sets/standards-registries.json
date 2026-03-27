@@ -1,0 +1,188 @@
+{
+  "id": "standards-registries",
+  "title": "Carbon Standards, Registries & Market Players",
+  "domain": "markt",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Verra/VCS",
+      "front": "What is Verra/VCS?",
+      "back": "Largest VCM standard worldwide (~16% market share, 2,000+ projects). US-based non-profit with 100+ methodologies covering REDD+, renewables, cookstoves and more.\n\nReformed after the 2023 Guardian REDD+ scandal (CEO resigned, VCS v4.5 released 2024). CCP-Eligible under ICVCM assessment.\n\nFees: Registration + Issuance fees per credit."
+    },
+    {
+      "id": 2,
+      "category": "Verra/VCS",
+      "front": "What was the Guardian REDD+ scandal?",
+      "back": "In January 2023, The Guardian published an investigation showing that ~90% of Verra's REDD+ rainforest credits had no real climate benefit.\n\nBaselines were overstated by 400-950%, meaning far more credits were issued than actual emissions avoided. This triggered Verra's CEO resignation, a comprehensive methodology overhaul (VM0048), and accelerated the push for dMRV and CCP standards.\n\nThe scandal reshaped the entire VCM integrity landscape."
+    },
+    {
+      "id": 3,
+      "category": "Verra/VCS",
+      "front": "What is a VCU (Verified Carbon Unit)?",
+      "back": "The credit unit in Verra's VCS system. 1 VCU = 1 tCO2e of avoided or removed emissions.\n\nEach VCU receives a unique serial number in the Verra registry, encoding project ID, vintage year, and methodology. A VCU can only be retired once — retirement is irreversible and constitutes the offset claim."
+    },
+    {
+      "id": 4,
+      "category": "Verra/VCS",
+      "front": "What is VM0048?",
+      "back": "Verra's revised REDD+ methodology, developed in response to the 2023 Guardian scandal. Replaces the discredited VM0007/VM0009/VM0015 methodologies.\n\nKey changes: more conservative baselines, stricter additionality requirements, improved monitoring protocols. Part of the broader VCS v4.5 reform package (2024).\n\nDesigned to restore credibility in forest-based carbon credits."
+    },
+    {
+      "id": 5,
+      "category": "Verra/VCS",
+      "front": "What are Verra's registry account types?",
+      "back": "Three main account types:\n\n1. Project Account — where newly issued credits land after verification\n2. Holding Account — for trading, storing, or transferring credits between parties\n3. Retirement Account — permanent destination; credits retired here cannot be traded or transferred\n\nThe flow is always: Issuance → Project Account → Holding Account(s) → Retirement Account."
+    },
+    {
+      "id": 6,
+      "category": "Verra/VCS",
+      "front": "What is Verra's CCP status?",
+      "back": "Verra/VCS is CCP-Eligible — it passed the ICVCM assessment for compliance with Core Carbon Principles.\n\n30+ Verra methodologies are CCP-approved. CCP-labeled credits command a +25% price premium over non-CCP credits.\n\n98% of VCM market volume programs are now CCP-Eligible, making it the de facto quality benchmark."
+    },
+    {
+      "id": 7,
+      "category": "Gold Standard",
+      "front": "What is the Gold Standard?",
+      "back": "Carbon certification standard founded by WWF in 2003, headquartered in Geneva, Switzerland.\n\nDistinguishing feature: mandatory SDG co-benefits documentation for every project. CCP-mandatory from January 2026 — early adoption signaling high integrity commitment.\n\nFocus: developing countries, renewable energy, cookstoves, water purification projects."
+    },
+    {
+      "id": 8,
+      "category": "Gold Standard",
+      "front": "How does Gold Standard differ from Verra?",
+      "back": "Gold Standard is smaller than Verra but perceived as higher integrity due to mandatory SDG co-benefit requirements.\n\nKey differences:\n- SDG co-benefits required (not optional)\n- CCP-mandatory from Jan 2026 (Verra: CCP-Eligible but not mandatory)\n- Stronger focus on cookstoves and renewable energy in developing countries\n- Less exposed to REDD+ scandal fallout\n- Geneva-based (vs. Verra in USA)"
+    },
+    {
+      "id": 9,
+      "category": "Gold Standard",
+      "front": "What is the Gold Standard dMRV Guidance?",
+      "back": "Published in 2024, this guidance formally accepts technology-assisted MRV for Gold Standard projects.\n\nAllows IoT sensors, satellite monitoring, and AI-based analytics as valid data sources for monitoring and verification — moving beyond traditional manual, sample-based field visits.\n\nSignals the industry's shift toward digital infrastructure as the new MRV standard."
+    },
+    {
+      "id": 10,
+      "category": "Gold Standard",
+      "front": "What project types dominate Gold Standard?",
+      "back": "Three main categories:\n\n1. Cookstoves — clean cooking solutions in developing countries, strong SDG impact\n2. Renewable energy — solar, wind, small hydro replacing fossil fuels\n3. Water purification — clean water access reducing need for boiling (fuel savings)\n\nAll project types require documented SDG co-benefits. Focus is on developing countries with high development impact per credit."
+    },
+    {
+      "id": 11,
+      "category": "Social Carbon",
+      "front": "What is Social Carbon Foundation?",
+      "back": "UK-based charity operating 65+ projects. The only major carbon standard originating from the Global South (Brazil). Exclusively focused on Nature-Based Solutions (NBS) with 11 NBS-specific methodologies.\n\nFunctions as a co-standard alongside VCS or Gold Standard, adding a social co-benefits layer.\n\nRegistry operated by Wilder Earth."
+    },
+    {
+      "id": 12,
+      "category": "Social Carbon",
+      "front": "What is the Hexagon Sustainability Model?",
+      "back": "Social Carbon's proprietary framework assessing projects across 6 resource dimensions:\n\n1. Carbon — GHG reduction/removal\n2. Biodiversity — ecosystem health\n3. Natural — water, soil, air quality\n4. Human — health, education, capacity\n5. Social — community cohesion, governance\n6. Economic — livelihoods, income\n\nProjects must demonstrate positive impact across all six dimensions, not just carbon."
+    },
+    {
+      "id": 13,
+      "category": "Social Carbon",
+      "front": "What is SCD0003?",
+      "back": "Social Carbon methodology module for 'Eddy Covariance-Based Continuous Quantification of GHG Fluxes.' Co-developed with a dMRV technology provider.\n\nCloses a critical gap: enables continuous atmospheric measurement (aMRV) for Nature-Based Solutions, replacing traditional sample-based field visits.\n\nBased on Eddy Covariance flux tower technology — the gold standard for ecosystem-level GHG measurement."
+    },
+    {
+      "id": 14,
+      "category": "Social Carbon",
+      "front": "What is Nature\u00b3?",
+      "back": "Social Carbon's next-generation standard framework:\n- Nature\u00b3 announcement: July 2025\n- Nature Stewardship Framework v1.0: January 2026\n\nDesigned to evolve beyond the current co-standard model into a more comprehensive NBS certification system.\n\nRepresents Social Carbon's strategic move from supplementary co-standard to standalone NBS authority."
+    },
+    {
+      "id": 15,
+      "category": "Social Carbon",
+      "front": "Is Social Carbon Article 6.2 compatible?",
+      "back": "NO — this is a structural limitation. Social Carbon cannot generate ITMOs for international transfer under Article 6.2 of the Paris Agreement.\n\nConsequence: projects registered solely under Social Carbon cannot access the premium ITMO market (e.g., Switzerland's 16 bilateral agreements, KliK Foundation purchases).\n\nFor Art. 6.2 eligibility, projects need registration under a CCP-eligible standard like Verra or Gold Standard."
+    },
+    {
+      "id": 16,
+      "category": "ICVCM & CCP",
+      "front": "What is the ICVCM?",
+      "back": "Integrity Council for the Voluntary Carbon Market — independent governance body that defines quality standards for the entire VCM.\n\nDeveloped the 10 Core Carbon Principles (CCPs), operational since 2024. Creates a two-class market: CCP-certified credits with premium vs. non-certified with discount.\n\nThe ICVCM governs the supply side; VCMI governs the buyer side."
+    },
+    {
+      "id": 17,
+      "category": "ICVCM & CCP",
+      "front": "List the 10 Core Carbon Principles (CCPs)",
+      "back": "Governance (4): Effective governance, Tracking, Transparency, Robust third-party validation & verification.\n\nEmissions Impact (4): Additionality, Permanence, Robust quantification, No double counting.\n\nSustainable Development (2): Sustainable development benefits & safeguards, Contribution to net-zero transition.\n\nAll 10 must be met for CCP label. 98% of market volume programs are CCP-Eligible."
+    },
+    {
+      "id": 18,
+      "category": "ICVCM & CCP",
+      "front": "What is the CCP price premium?",
+      "back": "CCP-labeled credits command approximately +25% premium over non-CCP credits. In H2 2024, CCP categories saw +35% price increases.\n\nThe quality spread is even wider: high-integrity credits cost up to 300% more than low-quality credits.\n\n84% of credits are rated high-risk (Nature Communications, 2024), making CCP certification increasingly essential for marketability."
+    },
+    {
+      "id": 19,
+      "category": "ICVCM & CCP",
+      "front": "How many programs are CCP-eligible?",
+      "back": "98% of VCM market volume programs are CCP-Eligible, including Verra/VCS and Gold Standard.\n\n30+ individual methodologies have been CCP-approved. Gold Standard made CCP mandatory from January 2026.\n\nCCP is becoming the de facto minimum quality threshold — non-CCP credits face growing marketability challenges as EU anti-greenwashing regulation takes effect (Sept. 2026)."
+    },
+    {
+      "id": 20,
+      "category": "ICVCM & CCP",
+      "front": "What is the VCMI Claims Code?",
+      "back": "The Voluntary Carbon Markets Integrity Initiative (VCMI) Claims Code governs the buyer side of the carbon market.\n\nDefines three tiers for corporate offset claims:\n- Gold — highest integrity, science-based targets + quality credits\n- Silver — strong targets + verified offsets\n- Bronze — entry level, improvement pathway\n\nComplementary to ICVCM (supply side). The Scope 3 Code defines how credits may count toward net-zero targets."
+    },
+    {
+      "id": 21,
+      "category": "Rating Agencies",
+      "front": "What are carbon rating agencies?",
+      "back": "Companies that assess carbon credit quality using AI, satellite data, and data analytics. Increasingly function as de facto regulators of the VCM.\n\nLeading agencies: Sylvera, Pachama, Calyx Global, BeZero Carbon. Their ratings directly impact credit prices — a downgrade can trigger 30-50% price drops.\n\nKey difference from traditional credit ratings: costs are typically borne by buyers, not project developers."
+    },
+    {
+      "id": 22,
+      "category": "Rating Agencies",
+      "front": "What is Sylvera?",
+      "back": "London-based carbon credit rating agency. Raised USD 57M in Series B funding.\n\nUses satellite imagery combined with machine learning to assess project quality and detect anomalies like over-crediting.\n\nOne of the most influential players in the VCM — their ratings directly impact credit pricing and buyer due diligence decisions."
+    },
+    {
+      "id": 23,
+      "category": "Rating Agencies",
+      "front": "What is BeZero Carbon?",
+      "back": "Carbon credit rating agency using an AAA-to-D rating scale, modeled after traditional credit rating agencies (S&P, Moody's).\n\nAssesses carbon credit quality based on additionality, permanence, leakage risk, and over-crediting potential.\n\nTheir ratings are increasingly used by institutional buyers as a due diligence shortcut — similar to how bond ratings guide fixed-income investors."
+    },
+    {
+      "id": 24,
+      "category": "Rating Agencies",
+      "front": "How do rating agencies affect carbon credit prices?",
+      "back": "Rating agencies have become powerful market movers:\n\n- A downgrade can trigger a 30-50% price drop for affected credits\n- Ratings are typically paid for by credit buyers, not developers\n- This creates an information asymmetry: developers cannot influence their own ratings\n\nThe rating ecosystem is accelerating the two-class market split between high-integrity and low-quality credits."
+    },
+    {
+      "id": 25,
+      "category": "Market Players",
+      "front": "Who is South Pole?",
+      "back": "Zurich-based project developer, the world's largest with ~18% market share and 700+ projects across nature-based and renewable energy categories.\n\nNear-collapse in 2023 due to quality problems. Underwent recapitalization in 2025.\n\nDespite reputational damage, remains the dominant developer by volume. Illustrates the risk concentration in the VCM's developer market."
+    },
+    {
+      "id": 26,
+      "category": "Market Players",
+      "front": "What are the main carbon credit trading platforms?",
+      "back": "1. Xpansiv/CBL Markets — largest spot exchange for carbon credits (dominant)\n2. AirCarbon Exchange — Singapore-based, blockchain-enabled trading\n3. Climate Impact X (CIX) — Singapore JV of DBS, SGX, Standard Chartered\n4. Carbonplace — banking consortium for carbon credit settlement\n\nMost trading still happens OTC (over-the-counter) rather than on exchanges. Exchange volume is growing as the market matures."
+    },
+    {
+      "id": 27,
+      "category": "Market Players",
+      "front": "What is the KliK Foundation?",
+      "back": "Swiss foundation and central ITMO buyer, funded by the CO2 compensation obligation on fuel importers. Budget: ~CHF 2.5 billion to 2030.\n\nMilestones:\n- Thailand: world's first ITMO purchase (Jan. 2024)\n- Ghana: 11,733 ITMOs from cookstove projects (July 2025)\n- Norway: world's first CDR-ITMO (biochar/DAC, June 2025)\n\nBAFU (Federal Office for the Environment) is the competent authority for Swiss Art. 6.2 agreements."
+    },
+    {
+      "id": 28,
+      "category": "Registry Functions",
+      "front": "What does a carbon credit registry do?",
+      "back": "Core functions of a carbon registry:\n\n1. Serialization — assigns unique IDs to every credit\n2. Account management — Project, Holding, Retirement accounts\n3. Transaction recording — issuance, transfer, cancellation, retirement\n4. Double-counting prevention — each credit can only be retired once\n5. Transparency — public access to project documents\n6. Art. 6 interface — connection to national registers and UNFCCC database"
+    },
+    {
+      "id": 29,
+      "category": "Registry Functions",
+      "front": "What is credit serialization?",
+      "back": "Every carbon credit receives a unique identifier in the registry, encoding:\n- Serial number (unique per credit)\n- Vintage year (when reduction occurred)\n- Project ID (which project generated it)\n- Methodology (which standard/method was applied)\n\nSerialization is the foundation of registry integrity — it enables tracking, prevents double counting, and creates an auditable chain of custody from issuance to retirement."
+    },
+    {
+      "id": 30,
+      "category": "Registry Functions",
+      "front": "What is the difference between issuance and retirement?",
+      "back": "Issuance: The registry creates new serialized credits after successful verification. Credits land in the Project Account and can be traded.\n\nRetirement: Credits are permanently delisted from circulation. The emission reduction claim is consumed — irreversible.\n\nBetween issuance and retirement, credits can be transferred between Holding Accounts multiple times. Only after retirement can a buyer claim the offset."
+    }
+  ]
+}

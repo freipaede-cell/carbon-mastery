@@ -1,0 +1,128 @@
+{
+  "id": "fee-architecture",
+  "title": "Fee Structure & Contract Architecture",
+  "domain": "vertrag",
+  "date": "2026-03-27",
+  "cards": [
+    {
+      "id": 1,
+      "category": "Contract Architecture",
+      "front": "What are the 3 contract layers?",
+      "back": "1. Framework Agreement (FA): COMPANY <> MANUFACTURER — governs equipment supply, IP, revenue sharing\n2. Carbon Service Agreement (CSA): COMPANY <> CLIENT — governs service delivery, fees, credits\n3. Work Orders (WO): Project-specific — details scope, timeline, fees per engagement\n\nFA is the backbone, CSA faces the client, WOs make it operational."
+    },
+    {
+      "id": 2,
+      "category": "Contract Architecture",
+      "front": "What is CSA-A (Carbon Credit Agreement)?",
+      "back": "Full-service contract including Compliance as base layer + Carbon Credit generation.\n\nIncludes: MRV infrastructure, carbon accounting, credit issuance, and all 5 fee types. Model B (compliance) is embedded — without MRV, no credits possible. One CSA per client, one model per CSA."
+    },
+    {
+      "id": 3,
+      "category": "Contract Architecture",
+      "front": "What is CSA-B (Compliance-only Agreement)?",
+      "back": "Standalone carbon accounting contract without credit generation.\n\nCovers: Scope 1/2/3 measurement, CSRD/CBAM reporting, data platform access. Contains an upgrade clause to CSA-A via supplementary agreement. Driven by EU regulatory demand (CSRD affects ~50,000 companies)."
+    },
+    {
+      "id": 4,
+      "category": "Contract Architecture",
+      "front": "What are Country Annexes?",
+      "back": "Jurisdiction-specific contract modifications attached to the base CSA.\n\nDRC: 12 mandatory measures (sanctions, FPIC, benefit-sharing, anti-corruption, UBO monitoring, escrow, etc.)\nIndonesia: 7 measures (language, PE management, equipment certification, data transfer)\n\nCountry Annexes address risks that the base contract cannot cover generically."
+    },
+    {
+      "id": 5,
+      "category": "Contract Architecture",
+      "front": "What are the 3 infrastructure options?",
+      "back": "1. None: Client owns or provides equipment — COMPANY delivers services only\n2. PaaS (DEFAULT): COMPANY provides Equipment-as-a-Service — monthly fee includes maintenance/warranty/replacement\n3. Lease: Third-party DFI or MANUFACTURER as lessor — off-balance for COMPANY\n\nPaaS is default because 10-year projects require guaranteed infrastructure with warranty + maintenance."
+    },
+    {
+      "id": 6,
+      "category": "5-Fee Architecture",
+      "front": "What are the 5 fee types?",
+      "back": "1. Structuring Fee — one-time, project design/feasibility/PDD\n2. Initiation Fee — one-time, project setup and onboarding\n3. SaaS Fee — recurring monthly, platform/software access\n4. PaaS Fee — recurring monthly, equipment-as-a-service (Model A, DEFAULT)\n5. Participation Fee — performance-based, % of credit revenue (Model A only)\n\nFees 2+5 shared with MANUFACTURER; Fees 1, 3, 4 stay with COMPANY."
+    },
+    {
+      "id": 7,
+      "category": "5-Fee Architecture",
+      "front": "What is the Structuring Fee?",
+      "back": "One-time fee charged in both CSA-A and CSA-B.\n\nCovers: Initial project design, feasibility assessment, PDD (Project Design Document) support, methodology selection, baseline scenario development.\n\nRetained 100% by COMPANY — not shared with MANUFACTURER. Compensates upfront advisory work before recurring revenue begins."
+    },
+    {
+      "id": 8,
+      "category": "5-Fee Architecture",
+      "front": "What is the PaaS Fee?",
+      "back": "Recurring monthly fee for Equipment-as-a-Service. Model A only, DEFAULT infrastructure option.\n\nIncludes: Hardware provision, maintenance, warranty coverage, replacement of defective units. COMPANY provides equipment to client; MANUFACTURER supplies to COMPANY under FA.\n\nPaaS is default because 10-year carbon projects require guaranteed, maintained infrastructure throughout."
+    },
+    {
+      "id": 9,
+      "category": "5-Fee Architecture",
+      "front": "What is the Participation Fee?",
+      "back": "Performance-based fee calculated as a percentage of carbon credit revenue. Model A (Carbon Credits) only.\n\nKey rules:\n- Cash only — no in-kind payment (no credits as compensation)\n- Shared with MANUFACTURER (split defined per Work Order)\n- Silence in WO = MANUFACTURER gets 0%\n- Tied to actual credit issuance and sale, not projections"
+    },
+    {
+      "id": 10,
+      "category": "5-Fee Architecture",
+      "front": "Why is PaaS the default infrastructure option?",
+      "back": "Carbon projects run 10-30 years. Equipment needs guaranteed maintenance, warranty, and replacement throughout.\n\nPaaS ensures:\n- COMPANY controls equipment quality and uptime\n- Warranty + maintenance included in monthly fee\n- Replacement at COMPANY's/MANUFACTURER's cost\n- No client capital expenditure upfront\n- SLA-backed uptime guarantees (95% quarterly target)"
+    },
+    {
+      "id": 11,
+      "category": "Revenue Sharing",
+      "front": "What is the revenue sharing principle between COMPANY and MANUFACTURER?",
+      "back": "No default split exists. Each fee has a 'Compensation' field in the Work Order — silence means MANUFACTURER gets 0%.\n\nShared fees: Initiation Fee + Participation Fee\nCOMPANY-only fees: Structuring, SaaS, PaaS\n\nThe exact split is negotiated per project and documented in the Work Order. [Reserved] placeholder protects minimum margins."
+    },
+    {
+      "id": 12,
+      "category": "Revenue Sharing",
+      "front": "What is Margin Protection?",
+      "back": "[Reserved] in all documents — ensures COMPANY retains a minimum margin regardless of how fees are structured or shared with MANUFACTURER.\n\nAppears in: contracts, briefings, management summaries. Prevents scenarios where aggressive revenue sharing with MANUFACTURER erodes COMPANY's viability. Exact mechanism is an open management decision."
+    },
+    {
+      "id": 13,
+      "category": "Revenue Sharing",
+      "front": "Which fees are shared with MANUFACTURER?",
+      "back": "Shared: Initiation Fee + Participation Fee (split per Work Order)\nCOMPANY retains 100%: Structuring Fee, SaaS Fee, PaaS Fee\n\nRationale: MANUFACTURER contributes to project setup (Initiation) and benefits from credit success (Participation). Platform, advisory, and equipment management are COMPANY's value-add."
+    },
+    {
+      "id": 14,
+      "category": "Revenue Sharing",
+      "front": "What is CPI adjustment for fees?",
+      "back": "Annual fee adjustment mechanism to protect against inflation over 10-30 year project lifetimes.\n\nOpen decision: Which index to use?\n- Swiss LIK (Landesindex der Konsumentenpreise) — COMPANY's home jurisdiction\n- US CPI — MANUFACTURER's jurisdiction and USD-denominated market\n\nMust be defined in the CSA to avoid disputes over long contract terms."
+    },
+    {
+      "id": 15,
+      "category": "Warranty & Equipment",
+      "front": "What is the 'Original Purchaser' warranty problem?",
+      "back": "MANUFACTURER's standard warranty covers only COMPANY (the direct purchaser), not the end-client who actually uses the equipment.\n\nIn a 3-party setup (MANUFACTURER > COMPANY > CLIENT), the client has no direct warranty claim against MANUFACTURER. This gap must be closed contractually via pass-through warranty provisions."
+    },
+    {
+      "id": 16,
+      "category": "Warranty & Equipment",
+      "front": "What is the warranty duration problem?",
+      "back": "Standard: 24 months from SHIPMENT (not installation).\n\nProblem: In DRC, transport takes 4-8 weeks due to poor infrastructure (19% electricity, 'sparsest roads in the world'). Effective warranty on-site = only 20-22 months.\n\nSolution: FA Art. 12.4 pass-through warranty extends coverage to 24 months from INSTALLATION date."
+    },
+    {
+      "id": 17,
+      "category": "Warranty & Equipment",
+      "front": "What is the Pass-Through Warranty solution?",
+      "back": "FA Art. 12.4: MANUFACTURER acknowledges client warranty claims and extends coverage to 24 months from INSTALLATION (not shipment).\n\nThis closes two gaps:\n1. Warranty reaches the actual end-user (client)\n2. Coverage starts when equipment is operational, not when it leaves the factory\n\nCritical for remote locations where transport significantly reduces effective warranty."
+    },
+    {
+      "id": 18,
+      "category": "Warranty & Equipment",
+      "front": "What is the lease advantage for warranty?",
+      "back": "Lease covers the entire lease term — not just 24 months:\n- Replacement at MANUFACTURER's cost\n- No client return shipping responsibility\n- Maintenance included throughout\n\nLimitation: MANUFACTURER cannot be direct lessor under UCC Finance Lease (requires 3-party structure: Supplier > Lessor > Lessee). COMPANY or third-party DFI must serve as lessor."
+    },
+    {
+      "id": 19,
+      "category": "Warranty & Equipment",
+      "front": "Why can't MANUFACTURER be the direct lessor?",
+      "back": "UCC Finance Lease requires a 3-party structure: Supplier > Lessor > Lessee. The manufacturer cannot simultaneously be supplier AND lessor for off-balance-sheet treatment.\n\nOptions:\n- COMPANY as lessor (PaaS model, on COMPANY's balance sheet)\n- Third-party DFI as lessor (true off-balance for both)\n- MANUFACTURER leasing arm (separate legal entity)"
+    },
+    {
+      "id": 20,
+      "category": "Warranty & Equipment",
+      "front": "What is the Equipment-as-a-Service (PaaS) model?",
+      "back": "COMPANY provides equipment to the client under a monthly service fee. Includes:\n- Hardware provision (sourced from MANUFACTURER)\n- Preventive and corrective maintenance\n- Warranty coverage for the service period\n- Replacement of defective/failed units\n- SLA-backed uptime guarantee (95% quarterly)\n\nEquipment has built-in redundancy — single unit failure does not break the measurement chain."
+    }
+  ]
+}
