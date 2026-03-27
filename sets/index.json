@@ -66,6 +66,168 @@
       "linkedSet": "glossar-core"
     },
     {
+      "id": "ep02-script-en",
+      "type": "presentation",
+      "title": "EP02 Script — Carbon Credit Lifecycle (EN)",
+      "file": "materials/ep02-script-en.html",
+      "description": "8-step lifecycle from PDD to Retirement — contract touchpoints at each stage",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep02-script-de",
+      "type": "presentation",
+      "title": "EP02 Skript — Carbon Credit Lifecycle (DE)",
+      "file": "materials/ep02-script-de.html",
+      "description": "8-Schritte-Lifecycle mit Vokabular-Boxen (PDD, VVB, Issuance, Buffer Pool)",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep03-script-en",
+      "type": "presentation",
+      "title": "EP03 Script — Standards, Registries & Integrity (EN)",
+      "file": "materials/ep03-script-en.html",
+      "description": "Verra, Gold Standard, Social Carbon, ICVCM 10 CCPs, AI rating agencies",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep03-script-de",
+      "type": "presentation",
+      "title": "EP03 Skript — Standards, Register & Integrität (DE)",
+      "file": "materials/ep03-script-de.html",
+      "description": "Verra, Gold Standard, Social Carbon, 10 CCPs mit Vokabular-Boxen",
+      "domain": "markt",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep04-script-en",
+      "type": "presentation",
+      "title": "EP04 Script — The Regulatory Tsunami (EN)",
+      "file": "materials/ep04-script-en.html",
+      "description": "EU ETS, CBAM, CSRD, Anti-Greenwashing Sept 2026, CORSIA, 6 Megatrends",
+      "domain": "regulierung",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep04-script-de",
+      "type": "presentation",
+      "title": "EP04 Skript — Der regulatorische Tsunami (DE)",
+      "file": "materials/ep04-script-de.html",
+      "description": "EU ETS, CBAM, CSRD, Anti-Greenwashing, CORSIA mit Vokabular-Boxen",
+      "domain": "regulierung",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep05-script-en",
+      "type": "presentation",
+      "title": "EP05 Script — Article 6: The Game Changer (EN)",
+      "file": "materials/ep05-script-en.html",
+      "description": "Art. 6.2/6.4, ITMOs, Corresponding Adjustments, Switzerland 16 bilaterals",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep05-script-de",
+      "type": "presentation",
+      "title": "EP05 Skript — Artikel 6: Der Game Changer (DE)",
+      "file": "materials/ep05-script-de.html",
+      "description": "Art. 6.2/6.4, ITMOs, Gegenrechnungen, Schweiz 16 Bilaterale mit Vokabular-Boxen",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep06-script-en",
+      "type": "presentation",
+      "title": "EP06 Script — The Great Convergence (EN)",
+      "file": "materials/ep06-script-en.html",
+      "description": "VCM meets Compliance, dual-pathway architecture, 4x price arbitrage",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep06-script-de",
+      "type": "presentation",
+      "title": "EP06 Skript — Die grosse Konvergenz (DE)",
+      "file": "materials/ep06-script-de.html",
+      "description": "VCM trifft Compliance, Dualpfad-Architektur, 4x Preisarbitrage mit Vokabular-Boxen",
+      "domain": "regulierung",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep07-script-en",
+      "type": "presentation",
+      "title": "EP07 Script — Who Owns the Carbon? (EN)",
+      "file": "materials/ep07-script-en.html",
+      "description": "Carbon rights, 3-layer consent architecture, FPIC, carbon land grab, 9 safeguards",
+      "domain": "glossar",
+      "linkedSet": "glossar-recht"
+    },
+    {
+      "id": "ep07-script-de",
+      "type": "presentation",
+      "title": "EP07 Skript — Wem gehört der Kohlenstoff? (DE)",
+      "file": "materials/ep07-script-de.html",
+      "description": "Carbon Rights, 3-Schichten-Consent, FPIC, Carbon Land Grab mit Vokabular-Boxen",
+      "domain": "glossar",
+      "linkedSet": "glossar-recht"
+    },
+    {
+      "id": "ep08-script-en",
+      "type": "presentation",
+      "title": "EP08 Script — Country Risk Deep Dive (EN)",
+      "file": "materials/ep08-script-en.html",
+      "description": "DRC 7 risk categories, Indonesia GO, Malaysia, Bolivia, 24 DD questions",
+      "domain": "laender",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep08-script-de",
+      "type": "presentation",
+      "title": "EP08 Skript — Länderrisiko-Vertiefung (DE)",
+      "file": "materials/ep08-script-de.html",
+      "description": "DRC 7 Risikokategorien, 50/25/25-Waterfall, Indonesien, Malaysia mit Vokabular-Boxen",
+      "domain": "laender",
+      "linkedSet": "glossar-jurisdiktion"
+    },
+    {
+      "id": "ep09-script-en",
+      "type": "presentation",
+      "title": "EP09 Script — Technology: dMRV, aMRV & Trust (EN)",
+      "file": "materials/ep09-script-en.html",
+      "description": "Eddy Covariance, LI-COR, blockchain integrity, SCD0003, data ownership",
+      "domain": "technik",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep09-script-de",
+      "type": "presentation",
+      "title": "EP09 Skript — Technologie: dMRV, aMRV & Vertrauen (DE)",
+      "file": "materials/ep09-script-de.html",
+      "description": "Eddy Covariance, Blockchain, SCD0003, Datenhoheit mit Vokabular-Boxen",
+      "domain": "technik",
+      "linkedSet": "glossar-core"
+    },
+    {
+      "id": "ep10-script-en",
+      "type": "presentation",
+      "title": "EP10 Script — Contracting Carbon: The Playbook (EN)",
+      "file": "materials/ep10-script-en.html",
+      "description": "5-fee architecture, CSA-A/B, warranty pass-through, country annexes, multi-jurisdictional",
+      "domain": "vertrag",
+      "linkedSet": "glossar-recht"
+    },
+    {
+      "id": "ep10-script-de",
+      "type": "presentation",
+      "title": "EP10 Skript — Carbon-Verträge: Das Playbook (DE)",
+      "file": "materials/ep10-script-de.html",
+      "description": "5-Gebühren-Architektur, CSA-A/B, Warranty Pass-Through, Country Annexes mit Vokabular-Boxen",
+      "domain": "vertrag",
+      "linkedSet": "glossar-recht"
+    },
+    {
       "id": "ep02",
       "type": "podcast",
       "title": "EP02: From PDD to Retirement — Carbon Credit Lifecycle",
